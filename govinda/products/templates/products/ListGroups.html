@@ -1,0 +1,59 @@
+{% include './MenuList.html' with menu="lg" %}
+
+{% block content %}
+     
+ <div class="col-sm-offset-7">
+
+{% if user.get_username == "admin" %} 
+ <a type="button" class="btn btn-primary" href="{% url 'add_group' %}">Add Group</a>
+ <a type="button" class="btn btn-primary" href="{% url 'edit_group' %}">Edit Group</a>
+ <a type="button" class="btn btn-primary" href="{% url 'delete_group' %}">Delete Group</a>
+{% endif %}
+
+</div>
+
+<br><br><br>
+<div class="col-md-8">
+<div class="container horizontal-scrollable"> 
+<h3>List Groups</h3>
+      <div class="row text-center"> 
+
+<table class="table table-bordered table-responsive table-striped">
+<thead>
+  <tr>
+    <th>Inventory Group Name</th>
+    <th>Description</th>              
+    <th>Business Unit</th>
+    <th>Date Added</th>
+
+    
+  </tr>
+</thead>
+{% if inventorygroup %}
+<tbody>
+      {% for grp in inventorygroup %}
+ <tr>
+ <td>{{ grp.name}} </td>
+  <td>{{ grp.desc}} </td>            
+  <td>{{ grp.bu.name}} </td>
+  <td>{{ grp.date}} </td>
+
+  
+</tr>
+      {% endfor %}    
+</tbody>
+
+{% endif %}
+
+</table>
+
+</div> 
+
+<br><br><br><br>
+
+</div>
+</div>
+
+{% endblock %}
+
+

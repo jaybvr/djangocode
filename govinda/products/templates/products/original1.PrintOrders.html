@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+<head>
+
+
+</head>
+<body>
+
+
+
+
+
+<form  >
+
+
+
+    <div > 
+      <div > 
+
+        <table  style="width:100%; border: 1px solid black; border-collapse: collapse; text-align: center;" cellspacing="0" cellpadding="0">
+          <thead>
+            <tr  ><th colspan="5" style="padding-top: 5px;"><h3>SRI SRI RADHA KRISHNA CHANDRA TEMPLE - ISKCON <br> Reddy College Rd, Malla Reddy Nagar, NGO Colony, Guntur, Andhra Pradesh 522004 Cell: 8331961288 </h3></th> </tr>
+            <tr > <th colspan="5" style="text-align: left; padding-top: 3px;"><h3>Order Details</h3></th></tr>
+            <tr><th colspan="2" style=" padding-top: 3px;"> Total Tax {{total_tax}} </th><th colspan="3" style=" padding-top: 3px;">Gross Order {{total_order}}  </th></tr>
+          </thead></table>
+
+          {% if o_dict %}
+          {% for order, item in o_dict.items %}
+      <table style="width:100%; border: 1px solid black; text-align: center;">
+        <thead>
+          
+          <tr >
+            <th style="   padding-top: 2px; ">Order ID</th>
+            <th style="   padding-top: 2px; ">Order Date</th>
+            <th style="   padding-top: 2px; ">Item Price</th>
+            <th style="   padding-top: 2px; ">GST </th>
+            <th style="   padding-top: 2px; ">Total</th>
+          
+            
+            
+
+          </tr>
+        </thead>
+        <tbody>
+              
+         <tr >
+          <td style=" padding: 2px;  width: 30%; ">{{ order.order_id }} </td>
+          <td style="padding: 2px; ">
+            {{ order.order_date }}
+          </td>
+          <td style="padding: 2px; ">{{ order.item_price }} </td>
+          <td style="padding: 2px; ">{{ order.tax }} </td>
+          <td style="padding: 2px; ">{{ order.order_total }} </td>
+          
+          
+          
+
+        </tr>
+        </tbody></table>
+
+
+<table style="width:100%; border: 1px solid black; text-align: center;">
+        <thead>
+          
+          <tr>
+<th></th>
+<th></th>
+            <th  style="   padding-top: 2px; ">Cash paid</th>
+            <th style="   padding-top: 2px; ">Online paid</th>
+            <th style="   padding-top: 2px;">Trans ID</th>
+
+</tr>
+</thead><tbody>
+<tr>
+  <td></td>
+  <td></td>
+  <td  style="padding: 2px; ">{{ order.cash }} </td>
+  <td  style="padding: 2px; ">{{ order.online }} </td>
+  <td style="padding: 2px; ">{{order.transaction_id}}</td>
+</tr>
+</tbody>
+
+
+
+
+
+<table style="width:100%; border: 1px solid black; text-align: center; ">
+  <thead>
+    
+          <tr >
+            <th style="   padding-top: 2px; ">Item code</th>
+            <th style="   padding-top: 2px; ">Item name</th>   
+            <th style="   padding-top: 2px; ">Group</th>
+            <th  style="   padding-top: 2px; ">Quantity</th>
+            <th  style="   padding-top: 2px; ">Item Price</th>
+            <th style="   padding-top: 2px; ">Order Price</th>
+      
+
+          </tr>
+        </thead>
+        <tbody>
+            {% for i in item %}
+
+            
+         <tr >
+          <td style="padding: 2px; ">{{ i.item_code}} </td>
+          <td style="padding: 2px; ">{{ i.item_name}} </td>   
+          <td style="padding: 2px; ">{{ i.group}} </td>
+         
+          <td  style="padding: 2px; ">
+            {{ i.order_quantity}}
+          </td>
+          <td  style="padding: 2px; ">{{ i.item_price}} </td>
+          <td style="padding: 2px; ">{{ i.order_price }} </td>
+         
+        </tr>
+              {% endfor %}    
+
+
+
+
+
+        </tbody>
+      </table>
+      
+<br><br><br><br>
+
+      {% endfor %}   
+      
+      <br>
+      {% endif %}
+
+      <br>
+     
+
+
+
+
+
+</form>
+  
+<br>
+
+<br>
+  
+
+
+
+
+</body>
+</html>

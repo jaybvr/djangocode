@@ -1,0 +1,179 @@
+{% include './MenuList.html' with menu="li" %}
+
+{% block content %}
+
+<div class="col-sm-9"> 
+  <h3>Delete Inventory Item</h3>
+{% if perror %}
+    <div class="alert alert-danger">
+                    <strong>Error!</strong> {{ perror }}
+                </div>
+ {% endif %}     
+ 
+{% if psuccess %}
+  <div class="alert alert-success">
+              <strong>Success!</strong> {{ psuccess }}
+  </div>
+{% endif %}
+
+ 
+ <form class="form-horizontal" action="{% url 'delete_inventory' %}" method="POST">
+      {% csrf_token %}
+    <div class="form-group">
+    <label class="control-label col-sm-2" >Enter Inventory Item Code *:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" id="delete_item" name="delete_item" placeholder="Enter Inventory Item Code" {% if not ditem %} required="required" {% endif %}>
+    </div>        
+  </div>
+  
+   <div class="form-group">        
+  <div class="col-sm-offset-2 col-sm-10">
+  
+        <button type="submit" class="btn btn-primary"  {% if ditem %} disabled {% endif %}>Submit</button>
+    
+      </div>
+</div>
+
+</form>
+
+<h3>Inventory Item Details</h3>
+  <h3> </h3>
+
+  <form class="form-horizontal" action="{% url 'delete_inventory' %}" method="POST">
+    {% csrf_token %}
+
+    <div class="form-group">
+      <div class="col-xs-6">
+          <input type="hidden" class="form-control input-default" value="{{ ditem.item_code }}" id="item_code" name="item_code" >
+      </div>
+
+      </div>
+
+<div class="form-group">
+  <label class="control-label col-sm-2" >Inventory Item Code *:</label>
+  <div class="col-xs-6">
+      <label class="control-label" >{{ ditem.item_code }}</label>
+  </div>
+</div>      
+
+<div class="form-group">
+  <label class="control-label col-sm-2" >Item Name :</label>
+  <div class="col-xs-6">
+    <label class="control-label" >{{ ditem.name }}</label>
+
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="control-label col-sm-2" >Business Unit:</label>
+  <div class="col-xs-6">
+    <label class="control-label" >{{ ditem.bu.name }}</label>
+  
+  </div>
+  </div>
+
+
+<div class="form-group">
+<label class="control-label col-sm-2" >Item Group:</label>
+<div class="col-xs-6">
+  <label class="control-label" >{{ ditem.group.name }}</label>
+
+</div>
+</div>
+
+
+<div class="form-group">
+  <label class="control-label col-sm-2" >Unit :</label>
+  <div class="col-xs-6">
+    <label class="control-label" >{{ ditem.unit }}</label>
+
+  </div>
+</div>
+
+
+<div class="form-group">
+<label class="control-label col-sm-2" >Quantity:</label>
+<div class="col-xs-6">
+  <label class="control-label" >{{ ditem.available_quantity }}</label>
+
+</div>
+</div>
+
+<div class="form-group">
+<label class="control-label col-sm-2" >Price:</label>
+<div class="col-xs-6">
+  <label class="control-label" >{{ ditem.price }}</label>
+
+</div>
+</div>
+
+<div class="form-group">
+  <label class="control-label col-sm-2" >iGST :</label>
+  <div class="col-xs-6">
+    <label class="control-label" >{{ ditem.igst }}</label>
+  
+  </div>
+  </div>
+
+
+<div class="form-group">
+  <label class="control-label col-sm-2" >cGST :</label>
+  <div class="col-xs-6">
+    <label class="control-label" >{{ ditem.cgst }}</label>
+  
+  </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >sGST :</label>
+    <div class="col-xs-6">
+      <label class="control-label" >{{ ditem.sgst }}</label>
+    
+    </div>
+    </div>
+
+    
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Expiry Date:</label>
+      <div class="col-xs-6">
+        <label class="control-label" >{{ ditem.exp_date }}</label>
+      
+      </div>
+             
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Damaged :</label>
+        <div class="col-xs-6">
+          {% if ditem.damage == True %}
+          <label class="control-label" >Yes</label>
+          {% else %}
+          <label class="control-label" >No</label>
+
+          {% endif %}
+        
+        </div>
+               
+        </div>
+
+<div class="form-group">
+<label class="control-label col-sm-2" >Date Added:</label>
+<div class="col-xs-6">
+  <label class="control-label" >{{ ditem.date }}</label>
+</div>
+</div>
+
+
+  <div class="form-group">        
+    <div class="col-sm-offset-2 col-sm-10">
+    <button type="submit" class="btn btn-primary" {% if not ditem %}  disabled  {% endif %}>Delete</button>
+  
+    </div>
+  </div>
+  
+</form>
+  </div>
+
+{% endblock %}
+
+

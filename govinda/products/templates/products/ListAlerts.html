@@ -1,0 +1,354 @@
+
+
+{% include './MenuList.html' with menu="la" %}
+
+{% block content %}
+
+
+
+<div class="col-md-7">
+
+
+
+<form class="form-horizontal" action="{% url 'gen_alert_repo' %}" method="GET">
+    {% csrf_token %}
+    <div class="col-sm-offset-9">
+  
+    <button type="submit" class="btn btn-primary">Print</button>
+  
+    <br><br>
+    </div>
+  
+  
+  </form>
+
+
+
+      {% if za_dict %}
+      <h2>Zero Available Items</h2>  
+
+{% for i, j in za_dict.items %}
+
+  <table style="width:100%;" class="table table-bordered table-responsive table-striped">
+    <thead>
+      <tr>
+        <th colspan="12" style="text-align: left;"> Business Unit : {{ i }}</th> 
+    </tr>
+    <tr>
+        <th>Item code</th>
+        <th>Item name</th>     
+        <th>Unit</th> 
+        <th>Inventory Group</th>        
+        <th>Available Quantity</th>
+        <th>Price</th>
+        <th>iGST %</th>
+        <th>cGST %</th>
+        <th>sGST %</th>
+        <th>Date Added</th>
+        <th>Exp Date</th>
+
+        
+  
+  
+    
+      </tr>
+    </thead>
+    <tbody>
+          {% for item in j %}
+     <tr >
+     <td>{{ item.item_code}} </td>
+      <td>{{ item.name}} </td>
+      <td>{{ item.unit }}</td>     
+      <td>{{ item.group.name}} </td>       
+      <td>{{ item.available_quantity}} </td>
+      <td>{{ item.price}} </td>
+      <td>{{ item.igst}} </td>
+      <td>{{ item.cgst}} </td>
+      <td>{{ item.sgst}} </td>
+      <td>{{ item.date}} </td>
+      <td>{{ item.exp_date}} </td>
+
+    
+    </tr>
+          {% endfor %}    
+    </tbody>
+    
+    {% endfor %}    
+    {% endif %}
+</table>
+<br><br>
+
+
+
+
+
+    {% if li_dict %}
+    <h2> Items with Available Quantity less than 5</h2>
+
+    {% for k, l in li_dict.items %}
+
+
+    <table class="table table-bordered table-responsive table-striped">
+        <thead>
+          <tr>
+            <th colspan="12" style="text-align: left;">   
+                Business Unit : {{ k }} 
+            </th> </tr>
+        <tr>
+        
+            <th>Item code</th>
+            <th>Item name</th>     
+            <th>Unit</th> 
+            <th>Business Unit </th>
+            <th>Inventory Group</th>        
+            <th>Available Quantity</th>
+            <th>Price</th>
+            <th>iGST %</th>
+            <th>cGST %</th>
+            <th>sGST %</th>
+            <th>Date Added</th>
+            <th>Exp Date</th>
+
+      
+      
+        
+          </tr>
+        </thead>
+        <tbody>
+              {% for item in l %}
+         <tr >
+         <td>{{ item.item_code}} </td>
+          <td>{{ item.name}} </td>
+          <td>{{ item.unit }}</td>     
+          <td>{{ item.bu.name}} </td>
+          <td>{{ item.group.name}} </td>       
+          <td>{{ item.available_quantity}} </td>
+          <td>{{ item.price}} </td>
+          <td>{{ item.igst}} </td>
+          <td>{{ item.cgst}} </td>
+          <td>{{ item.sgst}} </td>
+          <td>{{ item.date}} </td>
+          <td>{{ item.exp_date}} </td>
+
+        
+        </tr>
+              {% endfor %}    
+        </tbody>
+
+    {% endfor %}    
+
+    {% endif %}
+
+
+    
+    </table>
+
+
+
+
+
+
+    <br><br>
+
+
+
+
+    {% if ec_dict %}
+    <h2> Items expiring in the current month </h2>
+
+    {% for m, n in ec_dict.items %}
+
+
+    <table class="table table-bordered table-responsive table-striped">
+        <thead>
+          <tr>
+            <th colspan="12" style="text-align: left;">   
+                Business Unit : {{ m }} 
+            </th> </tr>
+        <tr>
+        
+            <th>Item code</th>
+            <th>Item name</th>     
+            <th>Unit</th> 
+            <th>Business Unit </th>
+            <th>Inventory Group</th>        
+            <th>Available Quantity</th>
+            <th>Price</th>
+            <th>iGST %</th>
+            <th>cGST %</th>
+            <th>sGST %</th>
+            <th>Date Added</th>
+            <th>Exp Date</th>
+
+      
+      
+        
+          </tr>
+        </thead>
+        <tbody>
+              {% for item in n %}
+         <tr >
+         <td>{{ item.item_code}} </td>
+          <td>{{ item.name}} </td>
+          <td>{{ item.unit }}</td>     
+          <td>{{ item.bu.name}} </td>
+          <td>{{ item.group.name}} </td>       
+          <td>{{ item.available_quantity}} </td>
+          <td>{{ item.price}} </td>
+          <td>{{ item.igst}} </td>
+          <td>{{ item.cgst}} </td>
+          <td>{{ item.sgst}} </td>
+          <td>{{ item.date}} </td>
+          <td>{{ item.exp_date}} </td>
+
+        
+        </tr>
+              {% endfor %}    
+        </tbody>
+
+    {% endfor %}    
+
+    {% endif %}
+
+
+    
+    </table>
+
+
+
+
+    {% if exp_dict %}
+    <h2> Items already expired</h2>
+
+    {% for o, p in exp_dict.items %}
+
+
+    <table class="table table-bordered table-responsive table-striped">
+        <thead>
+          <tr>
+            <th colspan="12" style="text-align: left;">   
+                Business Unit : {{ o }} 
+            </th> </tr>
+        <tr>
+        
+            <th>Item code</th>
+            <th>Item name</th>     
+            <th>Unit</th> 
+            <th>Business Unit </th>
+            <th>Inventory Group</th>        
+            <th>Available Quantity</th>
+            <th>Price</th>
+            <th>iGST %</th>
+            <th>cGST %</th>
+            <th>sGST %</th>
+            <th>Date Added</th>
+            <th>Exp Date</th>
+
+      
+      
+        
+          </tr>
+        </thead>
+        <tbody>
+              {% for item in p %}
+         <tr >
+         <td>{{ item.item_code}} </td>
+          <td>{{ item.name}} </td>
+          <td>{{ item.unit }}</td>     
+          <td>{{ item.bu.name}} </td>
+          <td>{{ item.group.name}} </td>       
+          <td>{{ item.available_quantity}} </td>
+          <td>{{ item.price}} </td>
+          <td>{{ item.igst}} </td>
+          <td>{{ item.cgst}} </td>
+          <td>{{ item.sgst}} </td>
+          <td>{{ item.date}} </td>
+          <td>{{ item.exp_date}} </td>
+
+        
+        </tr>
+              {% endfor %}    
+        </tbody>
+
+    {% endfor %}    
+
+    {% endif %}
+
+
+    
+    </table>
+
+
+<br><br>
+{% if damage_dict %}
+    <h2> Damaged Items</h2>
+
+    {% for o, p in damage_dict.items %}
+
+
+    <table class="table table-bordered table-responsive table-striped">
+        <thead>
+          <tr>
+            <th colspan="12" style="text-align: left;">   
+                Business Unit : {{ o }} 
+            </th> </tr>
+        <tr>
+        
+            <th>Item code</th>
+            <th>Item name</th>     
+            <th>Unit</th> 
+            <th>Business Unit </th>
+            <th>Inventory Group</th>        
+            <th>Available Quantity</th>
+            <th>Price</th>
+            <th>iGST %</th>
+            <th>cGST %</th>
+            <th>sGST %</th>
+            <th>Date Added</th>
+            <th>Exp Date</th>
+
+      
+      
+        
+          </tr>
+        </thead>
+        <tbody>
+              {% for item in p %}
+         <tr >
+         <td>{{ item.item_code}} </td>
+          <td>{{ item.name}} </td>
+          <td>{{ item.unit }}</td>     
+          <td>{{ item.bu.name}} </td>
+          <td>{{ item.group.name}} </td>       
+          <td>{{ item.available_quantity}} </td>
+          <td>{{ item.price}} </td>
+          <td>{{ item.igst}} </td>
+          <td>{{ item.cgst}} </td>
+          <td>{{ item.sgst}} </td>
+          <td>{{ item.date}} </td>
+          <td>{{ item.exp_date}} </td>
+
+        
+        </tr>
+              {% endfor %}    
+        </tbody>
+
+    {% endfor %}    
+
+    {% endif %}
+
+
+    
+    </table>
+    <br><br>
+    <br><br>
+    <br><br>
+
+
+
+
+
+
+
+    </div>
+    {% endblock %}

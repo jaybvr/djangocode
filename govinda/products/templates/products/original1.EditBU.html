@@ -1,0 +1,88 @@
+{% include './MenuList.html' with menu="bu" %}
+
+{% block content %}
+
+<div class="col-sm-9"> 
+  <h3>Edit Business Unit</h3>
+{% if perror %}
+    <div class="alert alert-danger">
+                    <strong>Error!</strong> {{ perror }}
+                </div>
+ {% endif %}     
+ 
+{% if psuccess %}
+  <div class="alert alert-success">
+              <strong>Success!</strong> {{ psuccess }}
+  </div>
+{% endif %}
+
+ 
+ <form class="form-horizontal" action="{% url 'edit_bu' %}" method="POST">
+      {% csrf_token %}
+    <div class="form-group">
+    <label class="control-label col-sm-2" >Enter Business Unit Name *:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" id="gr_id" name="edit_bu" placeholder="Enter BU Name" {% if not bu %} required="required" {% endif %}>
+    </div>        
+  </div>
+  
+   <div class="form-group">        
+  <div class="col-sm-offset-2 col-sm-10">
+  
+        <button type="submit" class="btn btn-primary"  {% if bu %} disabled {% endif %}>Submit</button>
+    
+      </div>
+</div>
+
+</form>
+
+<h3>Business Unit Details</h3>
+  <h3> </h3>
+
+  <form class="form-horizontal" action="{% url 'edit_bu' %}" method="POST">
+    {% csrf_token %}
+
+    <div class="form-group">
+      <div class="col-xs-6">
+          <input type="hidden" class="form-control input-default" value="{{ bu.name }}" id="bu_name" name="bu_name" >
+      </div>
+
+      </div>
+
+<div class="form-group">
+  <label class="control-label col-sm-2" >Business Unit Name *:</label>
+  <div class="col-xs-6">
+      <label class="control-label" >{{ bu.name }}</label>
+  </div>
+</div>      
+
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Description:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ bu.desc }}" id="bu_desc" name="bu_desc" placeholder="Enter Business Unit Descreption">
+
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Date Added :</label>
+    <div class="col-xs-6">
+      <label class="control-label" >{{ bu.date }}</label>
+    </div>
+  </div>
+  
+  
+  <div class="form-group">        
+    <div class="col-sm-offset-2 col-sm-10">
+    <button type="submit" class="btn btn-primary" {% if not bu %}  disabled  {% endif %}>Edit</button>
+  
+    </div>
+  </div>
+  
+</form>
+  </div>
+
+{% endblock %}
+
+

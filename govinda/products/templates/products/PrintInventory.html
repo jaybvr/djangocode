@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+
+
+<div > 
+
+
+<form  >
+
+
+
+      <div > 
+  
+        <table  style="width:100%; border: 1px solid black; border-collapse: collapse; text-align: center;" cellspacing="0" cellpadding="0">
+          <thead>
+            <tr  ><th colspan="5" style="padding-top: 5px;"><h3>SRI SRI RADHA KRISHNA CHANDRA TEMPLE - ISKCON <br> Reddy College Rd, Malla Reddy Nagar, NGO Colony, Guntur, Andhra Pradesh 522004 Cell: 8331961288 <br>GST Number 37AAATI0017P3ZK </h3></th> </tr>
+            <tr > <th colspan="5" style="text-align: left; padding-top: 3px;"><h3>Order Details</h3></th></tr>
+
+            <tr >
+              <th style="   padding-top: 3px;">Order ID</th>
+              <th style=" padding-top: 3px;">Order Date</th>
+              <th style=" padding-top: 3px;">Order Item Price</th>
+              <th style=" padding-top: 3px;">GST </th>
+              <th style=" padding-top: 3px;">Order Total</th>
+             
+
+  
+            </tr>
+          </thead>
+          <tbody>
+           
+                
+           <tr >
+            <td  style=" padding: 2px;  width: 30%;">{{ order.order_id }} </td>
+            <td style="padding: 2px; ">
+              {{ order.order_date }}
+            </td>
+            <td style="padding: 2px; ">{{ order.item_price }} </td>
+            <td style=" padding: 2px; ">{{ order.tax }} </td>
+            <td style=" padding: 2px; ">{{ order.order_total }} </td>
+            
+          </tr>
+         
+  
+          </tbody>
+        </table>
+  
+        <br>
+        </div>
+
+
+
+</form>
+  
+
+
+
+
+
+
+
+
+
+<br>
+
+<br>
+  <div > 
+    <div > 
+
+      <table style="border: 1px solid black; border-collapse: collapse; text-align: center; ">
+        <thead>
+          <tr>
+            <th style="  padding-top: 3px;">Item code</th>
+            <th style="  padding-top: 3px;">Item name</th>   
+            <th style="  padding-top: 3px;">Unit</th>   
+            <th style="  padding-top: 3px;">BU</th>
+            <th style="  padding-top: 3px;">Inventory Group</th>
+            <th style="  padding-top: 3px;">Avail Quantity</th>
+            <th style="  padding-top: 3px;">Price</th>
+            <th style="  padding-top: 3px;">cGST %</th>
+            <th style="  padding-top: 3px;">sGST %</th>
+            <th style="  padding-top: 3px;">Date</th>
+            <th style="  padding-top: 3px;">Exp Date</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          {% if qs %}
+
+              {% for item in qs %}
+              
+         <tr >
+          <td style="padding-top: 2px;">{{ item.item_code}} </td>
+          <td style="padding-top: 2px;">{{ item.name}} </td> 
+          <td style="padding-top: 2px;">{{ item.unit}} </td>
+          <td style="padding-top: 2px;">{{ item.bu.name}} </td>
+          <td style="padding-top: 2px;">{{ item.group}} </td>
+          <td style="padding-top: 2px;">{{ item.available_quantity}} </td>
+          <td style="padding-top: 2px;">{{ item.price}} </td>
+          <td style="padding-top: 2px;">{{ item.cgst}} </td>
+          <td style="padding-top: 2px;">{{ item.sgst}} </td>
+          <td style="padding-top: 2px;">{{ item.exp_date }} </td>
+         
+        </tr>
+              {% endfor %}    
+        <tr>
+          <td colspan="5"></td>
+          
+          <td style="  padding-top: 3px;"><h3>Gross Total :</h3></td>
+          <td style="  padding-top: 3px;"><h1>{{ total }}</h1></td>
+         
+
+
+        </tr>
+        {% endif %}
+
+        </tbody>
+      </table>
+      
+
+
+
+      <br>
+
+  
+
+  
+      </div></div>
+
+
+
+
+
+    </div>
+
+</body>
+</html>

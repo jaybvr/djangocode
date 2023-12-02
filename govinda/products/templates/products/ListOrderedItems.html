@@ -1,0 +1,93 @@
+{% include './MenuList.html' with menu="loi" %}
+
+{% block content %}
+
+<div class="col-sm-offset-7">
+   
+  
+  </div>
+
+<div class="col-sm-9"> 
+
+
+<form class="form-horizontal" action="{% url 'list_order_items' %}" method="GET" >
+    {% csrf_token %}
+
+    <h3>Filter Order Items </h3>
+
+
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Order ID  :</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default " id="item_name" name="order_id" placeholder="Enter Order ID  " >
+    </div>        
+    </div>
+    
+    <div class="form-group">        
+    <div class="col-sm-offset-2 col-sm-10">
+    
+        <button type="submit" class="btn btn-primary" >Search</button>
+    
+      </div>
+    </div>
+
+    </form>
+
+    <form class="form-horizontal">
+    <h3>Order Item Details</h3>
+
+
+    <table class="table table-bordered table-responsive table-striped">
+        <thead>
+          <tr>
+            <th>Item Code</th>
+            <th>Item Name</th>              
+            <th>Group</th>
+            <th>Order Quantity</th>
+            <th>Item Price</th>
+            <th>Order Price</th>
+            <th>Customer</th>
+            <th>Order ID</th>
+
+      
+
+          </tr>
+        </thead>
+        <tbody>
+          {% if order_items %}
+
+              {% for item in order_items %}
+              
+         <tr class="edit_order">
+          <td>{{ item.item_code}} </td>
+          <td>{{ item.item_name}} </td>            
+          <td>{{ item.group}}</td>
+          <td>{{ item.order_quantity}} </td>
+          <td>{{item.item_price}} </td>
+          <td>{{item.order_price}} </td>
+          <td>{{ item.customer_mobile.customer_mobile}} </td>
+          <td>{{ item.order_id.order_id}}</td>
+        </tr>
+              {% endfor %}    
+        {% endif %}
+
+        </tbody>
+      </table>
+
+
+</form>
+  
+
+
+
+      <br><br><br>
+      </div>
+
+
+
+
+
+      <br><br><br><br>
+
+      {% endblock %}

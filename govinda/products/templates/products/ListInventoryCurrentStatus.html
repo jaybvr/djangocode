@@ -1,0 +1,125 @@
+{% include './MenuList.html' with menu="gi" %}
+
+{% block content %}
+  
+
+<div class="col-md-10">
+  <br>
+  <br>
+  
+         
+<form class="form-horizontal" action="{% url 'gen_inventory_repo' %}" method="GET">
+  {% csrf_token %}
+  <div class="col-sm-offset-9">
+
+  <button type="submit" class="btn btn-primary">Print</button>
+
+  <br><br>
+  </div>
+
+
+</form>
+
+
+
+
+  {% if za_dict %}
+  <h3>Inventory Items Current Status</h3>  
+  <br>
+  <br>
+
+{% for i, j in za_dict.items %}
+
+<table style="width:100%;" class="table table-bordered table-responsive table-striped">
+<thead>
+  <tr>
+    <th colspan="12" style="text-align: left;"> Business Unit : {{ i }}</th> 
+</tr>
+<tr>
+    <th>Item code</th>
+    <th>Item name</th>     
+    <th>Unit</th> 
+    <th>Inventory Group</th>        
+    <th>Available Quantity</th>
+    <th>Price</th>
+    <th>iGST %</th>
+    <th>cGST %</th>
+    <th>sGST %</th>
+    <th>Date Added</th>
+    <th>Exp Date</th>
+    <th>Damage</th>
+
+    
+
+
+
+  </tr>
+</thead>
+<tbody>
+      {% for item in j %}
+ <tr >
+ <td>{{ item.item_code}} </td>
+  <td>{{ item.name}} </td>
+  <td>{{ item.unit }}</td>     
+  <td>{{ item.group.name}} </td>       
+  <td>{{ item.available_quantity}} </td>
+  <td>{{ item.price}} </td>
+  <td>{{ item.igst}} </td>
+  <td>{{ item.cgst}} </td>
+  <td>{{ item.sgst}} </td>
+  <td>{{ item.date}} </td>
+  <td>{{ item.exp_date}} </td>
+  {% if item.damage == True %}
+    <td> Yes </td>
+    {% else %}
+    <td> No </td>
+    {% endif %}
+
+
+
+
+
+
+
+</tr>
+      {% endfor %}    
+</tbody>
+
+{% endfor %}    
+{% endif %}
+</table>
+<br><br>
+
+
+    </div>
+
+
+<br><br><br><br>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $("#bu").change(function () {
+      var url = $("#inventory").attr("data-groups-url");  // get the url of the `load_cities` view
+      var bu = $(this).val();  // get the selected country ID from the HTML input
+
+      $.ajax({                       // initialize an AJAX request
+        url: url,                    // set the url of the request (= localhost:8000/hr/ajax/load-cities/)
+        data: {
+          'bu': bu       // add the country id to the GET parameters
+        },
+        success: function (data) {   // `data` is the return of the `load_cities` view function
+          $("#item_group").html(data);  // replace the contents of the city input with the data that came from the server
+          $("#item_group").append('<option>'+'-----'+'</option>');
+
+         
+        }
+      });
+
+    });
+  </script>
+
+{% endblock %}
+
+

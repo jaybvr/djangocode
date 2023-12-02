@@ -1,0 +1,175 @@
+{% include './MenuList.html' with menu="ii" %}
+
+{% block content %}
+
+
+<div class="col-md-10">
+    <h1> Import Items </h1>
+    <br><br><br>
+
+
+
+
+{% if error %}
+<div class="alert alert-danger">
+                <strong>Error!</strong> {{ error }}
+            </div>
+{% endif %}
+
+{% if success %}
+<div class="alert alert-success">
+                <strong>Success!</strong> {{ success }}
+            </div>
+{% endif %}
+
+
+<form class="form-horizontal" action="{% url 'import_items' %}" method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+<div class="form-group">
+
+<br><br>
+<input class="col-md-offset-2" type="file" title="Upload excel file" id="excel_file" name="excel_file" required="required"><br><br>
+
+</div>
+
+<br>
+<div class=" col-md-offset-2">
+
+<button type="submit" class="btn btn-primary" >Import</button>
+</div>
+  
+</form>
+
+{% if inclusions %}
+<h3> Below Items are added to the inventory </h3>
+
+            <table class="table table-bordered table-responsive table-striped">
+              <thead>
+                <tr>
+                  <th>Item ID </th>
+                  <th>Inventory Group </th>
+                  <th>Business Unit</th>              
+                
+                </tr>
+              </thead>
+              <tbody>
+                    {% for i in inclusions %}
+               <tr >
+               <td>{{ i.Item }} </td>
+               <td>{{ i.InventoryGroup }} </td>
+                <td>{{ i.BusinessUnit }} </td>
+            
+              </tr>
+                    {% endfor %}    
+              </tbody>
+              
+              
+            </table>
+
+
+{% endif %}
+
+
+
+{% if updated %}
+<h3> Below Items are Updated in the inventory </h3>
+
+            <table class="table table-bordered table-responsive table-striped">
+              <thead>
+                <tr>
+                  <th>Item ID </th>
+                  <th>Inventory Group </th>
+                  <th>Business Unit</th>              
+                
+                </tr>
+              </thead>
+              <tbody>
+                    {% for i in updated %}
+               <tr >
+               <td>{{ i.Item }} </td>
+               <td>{{ i.InventoryGroup }} </td>
+                <td>{{ i.BusinessUnit }} </td>
+            
+              </tr>
+                    {% endfor %}    
+              </tbody>
+              
+              
+            </table>
+
+
+{% endif %}
+
+
+
+
+
+{% if buexclusions %}
+
+
+
+<h3> BusinessUnit is not available for these items </h3>
+
+<table class="table table-bordered table-responsive table-striped">
+  <thead>
+    <tr>
+      <th>Item ID </th>
+      <th>Business Unit</th>              
+    
+    </tr>
+  </thead>
+  <tbody>
+        {% for i in buexclusions %}
+   <tr >
+   <td>{{ i.Item }} </td>
+    <td>{{ i.BusinessUnit }} </td>
+
+  </tr>
+        {% endfor %}    
+  </tbody>
+  
+  
+</table>
+
+{% endif %}
+
+
+
+{% if igexclusions %}
+<h3> InventoryGroup is not available for these items </h3>
+
+
+
+            <table class="table table-bordered table-responsive table-striped">
+              <thead>
+                <tr>
+                  <th>Item ID </th>
+                  <th>Inventory Group</th>              
+                
+                </tr>
+              </thead>
+              <tbody>
+                    {% for i in igexclusions %}
+               <tr >
+               <td>{{ i.Item }} </td>
+                <td>{{ i.InventoryGroup }} </td>
+            
+              </tr>
+                    {% endfor %}    
+              </tbody>
+              
+              
+            </table>
+
+{% endif %}
+
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}

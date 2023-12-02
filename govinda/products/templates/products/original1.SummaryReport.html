@@ -1,0 +1,130 @@
+
+
+{% include './MenuList.html' with menu="sr" %}
+
+{% block content %}
+
+
+
+<div class="col-md-7">
+
+
+
+<form class="form-horizontal" action="{% url 'gen_summary_repo' %}" method="GET">
+    {% csrf_token %}
+    <div class="col-sm-offset-9">
+  
+    <button type="submit" class="btn btn-primary">Print</button>
+  
+    <br><br>
+    </div>
+  
+  
+  </form>
+
+
+
+
+  <form class="form-horizontal" action="{% url 'gen_summary' %}" method="POST">
+    {% csrf_token %}
+
+
+    <h3>Generate Report for:</h3>
+
+    <div class="form-group">
+        <label class="control-label col-sm-3" >Time Frame:</label>
+        <div class="col-xs-6">
+            <select class="form-control" name="o_select" required="required">
+                <option selected></option>
+                <option >Today</option>
+                <option >Specific Date</option>
+                <option >Last 7 Days</option>
+                <option >Last 15 Days</option>
+                <option >Date Range</option>
+            
+            
+            </select>
+        </div>        
+      </div>
+
+<div class="form-group">
+    <label class="control-label col-sm-3" >Order Date From:</label>
+    <div class="col-xs-6">
+      <input type="date" class="form-control input-default" id="d_from" name="d_from" placeholder="Enter Order Date from " >
+    </div>        
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-3" >Order Date To:</label>
+        <div class="col-xs-6">
+          <input type="date" class="form-control input-default" id="d_to" name="d_to" placeholder="Enter Order Date to " >
+        </div>        
+        </div>
+
+        <div class="col-sm-offset-7">
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <br><br>
+            
+            </div>
+
+  </form>
+  
+
+
+<br><br><br>
+
+
+<h3> Summary Report </h3>
+
+   
+<table style="width:100%;" class="table table-bordered table-responsive table-striped">
+  <thead>
+    <tr>
+      <th colspan="1" style="text-align: left;"> <h3>Total Online  :  {{total_online}} </h3>   </th>
+       <th colspan="2" style="text-align: left;"><h3>Total Cash  :  {{total_cash}}</h3></th>  
+  </tr>
+  <tr>
+      <th>Items From</th>
+      <th>Tax</th>     
+      <th>Order Price</th> 
+    
+    </tr>
+  </thead>
+  <tbody>
+<tr><td> <h3>Total </h3>  </td> <td><h3>{{total_tax}}</h3> </td> <td><h3>{{total_order}}</h3></td></tr>
+{% if bu_dict %}
+
+        {% for i,l in bu_dict.items %}
+   <tr >
+   <td><h4>Business Unit: {{i}} </h4></td>
+    <td> <h4>{{l.tax}}</h4> </td>
+    <td><h4>{{l.price}}</h4></td>     
+  </tr>
+  {% for j, k  in l.groups.items %}
+
+<tr> 
+  <td>Group: {{j}}</td> 
+     <td>{{k.0}}</td> 
+     <td>{{k.1}}</td>
+  </tr>
+        {% endfor %}    
+  </tbody>
+  
+  {% endfor %}    
+
+
+  {% endif %}
+</table>
+
+
+<br><br><br><br><br>
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+
+
+
+</div>
+    {% endblock %}

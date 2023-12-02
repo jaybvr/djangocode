@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+
+
+<div > 
+
+
+
+
+
+      <div > 
+  
+        <table  style="width:100%; border: 1px solid black; border-collapse: collapse; text-align: center;" cellspacing="0" cellpadding="0">
+          <thead>
+            <tr  ><th colspan="5" style="padding-top: 5px;"><h3>SRI SRI RADHA KRISHNA CHANDRA TEMPLE - ISKCON <br> Reddy College Rd, Malla Reddy Nagar, NGO Colony, Guntur, Andhra Pradesh 522004 Cell: 8331961288 </h3></th> </tr>
+
+           
+          </thead></table>
+
+    
+
+<h3> Summary Report </h3>
+
+   
+<table style="width:100%; border: 1px solid black; border-collapse: collapse; text-align: center;">
+  <thead>
+    <tr>
+      <th colspan="1" style="text-align:center; padding-top: 3px;"> <h3>Total Online  :  {{total_online}} </h3>   </th>
+       <th colspan="2" style="text-align:center; padding-top: 3px;"><h3>Total Cash  :  {{total_cash}}</h3></th>  
+  </tr>
+  <tr>
+      <th style="   padding-top: 3px;">Items From</th>
+      <th style="   padding-top: 3px;">Tax</th>     
+      <th style="   padding-top: 3px;">Order Price</th> 
+    
+    </tr>
+  </thead>
+  <tbody>
+<tr><td style="padding: 2px; "> <h3>Total </h3>  </td> <td style="padding: 2px; "><h3>{{total_tax}}</h3> </td> <td style="padding: 2px; "><h3>{{total_order}}</h3></td></tr>
+{% if bu_dict %}
+
+        {% for i,l in bu_dict.items %}
+   <tr >
+   <td style="padding: 2px; "><h4>Business Unit: {{i}} </h4></td>
+    <td style="padding: 2px; "> <h4>{{l.tax}}</h4> </td>
+    <td style="padding: 2px; "><h4>{{l.price}}</h4></td>     
+  </tr>
+  {% for j, k  in l.groups.items %}
+
+<tr> 
+  <td style="padding: 2px; ">Group: {{j}}</td> 
+     <td style="padding: 2px; ">{{k.0}}</td> 
+     <td style="padding: 2px; ">{{k.1}}</td>
+  </tr>
+        {% endfor %}    
+  </tbody>
+  
+  {% endfor %}    
+
+
+  {% endif %}
+</table>
+
+
+  
+      </div></div>
+
+
+
+
+
+
+</body>
+</html>

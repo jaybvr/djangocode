@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+
+
+<div > 
+
+
+<form  >
+
+
+
+      <div > 
+  
+        <table  style="width:100%; border: 1px solid black; border-collapse: collapse; text-align: center;" cellspacing="0" cellpadding="0">
+            <thead>
+              <tr  ><th colspan="5" style="padding-top: 5px;"><h3>SRI SRI RADHA KRISHNA CHANDRA TEMPLE - ISKCON <br> Reddy College Rd, Malla Reddy Nagar, NGO Colony, Guntur, Andhra Pradesh 522004 Cell: 8331961288 </h3></th> </tr>
+              
+            </thead></table>
+
+      <h3>Zero Available Items</h3>  
+
+      {% if za_dict %}
+{% for i, j in za_dict.items %}
+
+  <table style="width:100%; border: 1px solid black; border-collapse: collapse; text-align: center;" cellspacing="0" cellpadding="0">
+    <thead>
+      <tr>
+        <th colspan="9" style="text-align: left; padding-top: 3px;"> Business Unit : {{ i }}</th> 
+
+    </tr>
+    <tr>
+        <th style="   padding-top: 3px;">Item code</th>
+        <th style="   padding-top: 3px;">Item name</th>     
+        <th style="   padding-top: 3px;">Unit</th> 
+        <th style="   padding-top: 3px;">Business Unit </th>
+        <th style="   padding-top: 3px;">Inventory Group</th>        
+        <th style="   padding-top: 3px;">Available Quantity</th>
+        <th style="   padding-top: 3px;">Price</th>
+        <th style="   padding-top: 3px;">cGST %</th>
+        <th style="   padding-top: 3px;">sGST %</th>
+        
+  
+  
+    
+      </tr>
+    </thead>
+    <tbody>
+          {% for item in j %}
+     <tr >
+     <td style="padding: 2px; ">{{ item.item_code}} </td>
+      <td style="padding: 2px; ">{{ item.name}} </td>
+      <td style="padding: 2px; ">{{ item.unit }}</td>     
+      <td style="padding: 2px; ">{{ item.bu.name}} </td>
+      <td style="padding: 2px; ">{{ item.group.name}} </td>       
+      <td style="padding: 2px; ">{{ item.available_quantity}} </td>
+      <td style="padding: 2px; ">{{ item.price}} </td>
+      <td style="padding: 2px; ">{{ item.cgst}} </td>
+      <td style="padding: 2px; ">{{ item.sgst}} </td>
+      
+    
+    </tr>
+          {% endfor %}    
+    </tbody>
+    
+    {% endfor %}    
+    {% endif %}
+</table>
+<br><br>
+
+<h3> Items with Available Quantity less than 5</h3>
+
+
+
+{% if li_dict %}
+{% for k, l in li_dict.items %}
+
+  <table style="width:100%; border: 1px solid black; border-collapse: collapse; text-align: center;" cellspacing="0" cellpadding="0">
+    <thead>
+      <tr>
+        <th colspan="9" style="text-align: left; padding-top: 3px;"> Business Unit : {{ k }}</th> 
+    </tr>
+    <tr>
+        <th style="   padding-top: 3px;">Item code</th>
+        <th style="   padding-top: 3px;">Item name</th>     
+        <th style="   padding-top: 3px;">Unit</th> 
+        <th style="   padding-top: 3px;">Business Unit </th>
+        <th style="   padding-top: 3px;">Inventory Group</th>        
+        <th style="   padding-top: 3px;">Available Quantity</th>
+        <th style="   padding-top: 3px;">Price</th>
+        <th style="   padding-top: 3px;">cGST %</th>
+        <th style="   padding-top: 3px;">sGST %</th>
+        
+  
+  
+    
+      </tr>
+    </thead>
+    <tbody>
+          {% for item in l %}
+     <tr >
+     <td style="padding: 2px; ">{{ item.item_code}} </td>
+      <td style="padding: 2px; ">{{ item.name}} </td>
+      <td style="padding: 2px; ">{{ item.unit }}</td>     
+      <td style="padding: 2px; ">{{ item.bu.name}} </td>
+      <td style="padding: 2px; ">{{ item.group.name}} </td>       
+      <td style="padding: 2px; ">{{ item.available_quantity}} </td>
+      <td style="padding: 2px; ">{{ item.price}} </td>
+      <td style="padding: 2px; ">{{ item.cgst}} </td>
+      <td style="padding: 2px; ">{{ item.sgst}} </td>
+      
+    
+    </tr>
+          {% endfor %}    
+    </tbody>
+    
+    {% endfor %}    
+    {% endif %}
+</table>
+
+
+
+
+
+
+
+
+</body>
+</html>

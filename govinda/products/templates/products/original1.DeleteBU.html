@@ -1,0 +1,85 @@
+{% include './MenuList.html' with menu="bu" %}
+
+{% block content %}
+      
+<div class="col-sm-9"> 
+  <h3>Delete Business Unit</h3>
+{% if perror %}
+    <div class="alert alert-danger">
+                    <strong>Error!</strong> {{ perror }}
+                </div>
+ {% endif %}     
+ 
+ 
+{% if psuccess %}
+<div class="alert alert-success">
+            <strong>Success!</strong> {{ psuccess }}
+</div>
+{% endif %}
+ <form class="form-horizontal" action="{% url 'delete_bu' %}" method="POST">
+      {% csrf_token %}
+    <div class="form-group">
+    <label class="control-label col-sm-2" >Enter Business Unit Name *:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" id="del_bu" name="del_bu" placeholder="Enter Business Unit Name" {% if not dbu %} required="required" {% endif %}>
+    </div>        
+  </div>
+  
+   <div class="form-group">        
+  <div class="col-sm-offset-2 col-sm-10">
+  
+        <button type="submit" class="btn btn-primary"  {% if dbu %} disabled {% endif %}>Submit</button>
+    
+      </div>
+</div>
+
+</form>
+
+<h3>Business Unit Details</h3>
+  <h3> </h3>
+
+  <form class="form-horizontal" action="{% url 'delete_bu' %}" method="POST">
+    {% csrf_token %}
+
+    <div class="form-group">
+      <div class="col-xs-6">
+          <input type="hidden" class="form-control input-default" value="{{ dbu.name }}" id="bu_name" name="bu_name" >
+      </div>
+
+      </div>
+
+<div class="form-group">
+  <label class="control-label col-sm-2" >Business Unit Name *:</label>
+  <div class="col-xs-6">
+      <label class="control-label" >{{ dbu.name }}</label>
+  </div>
+</div>      
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Description:</label>
+    <div class="col-xs-6">
+        <label class="control-label" >{{ dbu.desc }}</label>
+    </div>
+  </div>
+
+  
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Date Added :</label>
+    <div class="col-xs-6">
+      <label class="control-label" >{{ dbu.date }}</label>
+    </div>
+  </div>
+
+  <div class="form-group">        
+    <div class="col-sm-offset-2 col-sm-10">
+    <button type="submit" class="btn btn-primary" {% if not dbu %} disabled {% endif %}>Delete</button>
+  
+    </div>
+  </div>
+  
+</form>
+  </div>
+
+{% endblock %}
+
+

@@ -1,0 +1,109 @@
+{% include './MenuList.html' with menu="gi" %}
+
+{% block content %}
+     
+ <div class="col-sm-offset-7">
+
+
+</div>
+
+
+<div class="col-xs-5">
+  <br>
+  <br>
+  
+         
+<div class="container horizontal-scrollable"> 
+  <h3>List Inventory Current status</h3>
+  <br>
+        <div class="row text-center"> 
+  
+<hr> 
+<br><br><br>
+
+
+
+
+  <table class="table table-bordered table-responsive table-striped">
+  <thead>
+    <tr>
+      <th>Item code</th>
+      <th>Item name</th>     
+      <th>Unit</th> 
+      <th>BU </th>
+      <th>Inventory Group</th>        
+      <th>Available Quantity</th>
+      <th>Price</th>
+      <th>cGST %</th>
+      <th>sGST %</th>
+      <th>Date</th>
+      <th>Exp Date</th>
+    </tr>
+  </thead>
+  {% if qs %}
+  <tbody>
+        {% for item in qs %}
+   <tr>
+   <td>{{ item.item_code}} </td>
+    <td>{{ item.name}} </td>
+    <td>{{ item.unit }}</td>     
+    <td>{{ item.bu.name}} </td>
+    <td>{{ item.group.name}} </td>       
+    <td>{{ item.available_quantity}} </td>
+    <td>{{ item.price}} </td>
+    <td>{{ item.cgst}} </td>
+    <td>{{ item.sgst}} </td>
+    <td>{{ item.date}} </td>
+    <td>{{ item.exp_date}} </td>
+  </tr>
+        {% endfor %}    
+  </tbody>
+  
+  {% endif %}
+  
+  </table>
+  
+  </div> 
+  
+  <br><br><br><br>
+  
+  </div>
+        
+
+    </div>
+
+
+<br><br><br><br>
+
+
+
+    </div>
+   
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $("#bu").change(function () {
+      var url = $("#inventory").attr("data-groups-url");  // get the url of the `load_cities` view
+      var bu = $(this).val();  // get the selected country ID from the HTML input
+
+      $.ajax({                       // initialize an AJAX request
+        url: url,                    // set the url of the request (= localhost:8000/hr/ajax/load-cities/)
+        data: {
+          'bu': bu       // add the country id to the GET parameters
+        },
+        success: function (data) {   // `data` is the return of the `load_cities` view function
+          $("#item_group").html(data);  // replace the contents of the city input with the data that came from the server
+          $("#item_group").append('<option>'+'-----'+'</option>');
+
+         
+        }
+      });
+
+    });
+  </script>
+
+{% endblock %}
+
+

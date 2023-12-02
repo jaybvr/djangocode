@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="navi.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+   </head>
+
+   {% load static %}
+   <!--<body id="bg", style="background-image: url('{% static "Hari.jpg" %}');">-->
+
+
+  <div style="text-align:center;color:#00008B;">
+        <i><h1>Hare Krishna</h1></i>
+      </div>
+                 
+ 
+ {% if not menu == 'po' %}
+  <nav class="navbar navbar-defult">
+  <div class="container-fluid">
+       <ul class="nav navbar-nav">
+            <li class="active"><a href="{% url 'list_main' %}"><span class="glyphicon glyphicon-home"></span></a></li>
+          </ul>
+          
+          
+<ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Logged in as <span class="glyphicon glyphicon-user"></span>{{ request.user }}</a></li>
+      <li><a href="{% url 'logout_user' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+   
+ <div class="btn-group-vertical col-md-2">
+  {% if user.get_username == "admin" %}
+  <a type="button" class="btn {% if menu == 'bu' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'list_bu' %}"><span class="glyphicon glyphicon-blackboard"></span>  Business Unit</a>
+  <a type="button" class="btn {% if menu == 'lg' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'list_groups' %}"><span class="glyphicon glyphicon-blackboard"></span>  Groups</a>
+  <a type="button" class="btn {% if menu == 'gi' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'get_inventory' %}"><span class="glyphicon glyphicon-blackboard"></span>  Inventory Current Status</a>
+
+  {% endif %}  
+
+  <a type="button" class="btn {% if menu == 'li' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'list_inventory' %}"><span class="glyphicon glyphicon-camera"></span>  Inventory Items </a>
+   <a type="button" class="btn {% if menu == 'ls' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'update_cart' %}"> <span class="glyphicon glyphicon-th-list"></span>  Sales</a>
+   <a type="button" class="btn {% if menu == 'co' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'cart_checkout' %}"> <span class="glyphicon glyphicon-th-list"></span>  Check Out</a>
+   <a type="button" class="btn {% if menu == 're' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'gen_report' %}"> <span class="glyphicon glyphicon-th-list"></span>  Reports</a>
+   <a type="button" class="btn {% if menu == 'la' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'list_alerts' %}"> <span class="glyphicon glyphicon-th-list"></span>  Alerts</a>
+   <a type="button" class="btn {% if menu == 'sr' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'gen_summary' %}"> <span class="glyphicon glyphicon-th-list"></span>  Summary Report</a>
+
+   <a type="button" class="btn {% if menu == 'lc' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'list_customers' %}"> <span class="glyphicon glyphicon-th-list"></span>  Customers</a>
+   <a type="button" class="btn {% if menu == 'lo' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'list_orders' %}"> <span class="glyphicon glyphicon-th-list"></span>  List Orders</a>
+   <a type="button" class="btn {% if menu == 'ri' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'return_items' %}"> <span class="glyphicon glyphicon-th-list"></span>  Return of Items</a>
+
+   <a type="button" class="btn {% if menu == 'loi' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'list_order_items' %}"> <span class="glyphicon glyphicon-th-list"></span>  List Order Items</a>
+   <a type="button" class="btn {% if menu == 'ii' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'import_items' %}"> <span class="glyphicon glyphicon-th-list"></span>  Import Items</a>
+
+
+  
+   {% if user.get_username == "admin" %}
+        
+  {% endif %}  
+  {% endif %}
+</div>
+</html>

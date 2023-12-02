@@ -1,0 +1,250 @@
+{% include './MenuList.html' with menu="co" %}
+
+{% block content %}
+<div class="col-sm-offset-7">
+  <form class="form-horizontal" action="{% url 'generatePDF' %}" method="POST">
+    {% csrf_token %}
+    <div class="col-sm-offset-7">
+
+    <button type="submit" class="btn btn-primary">Print</button>
+    <br><br>
+    </div>
+
+  <input type="hidden" class="form-control input-default" id="o_id" name="o_id" value= "{{ order.order_id }}" >
+
+  </form>
+  </div>
+
+<div class="col-sm-9"> 
+
+
+<form class="form-horizontal" >
+
+
+    <div class="container horizontal-scrollable"> 
+      <div class="row text-center"> 
+  
+        <table class="table table-bordered table-responsive table-striped">
+          <thead>
+            <tr > <th colspan="6" style="text-align: left; padding-top: 3px;"><h3>Order Details</h3></th></tr>
+
+            <tr>
+              <th>Order ID</th>
+              <th>Order Status</th>              
+              <th>Order Date</th>
+              <th>Order Item Price</th>
+              <th>GST </th>
+              <th>Order Total</th>
+             
+
+  
+            </tr>
+          </thead>
+          <tbody>
+           
+                
+           <tr class="edit_order">
+            <td>{{ order.order_id }} </td>
+            <td>{{ order.order_status }} </td>            
+            <td>
+              {{ order.order_date }}
+            </td>
+            <td>{{ order.item_price }} </td>
+            <td>{{ order.tax }} </td>
+            <td>{{ order.order_total }} </td>
+            
+          </tr>
+         
+  
+          </tbody>
+        </table>
+        
+  
+  
+  
+        <br>
+       
+    
+        </div></div>
+
+
+
+
+        <div class="container horizontal-scrollable"> 
+          <div class="row text-center"> 
+    
+        <table class="table table-bordered table-responsive table-striped">
+          <thead>
+            <tr> <th colspan="5" style="text-align: left;  padding-top: 3px;"><h3>Payment Details</h3></th></tr>
+
+            <tr>
+              
+              <th>Paid by Cash</th>
+              <th>Paid online</th>
+              <th>Transaction ID</th>
+              <th>Gift</th>
+              <th>Damage</th>
+
+  
+            </tr>
+          </thead>
+          <tbody>
+           
+                
+           <tr class="edit_order">
+           
+            <td>{{ order.cash }} </td>
+            <td>{{ order.online }} </td>
+            <td>{{order.transaction_id}}</td>
+            {% if order.gift %}
+            <td> Yes</td>
+            {% else %}
+            <td>No</td>
+            {% endif %}
+            {% if order.damage %}
+            <td> Yes</td>
+            {% else %}
+            <td>No</td>
+            {% endif %}
+
+          </tr>
+         
+  
+          </tbody>
+        </table>
+          </div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</form>
+  
+
+    <form class="form-horizontal" >
+
+  
+
+
+
+  <div class="container horizontal-scrollable"> 
+    <div class="row text-center"> 
+
+  <table class="table table-bordered table-responsive table-striped">
+    <thead>
+      <tr> <th colspan="4" style="text-align: left;  padding-top: 3px;"><h3>Customer Details</h3></th></tr>
+
+      <tr>
+        
+        <th>Customer Name</th>
+        <th>Customer Mobile</th>
+        <th>Customer Mail </th>
+        <th>Customer Address</th>
+
+      </tr>
+    </thead>
+    <tbody>
+     
+          
+     <tr class="edit_order">
+     
+      <td>{{  cust.customer_name }} </td>
+      <td>{{ cust.customer_mobile }} </td>
+      <td>{{cust.customer_mailid}}</td>
+      <td>{{ cust.customer_address }}</td>
+    </tr>
+   
+
+    </tbody>
+  </table>
+    </div></div>
+
+
+</form>
+
+
+
+  <div class="container horizontal-scrollable"> 
+    <div class="row text-center"> 
+
+      <table class="table table-bordered table-responsive table-striped">
+        <thead>
+          <tr> <th colspan="7" style="text-align: left;  padding-top: 3px;"><h3>Items</h3></th></tr>
+
+          <tr>
+            <th>Item code</th>
+            <th>Item name</th>        
+            <th>Business Unit</th>
+            <th>Inventory Group</th>      
+            <th>Order Quantity</th>
+            <th>Price</th>
+            <th>Order Price</th>
+      
+
+          </tr>
+        </thead>
+        <tbody>
+          {% if qs %}
+
+              {% for item in qs %}
+              
+         <tr class="edit_order">
+          <td>{{ item.item_code}} </td>
+          <td>{{ item.item_name}} </td>    
+          <td>{{ item.bu}} </td>
+          <td>{{ item.group}} </td>
+        
+          <td>
+            {{ item.order_quantity}}
+          </td>
+          <td>{{ item.item_price}} </td>
+          <td>{{ item.order_price }} </td>
+         
+        </tr>
+              {% endfor %}    
+        <tr>
+          <td></td>
+          <td></td>
+
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><h3>Gross Total :</h3></td>
+          <td><h1>{{ total }}</h1></td>
+         
+
+
+        </tr>
+        {% endif %}
+
+        </tbody>
+      </table>
+      
+
+
+
+      <br><br><br>
+
+  
+
+  
+      </div></div>
+
+
+
+
+-->
+</div>
+      <br><br><br><br>
+
+      {% endblock %}

@@ -1,0 +1,202 @@
+{% include './MenuList.html' with menu="re" %}
+
+{% block content %}
+
+
+<div class="col-sm-9"> 
+  
+  
+  {% if perror %}
+  <div class="alert alert-danger">
+                  <strong>Error!</strong> {{ perror }}
+              </div>
+{% endif %}     
+
+{% if psuccess %}
+<div class="alert alert-success">
+            <strong>Success!</strong> {{ psuccess }}
+</div>
+{% endif %}
+
+<form class="form-horizontal" action="{% url 'generatePDF1' %}" method="GET">
+  {% csrf_token %}
+  <div class="col-sm-offset-7">
+
+  <button type="submit" class="btn btn-primary">Print</button>
+
+  <br><br>
+  </div>
+
+
+</form>
+
+
+  <form class="form-horizontal" action="{% url 'gen_report' %}" method="POST">
+    {% csrf_token %}
+
+
+    <h3>Generate Report for:</h3>
+
+    <div class="form-group">
+        <label class="control-label col-sm-3" >Time Frame:</label>
+        <div class="col-xs-6">
+            <select class="form-control" name="o_select" required="required">
+                <option selected></option>
+                <option >Today</option>
+                <option >Specific Date</option>
+                <option >Last 7 Days</option>
+                <option >Last 15 Days</option>
+                <option >Date Range</option>
+            
+            
+            </select>
+        </div>        
+      </div>
+
+<div class="form-group">
+    <label class="control-label col-sm-3" >Order Date From:</label>
+    <div class="col-xs-6">
+      <input type="date" class="form-control input-default" id="d_from" name="d_from" placeholder="Enter Order Date from " >
+    </div>        
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-sm-3" >Order Date To:</label>
+        <div class="col-xs-6">
+          <input type="date" class="form-control input-default" id="d_to" name="d_to" placeholder="Enter Order Date to " >
+        </div>        
+        </div>
+
+        <div class="col-sm-offset-7">
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <br><br>
+            
+            </div>
+
+  </form>
+  
+
+
+
+
+
+
+<form class="form-horizontal" >
+
+
+    <div class="container horizontal-scrollable"> 
+      <div class="row text-center"> 
+         <table class="table table-bordered table-responsive table-striped">
+            
+            <th colspan="2" >
+              <h1>Orders  With Items </h1> </th>
+            <tr>
+              <th><h3>{% if total_tax %}Total Tax     {{total_tax}}  {% endif %} </h3></th>
+              <th><h3>{% if total_order %} Total Order    {{total_order}}  {% endif %}</h3></th>
+                    
+                  </tr>
+            
+              </table>
+        
+
+        {% if o_dict %}
+            {% for order, item in o_dict.items %}
+        <table class="table table-bordered table-responsive table-striped">
+          <thead>
+            
+            <tr>
+              <th>Order ID</th>
+              <th>Order Date</th>
+              <th>Order Item Price</th>
+              <th>GST </th>
+              <th>Order Total</th>
+              <th>Paid by Cash</th>
+              <th>Paid online</th>
+              <th>Transaction ID</th>
+
+  
+            </tr>
+          </thead>
+          <tbody>
+                
+           <tr>
+            <td>{{ order.order_id }} </td>
+            <td>
+              {{ order.order_date }}
+            </td>
+            <td>{{ order.item_price }} </td>
+            <td>{{ order.tax }} </td>
+            <td>{{ order.order_total }} </td>
+            <td>{{ order.cash }} </td>
+            <td>{{ order.online }} </td>
+            <td>{{order.transaction_id}}</td>
+
+          </tr>
+  
+          <thead>
+            <tr>
+              <th>Item code</th>
+              <th>Item name</th>   
+              <th>Inventory Group</th>
+              <th colspan="2">Order Quantity</th>
+              <th colspan="2">Price per Item</th>
+              <th>Order Price</th>
+        
+  
+            </tr>
+          </thead>
+          <tbody>
+              {% for i in item %}
+  
+              
+           <tr>
+            <td>{{ i.item_code}} </td>
+            <td>{{ i.item_name}} </td>   
+            <td>{{ i.group}} </td>
+           
+            <td colspan="2">
+              {{ i.order_quantity}}
+            </td>
+            <td colspan="2">{{ i.item_price}} </td>
+            <td>{{ i.order_price }} </td>
+           
+          </tr>
+                {% endfor %}    
+
+
+
+
+
+          </tbody>
+        </table>
+        
+  <br><br><br><br>
+  
+        {% endfor %}   
+        
+        <br>
+        {% endif %}
+  
+        <br>
+       
+    
+        </div></div>
+
+</form>
+
+
+
+
+  
+
+  
+      </div>
+
+
+
+
+
+
+
+      {% endblock %}

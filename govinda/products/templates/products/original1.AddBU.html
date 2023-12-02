@@ -1,0 +1,59 @@
+{% include './MenuList.html' with menu="bu" %}
+
+{% block content %}
+      
+<div class="col-sm-9"> 
+      <h3>Add Groups</h3>
+      
+     {% if perror %}
+        <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ perror }}
+                    </div>
+     {% endif %}
+
+     {% if psuccess %}
+        <div class="alert alert-success">
+                        <strong>Success!</strong> {{ psuccess }}
+                    </div>
+     {% endif %}
+
+     <form class="form-horizontal" action="{% url 'add_bu' %}" method="POST">
+          {% csrf_token %}
+          
+  <div class="form-group">
+      <label class="control-label col-sm-2" >Business Unit Name * :</label>
+      <div class="col-xs-6">
+        <input type="text" class="form-control input-default" id="grp_name" name="bu_name" required="required" placeholder="Enter Business Unit Name ">
+      </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Description :</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" id="grp_desc" name="bu_desc" required="required" placeholder="Enter BU Description ">
+    </div>
+</div>
+
+<div class="form-group">
+  <label class="control-label col-sm-2" >Date Added :</label>
+  <div class="col-xs-6">
+    <label class="control-label" >{{ now }}</label>
+  </div>
+</div>
+
+
+
+  <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">ADD</button>
+          </div>
+  </div>
+    
+  </form>
+  <br><br><br><br>
+  </div>
+
+
+{% endblock %}
+
+

@@ -1,0 +1,99 @@
+{% include './MenuList.html' with menu="lc" %}
+
+{% block content %}
+
+<div class="col-sm-9"> 
+  <h3>Edit Customer details</h3>
+{% if perror %}
+    <div class="alert alert-danger">
+                    <strong>Error!</strong> {{ perror }}
+                </div>
+ {% endif %}     
+ 
+{% if psuccess %}
+  <div class="alert alert-success">
+              <strong>Success!</strong> {{ psuccess }}
+  </div>
+{% endif %}
+
+ 
+ <form class="form-horizontal" action="{% url 'edit_customer' %}" method="POST">
+      {% csrf_token %}
+    <div class="form-group">
+    <label class="control-label col-sm-2" >Enter Customer mobile no *:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" id="gr_id" name="edit_cust" placeholder="Enter Customer mobile no " {% if not ecust %} required="required" {% endif %}>
+    </div>        
+  </div>
+  
+   <div class="form-group">        
+  <div class="col-sm-offset-2 col-sm-10">
+  
+        <button type="submit" class="btn btn-primary"  {% if ecust %} disabled {% endif %}>Submit</button>
+    
+      </div>
+</div>
+
+</form>
+
+<h3>Business Unit Details</h3>
+  <h3> </h3>
+
+  <form class="form-horizontal" action="{% url 'edit_customer' %}" method="POST">
+    {% csrf_token %}
+
+    <div class="form-group">
+      <div class="col-xs-6">
+          <input type="hidden" class="form-control input-default" value="{{ ecust.customer_mobile }}" id="ecust" name="ecust" >
+      </div>
+
+      </div>
+
+<div class="form-group">
+  <label class="control-label col-sm-2" >Customer Mobile *:</label>
+  <div class="col-xs-6">
+      <label class="control-label" >{{ ecust.customer_mobile }}</label>
+  </div>
+</div>      
+
+
+  
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Customer Name :</label>
+    <div class="col-xs-6">
+        <input type="text" class="form-control input-default" value="{{ ecust.customer_name }}" id="ecust_name" name="ecust_name" placeholder="Enter Customer Name">
+  
+      </div>
+  </div>
+  
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Customer Mail ID :</label>
+    <div class="col-xs-6">
+        <input type="text" class="form-control input-default" value="{{ ecust.customer_mailid }}" id="ecust_mail" name="ecust_mail" placeholder="Enter Customer Mail ID">
+  
+      </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Customer Address :</label>
+    <div class="col-xs-6">
+        <input type="text" class="form-control input-default" value="{{ ecust.customer_address }}" id="ecust_addr" name="ecust_addr" placeholder="Enter Customer Address">
+  
+      </div>
+  </div>
+  
+  
+  <div class="form-group">        
+    <div class="col-sm-offset-2 col-sm-10">
+    <button type="submit" class="btn btn-primary" {% if not ecust %}  disabled  {% endif %}>Edit</button>
+  
+    </div>
+  </div>
+  
+</form>
+  </div>
+
+{% endblock %}
+
+
