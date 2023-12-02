@@ -1,0 +1,167 @@
+{% include './base_layout.html' with menu="lf" %}
+
+{% block content %}
+
+  
+<div class="col-sm-9"> 
+      <h3>Edit Fabric</h3>
+      <h3> </h3>
+      {% if error %}
+        <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ error }}
+                    </div>
+     {% endif %}
+     
+     <form class="form-horizontal" action="{% url 'edit_fabric' %}" method="POST">
+          {% csrf_token %}
+        <div class="form-group">
+        <label class="control-label col-sm-2" >Enter Fabric IP*:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" id="edit_fabric_id" name="efabric_ip" placeholder="Enter Fabric IP" {% if not efabric %} required="required"  {% endif %}>
+        </div>        
+      </div>
+      
+       <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+       
+            <button type="submit" class="btn btn-primary" {% if efabric %} disabled  {% endif %}>Submit</button>
+        
+        
+          </div>
+  </div>
+  
+  </form>
+  
+      <h3>Fabric Details</h3>
+      <h3> </h3>
+     
+     <form class="form-horizontal" action="{% url 'edit_fabric' %}" method="POST">
+        {% csrf_token %}
+        
+<div class="form-group">
+            <div class="col-xs-6">
+                <input type="hidden" class="form-control input-default" value="{{ efabric.fabric_ip }}" id="fabric_ip" name="fabric_ip" placeholder="Enter Fabric IP">
+            </div>
+      </div>
+      
+      <div class="form-group">
+            <label class="control-label col-sm-2" >Fabric IP:</label>
+            <div class="col-xs-6">
+                <label class="control-label" >{{ efabric.fabric_ip }}</label>
+            </div>
+      </div>
+     
+     
+     
+      <div class="form-group">
+          <label class="control-label col-sm-2" >Serial:</label>
+          <div class="col-xs-6">
+            <input type="text" class="form-control input-default" value="{{ efabric.fabric_serial }}" id="fabric_serial" name="fabric_serial" placeholder="Enter Fabric Serial">
+          </div>
+      </div>
+     
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Location:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" value="{{ efabric.fabric_location }}" id="fabric_location" name="fabric_location" placeholder="Enter Fabric Location">
+        </div>
+    </div>
+    
+    
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Fabric Credentials:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ efabric.fabric_credentials }}"  id="fabric_credentials" name="fabric_credentials" placeholder="Enter Fabric Credentials">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Brocade / Cisco:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ efabric.fabric_type }}" id="fabric_type" name="fabric_type" placeholder="Enter Fabric Type">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Primary / Secondary:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ efabric.fabric_primary }}" id="fabric_primary" name="fabric_primary" placeholder="Enter Fabric Primary">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Fabric Port:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ efabric.fabric_primary_port }}" id="fabric_port" name="fabric_port" placeholder="Enter Fabric Port">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >VSAN ID:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ efabric.fabric_vsan_id }}" id="fabric_vsan_id" name="fabric_vsan_id" placeholder="Enter Fabric VSAN ID">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" >LAB:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ efabric.fabric_lab }}" id="fabric_lab" name="fabric_lab" placeholder="Enter the LAB where this fabric is present" onkeyup="this.value = this.value.toUpperCase();">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Connected Storwises:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ efabric.fabric_storwise }}" id="fabric_storwise" name="fabric_storwise" placeholder="Enter Storwise IP's which are connected to this fabric">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Connected DS8K:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ efabric.fabric_ds8k }}" id="fabric_ds8k" name="fabric_ds8k" placeholder="Enter DS8K IP's which are connected to this fabric">
+    </div>
+  </div>
+
+ <div class="form-group">
+    <label class="control-label col-sm-2" >Connected EMC VMAX:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ efabric.fabric_emc_vmax }}" id="fabric_vmax" name="fabric_vmax" placeholder="Enter VMAX IP's which are connected to this fabric">
+    </div>
+  </div>
+   <div class="form-group">
+    <label class="control-label col-sm-2" >Connected EMC VNX:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ efabric.fabric_emc_vnx }}" id="fabric_vnx" name="fabric_vnx" placeholder="Enter VNX Ip's which are connected to this fabric">
+    </div>
+  </div>
+   <div class="form-group">
+    <label class="control-label col-sm-2" >Connected Hitachi:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ efabric.fabric_hitachi }}" id="fabric_hitachi" name="fabric_hitachi"  placeholder="Enter HITACHI Ip's which are connected to this fabric">
+    </div>
+  </div>
+   <div class="form-group">
+    <label class="control-label col-sm-2" >Connected XIV:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ efabric.fabric_xiv }}" id="fabric_xiv" name="fabric_xiv" placeholder="Enter XIV Ip's which are connected to this fabric">
+    </div>
+  </div>
+  
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+       
+       <button type="submit" class="btn btn-primary" {% if not efabric %} disabled {% endif %}>Update</button>
+        
+        </div>
+  </div>
+    
+  </form>
+    <br><br><br><br>
+
+  </div>
+
+{% endblock %}
+
+
+

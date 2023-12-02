@@ -1,0 +1,53 @@
+{% include './base_layout.html' with menu="sl" %}
+
+
+{% block content %}
+
+<div class="col-sm-8">
+{% if user.get_username != "user" %}
+      
+   <div class="col-sm-offset-6">
+           <a type="button" class="btn btn-primary" href="{% url 'add_supported_level' %}">Add Supp Level</a>
+           <a type="button" class="btn btn-primary" href="{% url 'edit_supported_level' %}">Edit Supp Level</a>
+         
+      {% if user.get_username != "editor" %}
+      
+           <a type="button" class="btn btn-primary" href="{% url 'delete_supported_level' %}">Delete Supp Level</a>
+      
+      {% endif %}
+           
+    </div>
+    
+      {% endif %}
+
+      
+            <h3>List Supported Levels</h3>
+           <br>
+           <b>Knowledge Center : </b> <a href="https://www.ibm.com/support/knowledgecenter">https://www.ibm.com/support/knowledgecenter</a>
+<table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+          
+                <th>Release</th>
+                <th>Comments</th>
+                
+                </tr>
+          </thead>
+ 
+          <tbody>
+          {% for sl in supp_level %}
+          <tr>
+             <td><a type="button" class="btn btn-secondary" href="{% url 'detail_list_supported_levels' sl.pvc_release  %}">{{ sl.pvc_release }}</a></td>
+             
+             <td><textarea class="form-control" rows="10" id="supportedlevels" name="supp_level">{{ sl.comments }}</textarea></td>
+          </tr>
+          {% endfor %}
+          </tbody></table>
+       <br><br><br><br>
+
+         </div>
+      
+{% endblock %}
+
+
+

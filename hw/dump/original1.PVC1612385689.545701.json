@@ -1,0 +1,5865 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$216000$p8XyXaBmrCys$MXV7GK1PvSzEMrknGP0DRE5DGybwjoKzHOoMXDvbGoY=",
+    "last_login": "2021-02-04T00:27:08.124",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-11-07T20:02:41.748",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$216000$kXekjzjvHgxk$xkQf9Owb0wOK3oZKqQTMX9Pf9KeOUvrqk2vCjZYm0zw=",
+    "last_login": "2020-11-09T18:38:02.646",
+    "is_superuser": false,
+    "username": "editor",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-11-07T20:05:21.856",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$216000$lLwjUHYfJLzW$aTugSeHe6a+3D8g5DDyBEK/6Vmxrovf570ImejvolM4=",
+    "last_login": "2021-02-03T14:29:43.303",
+    "is_superuser": false,
+    "username": "user",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2020-11-07T20:05:53.352",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2y2iijwww1hzim4rabsm0zf9opaj47c9",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnrT2xDSZ8zROvdFQ4gW4qTCnF3iJQC2jcz76Um3NYybV2WaWZ1UUadfreM9JC6A75jvTVNra7LnPWu6IN2PTaW5_Vw_w4K9vKtHYgDg2cmZkGAYC0kMTzgYG0gw96EkHLwlkk8OvHATDFCiuxMIvX-AN0oN7A:1l6J2l:1ePXX_DsISPm-L-U7aS2tftzclzmvQ34bHdjWkMjrPk",
+    "expire_date": "2021-02-15T01:39:59.147"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "4nxtf7ld3w0mmnn0qyidefipiqdjba0h",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8WhhcuvcbyMwAUjU0Ke3K-O_apAvd3nPOfYmI21rj1vMSpyTOworT70bIj9x2kO7YbrPkua3LRHJX5EG7vM4pPy-H-3dQsddvDSU4SKwHhz57B5m8d6aALZqMKlgSEA-2jAwQOCEyOQucSYVRaaPF-wP5ITh4:1l7E0l:TBoxedmqPoZ3H_INd4uEYYlXJ1mpuuPA6qzXShQSH-o",
+    "expire_date": "2021-02-17T14:29:43.316"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6vgmvoxl8f9hd2eumyk7qd2w6i7ygnlp",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8WhhcuvcbyMwAUjU0Ke3K-O_apAvd3nPOfYmI21rj1vMSpyTOworT70bIj9x2kO7YbrPkua3LRHJX5EG7vM4pPy-H-3dQsddvDSU4SKwHhz57B5m8d6aALZqMKlgSEA-2jAwQOCEyOQucSYVRaaPF-wP5ITh4:1l7CjL:PyvAXLW3HkOpyXpwb8NN9FLfmYx7KagRwT_PS_8_6yc",
+    "expire_date": "2021-02-17T13:07:39.853"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7ak0mr6ou7fghosmecft732me59fqe8o",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnrT2xDSZ8zROvdFQ4gW4qTCnF3iJQC2jcz76Um3NYybV2WaWZ1UUadfreM9JC6A75jvTVNra7LnPWu6IN2PTaW5_Vw_w4K9vKtHYgDg2cmZkGAYC0kMTzgYG0gw96EkHLwlkk8OvHATDFCiuxMIvX-AN0oN7A:1kcNRM:Db0OcZT-n1WfHESxGOh9BGDRf1U5AR5_hDtIxyPtnLU",
+    "expire_date": "2020-11-24T12:17:40.991"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8og317gj5c34rft1g6wo4e31dfjoe1bf",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnrT2xDSZ8zROvdFQ4gW4qTCnF3iJQC2jcz76Um3NYybV2WaWZ1UUadfreM9JC6A75jvTVNra7LnPWu6IN2PTaW5_Vw_w4K9vKtHYgDg2cmZkGAYC0kMTzgYG0gw96EkHLwlkk8OvHATDFCiuxMIvX-AN0oN7A:1kcLDB:Ld1WscVdU7pruwS9yi_tHZgpGnoJvRyAcCKDeb3wwJQ",
+    "expire_date": "2020-11-24T09:54:53.813"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "9jnpqd1952xeb9wtusbvdzfarrkeh464",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnrT2xDSZ8zROvdFQ4gW4qTCnF3iJQC2jcz76Um3NYybV2WaWZ1UUadfreM9JC6A75jvTVNra7LnPWu6IN2PTaW5_Vw_w4K9vKtHYgDg2cmZkGAYC0kMTzgYG0gw96EkHLwlkk8OvHATDFCiuxMIvX-AN0oN7A:1kcLUf:K7F_zygbgxvNZyF3eNWQBzQtyDGubtRhbvkncCg-SJY",
+    "expire_date": "2020-11-24T10:12:57.023"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "9s1nts7uz05s1qe9vwpep5if5xsxoy8n",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8WhhcuvcbyMwAUjU0Ke3K-O_apAvd3nPOfYmI21rj1vMSpyTOworT70bIj9x2kO7YbrPkua3LRHJX5EG7vM4pPy-H-3dQsddvDSU4SKwHhz57B5m8d6aALZqMKlgSEA-2jAwQOCEyOQucSYVRaaPF-wP5ITh4:1l7Dzf:o_I6NFP2Zi4gXArWYz7XsewYuG8s9ajHUVVg2_J8YqY",
+    "expire_date": "2021-02-17T14:28:35.886"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "addzkkpvjvd4f8t6nm7qn20pweeuhxl4",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnrT2xDSZ8zROvdFQ4gW4qTCnF3iJQC2jcz76Um3NYybV2WaWZ1UUadfreM9JC6A75jvTVNra7LnPWu6IN2PTaW5_Vw_w4K9vKtHYgDg2cmZkGAYC0kMTzgYG0gw96EkHLwlkk8OvHATDFCiuxMIvX-AN0oN7A:1l7EE0:DposMq8H8sCDRtMo2mx-noxcmETam9xoK2zbO6prXAk",
+    "expire_date": "2021-02-17T14:43:24.928"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "coj8nkzpggzb3fcmyrxl1ned73wv0vgv",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnrT2xDSZ8zROvdFQ4gW4qTCnF3iJQC2jcz76Um3NYybV2WaWZ1UUadfreM9JC6A75jvTVNra7LnPWu6IN2PTaW5_Vw_w4K9vKtHYgDg2cmZkGAYC0kMTzgYG0gw96EkHLwlkk8OvHATDFCiuxMIvX-AN0oN7A:1kblxa:bOv-wN9rc9dVOmafJlOYp99K7kQ3KK-en-UwCM0y3pk",
+    "expire_date": "2020-11-22T20:16:26.441"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "d8v1rmr53r9xukqaoe44rpdrbu7hmbl2",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8WhhcuvcbyMwAUjU0Ke3K-O_apAvd3nPOfYmI21rj1vMSpyTOworT70bIj9x2kO7YbrPkua3LRHJX5EG7vM4pPy-H-3dQsddvDSU4SKwHhz57B5m8d6aALZqMKlgSEA-2jAwQOCEyOQucSYVRaaPF-wP5ITh4:1l7BYX:XR_1MA51zFuU7ECQujnfuZ5nOwZxXPLT4FH5f1gW73A",
+    "expire_date": "2021-02-17T11:52:25.096"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "l839v901dzfe7jwc7upmkrnsp31xpf8r",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8WhhcuvcbyMwAUjU0Ke3K-O_apAvd3nPOfYmI21rj1vMSpyTOworT70bIj9x2kO7YbrPkua3LRHJX5EG7vM4pPy-H-3dQsddvDSU4SKwHhz57B5m8d6aALZqMKlgSEA-2jAwQOCEyOQucSYVRaaPF-wP5ITh4:1l7BYY:4KeClu-ss216nkEILplyblSdkOUyzM7jXiOTATzcbww",
+    "expire_date": "2021-02-17T11:52:26.808"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "lvtvvrh4xq4sa15wfggrxkk2p6sybejt",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8WhhcuvcbyMwAUjU0Ke3K-O_apAvd3nPOfYmI21rj1vMSpyTOworT70bIj9x2kO7YbrPkua3LRHJX5EG7vM4pPy-H-3dQsddvDSU4SKwHhz57B5m8d6aALZqMKlgSEA-2jAwQOCEyOQucSYVRaaPF-wP5ITh4:1l7C19:NWIufJxtxfPyjPa0O36KfNWdqSrzoYBKGWCi1zIt3_E",
+    "expire_date": "2021-02-17T12:21:59.164"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "nxyyaxg903f3dcuzzgnbis4xr8bldbnv",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnrT2xDSZ8zROvdFQ4gW4qTCnF3iJQC2jcz76Um3NYybV2WaWZ1UUadfreM9JC6A75jvTVNra7LnPWu6IN2PTaW5_Vw_w4K9vKtHYgDg2cmZkGAYC0kMTzgYG0gw96EkHLwlkk8OvHATDFCiuxMIvX-AN0oN7A:1kd6cw:zBD7XtABRwyeZaPcYRQ3H6aLqozC0CP1W61gWck-z6U",
+    "expire_date": "2020-11-26T12:32:38.222"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "tcy10oe9gg98y0pz6pkfvz2ybpwt2chz",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnrT2xDSZ8zROvdFQ4gW4qTCnF3iJQC2jcz76Um3NYybV2WaWZ1UUadfreM9JC6A75jvTVNra7LnPWu6IN2PTaW5_Vw_w4K9vKtHYgDg2cmZkGAYC0kMTzgYG0gw96EkHLwlkk8OvHATDFCiuxMIvX-AN0oN7A:1l7NKu:cp6NjfgMH2BM52dwefRQge9nG0J80pT_CmHGQX-U1kk",
+    "expire_date": "2021-02-18T00:27:08.141"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "v4kponikewsv5myjnqcz8ryfxx0dgqqw",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnrT2xDSZ8zROvdFQ4gW4qTCnF3iJQC2jcz76Um3NYybV2WaWZ1UUadfreM9JC6A75jvTVNra7LnPWu6IN2PTaW5_Vw_w4K9vKtHYgDg2cmZkGAYC0kMTzgYG0gw96EkHLwlkk8OvHATDFCiuxMIvX-AN0oN7A:1kcLTI:xBHujvBVMg5B7brXwqHwI-p1UCUUo6_Y3dOgUw8wKAw",
+    "expire_date": "2020-11-24T10:11:32.413"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "vlcl6div3n5frnbdzrgudg93n351j4ct",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnrT2xDSZ8zROvdFQ4gW4qTCnF3iJQC2jcz76Um3NYybV2WaWZ1UUadfreM9JC6A75jvTVNra7LnPWu6IN2PTaW5_Vw_w4K9vKtHYgDg2cmZkGAYC0kMTzgYG0gw96EkHLwlkk8OvHATDFCiuxMIvX-AN0oN7A:1kx1WH:uwOO2qeuY8RTQNcbxlCLbPZeXcBADHMaINJUtdsGOnI",
+    "expire_date": "2021-01-20T11:08:05.646"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "z48z0e88xgux6fh8vtwi6pw9a88n483z",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnrT2xDSZ8zROvdFQ4gW4qTCnF3iJQC2jcz76Um3NYybV2WaWZ1UUadfreM9JC6A75jvTVNra7LnPWu6IN2PTaW5_Vw_w4K9vKtHYgDg2cmZkGAYC0kMTzgYG0gw96EkHLwlkk8OvHATDFCiuxMIvX-AN0oN7A:1kcMw2:fHZtHmUhxApsJmFSWtLDWqSjnJytr4UgnfddTq73aZE",
+    "expire_date": "2020-11-24T11:45:18.292"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "z7hcxtjljoq1stn1wnuniqkqxtzyobgr",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnrT2xDSZ8zROvdFQ4gW4qTCnF3iJQC2jcz76Um3NYybV2WaWZ1UUadfreM9JC6A75jvTVNra7LnPWu6IN2PTaW5_Vw_w4K9vKtHYgDg2cmZkGAYC0kMTzgYG0gw96EkHLwlkk8OvHATDFCiuxMIvX-AN0oN7A:1kbcUh:a9Zw_eZ2LTaiSKBBG_Rxet4xIGTTwrB8Al1laig2bbE",
+    "expire_date": "2020-11-22T04:39:59.122"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "zlo20rbfh0cgkcxi7bp7zyso2ccy6xif",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8WhhcuvcbyMwAUjU0Ke3K-O_apAvd3nPOfYmI21rj1vMSpyTOworT70bIj9x2kO7YbrPkua3LRHJX5EG7vM4pPy-H-3dQsddvDSU4SKwHhz57B5m8d6aALZqMKlgSEA-2jAwQOCEyOQucSYVRaaPF-wP5ITh4:1l7BbE:fY2STCHZSk2FzWlXVKFyw6CkLA-8O1-pb13535UfN28",
+    "expire_date": "2021-02-17T11:55:12.221"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.181.192",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8 Open Power",
+    "cec_squad": "Pool",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "2120F8A",
+    "cec_location": "C340F18-U29",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.69.149",
+    "cec_vios1": "9.47.66.185",
+    "cec_vios2": "9.47.66.186",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.181.193",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P7",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21C1B7V_SRIOV",
+    "cec_location": "C340f13 u1",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.79.30",
+    "cec_vios1": "9.47.79.31",
+    "cec_vios2": "9.47.79.32",
+    "cec_proc_memory": "16/128",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.181.88",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "P8_2",
+    "cec_serial": "10D6D9T_SRIOV",
+    "cec_location": "c340F3-u25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.79.30",
+    "cec_vios1": "9.47.79.31",
+    "cec_vios2": "9.47.79.32",
+    "cec_proc_memory": "16/128",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14/9.47.67.15",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.181.91",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "P8_5",
+    "cec_serial": "10D6D7T",
+    "cec_location": "c340F3-u17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.79.33",
+    "cec_vios1": "9.47.79.34",
+    "cec_vios2": "9.47.79.35",
+    "cec_proc_memory": "16/128",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14/9.47.67.15",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.131",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "TechM",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "10C62AW",
+    "cec_location": "c387f7u01",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.70.167",
+    "cec_vios1": "9.47.70.168",
+    "cec_vios2": "9.47.70.169",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.133",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "DevOpsCT",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "10C62AW",
+    "cec_location": "c387f7u01",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.76.53",
+    "cec_vios1": "9.47.76.54",
+    "cec_vios2": "9.47.76.55",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C9-T1",
+    "cec_fabric1": "9.114.181.33",
+    "cec_fabric2": "9.114.181.34",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC: 9.114.181.189",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.159",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21543AA",
+    "cec_location": "C340F20 U37",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.198",
+    "cec_vios1": "9.47.72.199",
+    "cec_vios2": "9.47.72.200",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.161",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "215443A",
+    "cec_location": "C340F20 U39",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.237",
+    "cec_vios1": "9.47.72.238",
+    "cec_vios2": "9.47.72.239",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.163",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "130327X",
+    "cec_location": "C387f7u9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.240",
+    "cec_vios1": "9.47.72.241",
+    "cec_vios2": "9.47.72.242",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.165",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "13032AX",
+    "cec_location": "C387F6U23",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.70.167",
+    "cec_vios1": "9.47.70.168",
+    "cec_vios2": "9.47.70.169",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.167",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "S21483DA",
+    "cec_location": "C340F19-U15",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.68.1",
+    "cec_vios1": "9.47.68.2",
+    "cec_vios2": "9.47.68.3",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C9-T1",
+    "cec_fabric1": "9.114.181.33",
+    "cec_fabric2": "9.114.181.34",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC: 9.114.181.189",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.169",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "S21483EA",
+    "cec_location": "C340F19-U17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.76.53",
+    "cec_vios1": "9.47.76.54",
+    "cec_vios2": "9.47.76.55",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C9-T1",
+    "cec_fabric1": "9.114.181.33",
+    "cec_fabric2": "9.114.181.34",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC: 9.114.181.189",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.171",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21543AA",
+    "cec_location": "C340F20 U37",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.245",
+    "cec_vios1": "9.114.248.177",
+    "cec_vios2": "9.114.248.178",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C12-T1",
+    "cec_fabric1": "9.114.181.184",
+    "cec_fabric2": "9.114.181.185",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.114.181.186",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.173",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "2120F8A",
+    "cec_location": "C340F18-U29",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.68.1",
+    "cec_vios1": "9.47.68.2",
+    "cec_vios2": "9.47.68.3",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C9-T1",
+    "cec_fabric1": "9.114.181.33",
+    "cec_fabric2": "9.114.181.34",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC: 9.114.181.189",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.175",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21C1B7V_SRIOV",
+    "cec_location": "C340f13 u1",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.76.53",
+    "cec_vios1": "9.47.76.54",
+    "cec_vios2": "9.47.76.55",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C9-T1",
+    "cec_fabric1": "9.114.181.33",
+    "cec_fabric2": "9.114.181.34",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC: 9.114.181.189",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.177",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21C1B5V_SRIOV",
+    "cec_location": "C340f13 u5",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.245",
+    "cec_vios1": "9.114.248.177",
+    "cec_vios2": "9.114.248.178",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C12-T1",
+    "cec_fabric1": "9.114.181.184",
+    "cec_fabric2": "9.114.181.185",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.114.181.186",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.181",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "13C740W",
+    "cec_location": "C387F5U17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.79.33",
+    "cec_vios1": "9.47.79.34",
+    "cec_vios2": "9.47.79.35",
+    "cec_proc_memory": "16/128",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.183",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21213CA",
+    "cec_location": "C340f13 u21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.68.1",
+    "cec_vios1": "9.47.68.2",
+    "cec_vios2": "9.47.68.3",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C9-T1",
+    "cec_fabric1": "9.114.181.33",
+    "cec_fabric2": "9.114.181.34",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC: 9.114.181.189",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.185",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "212139A",
+    "cec_location": "C340f13 u25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.76.53",
+    "cec_vios1": "9.47.76.54",
+    "cec_vios2": "9.47.76.55",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C9-T1",
+    "cec_fabric1": "9.114.181.33",
+    "cec_fabric2": "9.114.181.34",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC: 9.114.181.189",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.187",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "212106A",
+    "cec_location": "C340F18-U9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.245",
+    "cec_vios1": "9.114.248.177",
+    "cec_vios2": "9.114.248.178",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C12-T1",
+    "cec_fabric1": "9.114.181.184",
+    "cec_fabric2": "9.114.181.185",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.114.181.186",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.189",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "212109A",
+    "cec_location": "C340F18-U13",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.246",
+    "cec_vios1": "9.114.248.179",
+    "cec_vios2": "9.114.248.180",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C12-T1",
+    "cec_fabric1": "9.114.181.184",
+    "cec_fabric2": "9.114.181.185",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.114.181.186",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.191",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "212104A",
+    "cec_location": "C340F18-U21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.252.191",
+    "cec_vios1": "9.114.252.194",
+    "cec_vios2": "9.114.252.198",
+    "cec_proc_memory": "",
+    "cec_model": "",
+    "cec_network_ports": "",
+    "cec_fabric1": "",
+    "cec_fabric2": "",
+    "cec_pvlan": "",
+    "cec_storages": "",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.20/22",
+  "fields": {
+    "cec_ip_ping": false,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "2120FEA",
+    "cec_location": "C340F18-U25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.10",
+    "cec_vios1": "9.114.252.204",
+    "cec_vios2": "9.114.252.205",
+    "cec_proc_memory": "",
+    "cec_model": "",
+    "cec_network_ports": "",
+    "cec_fabric1": "",
+    "cec_fabric2": "",
+    "cec_pvlan": "",
+    "cec_storages": "",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.214",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P7",
+    "cec_squad": "DevOpsCT",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "13032DX",
+    "cec_location": "C387F6U19",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.79.33",
+    "cec_vios1": "9.47.79.34",
+    "cec_vios2": "9.47.79.35",
+    "cec_proc_memory": "16/128",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.215",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P7",
+    "cec_squad": "DevOpsCT",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "1301AC8",
+    "cec_location": "C387f4u21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.68.1",
+    "cec_vios1": "9.47.68.2",
+    "cec_vios2": "9.47.68.3",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C9-T1",
+    "cec_fabric1": "9.114.181.33",
+    "cec_fabric2": "9.114.181.34",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC: 9.114.181.189",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.45",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "13032AX",
+    "cec_location": "C387F6U23",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.79.30",
+    "cec_vios1": "9.47.79.31",
+    "cec_vios2": "9.47.79.32",
+    "cec_proc_memory": "16/128",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.23.53",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P7",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21C1B6V",
+    "cec_location": "C340f13 u9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.69.149",
+    "cec_vios1": "9.47.66.185",
+    "cec_vios2": "9.47.66.186",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.248.217",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "admin/admin",
+    "cec_type": "P9 ZZ",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "13C740W",
+    "cec_location": "C387F5U17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.250.48",
+    "cec_vios1": "9.114.250.89",
+    "cec_vios2": "9.114.250.124",
+    "cec_proc_memory": "32/4096",
+    "cec_model": "9040-MR9",
+    "cec_network_ports": "C9T1,C4T1",
+    "cec_fabric1": "9.114.254.30",
+    "cec_fabric2": "9.47.70.101",
+    "cec_pvlan": "2227",
+    "cec_storages": "SVC: 9.114.254.104",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.249.201",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "admin/admin",
+    "cec_type": "P9 ZZ",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "c387f5u1-vios.pok.stglabs.ibm.com",
+    "cec_serial": "10C62AW",
+    "cec_location": "c387f7u01",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.252.253",
+    "cec_vios1": "9.114.253.33",
+    "cec_vios2": "9.114.253.38",
+    "cec_proc_memory": "40/4096",
+    "cec_model": "9040-MR9",
+    "cec_network_ports": "C4T1,C10T1",
+    "cec_fabric1": "9.114.254.30",
+    "cec_fabric2": "9.47.70.101",
+    "cec_pvlan": "2227",
+    "cec_storages": "SVC: 9.114.254.104",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.250.10",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "admin/admin",
+    "cec_type": "P9 Zeppelin",
+    "cec_squad": "Infra",
+    "cec_owner": "PUNITH - PRAKHAR",
+    "cec_name": "Server-9040-MR9-SN13032AX",
+    "cec_serial": "13032AX",
+    "cec_location": "C387F6U23",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.10",
+    "cec_vios1": "9.114.252.204",
+    "cec_vios2": "9.114.252.205",
+    "cec_proc_memory": "40/4096",
+    "cec_model": "9040-MR9",
+    "cec_network_ports": "C4T1,C10T1",
+    "cec_fabric1": "brocde: 9.114.254.30 admin/P@ssw0rd",
+    "cec_fabric2": "cisco: 9.47.70.101 admin/passw0rd",
+    "cec_pvlan": "2227",
+    "cec_storages": "SVC1:9.114.254.32(superuser/passw0rd) SVC2: 9.114.254.104(superuser/passw0rd) DS8K: 9.114.230.57(pvcadmin/passw0rd)",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.250.41",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "",
+    "cec_type": "P9 Zeppelin",
+    "cec_squad": "Infra",
+    "cec_owner": "JAY",
+    "cec_name": "",
+    "cec_serial": "13032DX",
+    "cec_location": "C387F6U19",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "",
+    "cec_vios1": "",
+    "cec_vios2": "",
+    "cec_proc_memory": "",
+    "cec_model": "",
+    "cec_network_ports": "",
+    "cec_fabric1": "",
+    "cec_fabric2": "",
+    "cec_pvlan": "",
+    "cec_storages": "",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.250.9",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "admin/admin",
+    "cec_type": "P9 Zeppelin",
+    "cec_squad": "Infra",
+    "cec_owner": "JAY",
+    "cec_name": "",
+    "cec_serial": "130327X",
+    "cec_location": "C387f7u9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.252.191",
+    "cec_vios1": "9.114.252.194",
+    "cec_vios2": "9.114.252.198",
+    "cec_proc_memory": "",
+    "cec_model": "",
+    "cec_network_ports": "",
+    "cec_fabric1": "",
+    "cec_fabric2": "",
+    "cec_pvlan": "",
+    "cec_storages": "",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.150",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P7",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "2120FEA",
+    "cec_location": "C340F18-U25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.237",
+    "cec_vios1": "9.47.72.238",
+    "cec_vios2": "9.47.72.239",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.151",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P7",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "2120F8A",
+    "cec_location": "C340F18-U29",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.240",
+    "cec_vios1": "9.47.72.241",
+    "cec_vios2": "9.47.72.242",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.167",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P7",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "10D6D7T",
+    "cec_location": "c340F3-u17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.245",
+    "cec_vios1": "9.114.248.177",
+    "cec_vios2": "9.114.248.178",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C12-T1",
+    "cec_fabric1": "9.114.181.184",
+    "cec_fabric2": "9.114.181.185",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.114.181.186",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.168",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P7",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "10D6D9T_SRIOV",
+    "cec_location": "c340F3-u25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.76.53",
+    "cec_vios1": "9.47.76.54",
+    "cec_vios2": "9.47.76.55",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C9-T1",
+    "cec_fabric1": "9.114.181.33",
+    "cec_fabric2": "9.114.181.34",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC: 9.114.181.189",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.225",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "DevOpsCT",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "13C740W",
+    "cec_location": "C387F5U17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.245",
+    "cec_vios1": "9.114.248.177",
+    "cec_vios2": "9.114.248.178",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C12-T1",
+    "cec_fabric1": "9.114.181.184",
+    "cec_fabric2": "9.114.181.185",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.114.181.186",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.226",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "DevOpsCT",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "",
+    "cec_location": "",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.246",
+    "cec_vios1": "9.114.248.179",
+    "cec_vios2": "9.114.248.180",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C12-T1",
+    "cec_fabric1": "9.114.181.184",
+    "cec_fabric2": "9.114.181.185",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.114.181.186",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.227",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "10D6D9T_SRIOV",
+    "cec_location": "c340F3-u25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.252.191",
+    "cec_vios1": "9.114.252.194",
+    "cec_vios2": "9.114.252.198",
+    "cec_proc_memory": "",
+    "cec_model": "",
+    "cec_network_ports": "",
+    "cec_fabric1": "",
+    "cec_fabric2": "",
+    "cec_pvlan": "",
+    "cec_storages": "",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.228",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "S21483DA",
+    "cec_location": "C340F19-U15",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.253.170",
+    "cec_vios1": "9.114.253.245",
+    "cec_vios2": "9.114.254.80",
+    "cec_proc_memory": "",
+    "cec_model": "",
+    "cec_network_ports": "",
+    "cec_fabric1": "",
+    "cec_fabric2": "",
+    "cec_pvlan": "",
+    "cec_storages": "",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.229",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "10D6D7T",
+    "cec_location": "c340F3-u17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.10",
+    "cec_vios1": "9.114.252.204",
+    "cec_vios2": "9.114.252.205",
+    "cec_proc_memory": "",
+    "cec_model": "",
+    "cec_network_ports": "",
+    "cec_fabric1": "",
+    "cec_fabric2": "",
+    "cec_pvlan": "",
+    "cec_storages": "",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.230",
+  "fields": {
+    "cec_ip_ping": false,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21C1B6V",
+    "cec_location": "C340f13 u9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.188",
+    "cec_vios1": "9.47.72.189",
+    "cec_vios2": "9.47.72.190",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.231",
+  "fields": {
+    "cec_ip_ping": false,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21C1B7V_SRIOV",
+    "cec_location": "C340f13 u1",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.75.240",
+    "cec_vios1": "9.47.75.241",
+    "cec_vios2": "9.47.75.242",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.232",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21C1B6V",
+    "cec_location": "C340f13 u9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.246",
+    "cec_vios1": "9.114.248.179",
+    "cec_vios2": "9.114.248.180",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C12-T1",
+    "cec_fabric1": "9.114.181.184",
+    "cec_fabric2": "9.114.181.185",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.114.181.186",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.233",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21C1B5V_SRIOV",
+    "cec_location": "C340f13 u5",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.75.243",
+    "cec_vios1": "9.47.75.244",
+    "cec_vios2": "9.47.75.245",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.41",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "S21483DA",
+    "cec_location": "C340F19-U15",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.246",
+    "cec_vios1": "9.114.248.179",
+    "cec_vios2": "9.114.248.180",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C12-T1",
+    "cec_fabric1": "9.114.181.184",
+    "cec_fabric2": "9.114.181.185",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.114.181.186",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.42",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "S21483EA",
+    "cec_location": "C340F19-U17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.252.191",
+    "cec_vios1": "9.114.252.194",
+    "cec_vios2": "9.114.252.198",
+    "cec_proc_memory": "",
+    "cec_model": "",
+    "cec_network_ports": "",
+    "cec_fabric1": "",
+    "cec_fabric2": "",
+    "cec_pvlan": "",
+    "cec_storages": "",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.43",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21543AA",
+    "cec_location": "C340F20 U37",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.10",
+    "cec_vios1": "9.114.252.204",
+    "cec_vios2": "9.114.252.205",
+    "cec_proc_memory": "",
+    "cec_model": "",
+    "cec_network_ports": "",
+    "cec_fabric1": "",
+    "cec_fabric2": "",
+    "cec_pvlan": "",
+    "cec_storages": "",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.44",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "S21483DA",
+    "cec_location": "C340F19-U15",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.237",
+    "cec_vios1": "9.47.72.238",
+    "cec_vios2": "9.47.72.239",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.45",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "10D6D9T_SRIOV",
+    "cec_location": "c340F3-u25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.191",
+    "cec_vios1": "9.47.72.192",
+    "cec_vios2": "9.47.72.193",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.46",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "130327X",
+    "cec_location": "C387f7u9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.75.240",
+    "cec_vios1": "9.47.75.241",
+    "cec_vios2": "9.47.75.242",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.251.79 / 9.114.250.42",
+  "fields": {
+    "cec_ip_ping": false,
+    "cec_fsp_credentials": "admin/admin",
+    "cec_type": "P9 Fleetwood",
+    "cec_squad": "Infra",
+    "cec_owner": "PUNITH - PRAKHAR",
+    "cec_name": "Server-9080-M9S-SN1301AC8",
+    "cec_serial": "1301AC8",
+    "cec_location": "C387f4u21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.252.209",
+    "cec_vios1": "9.114.252.214",
+    "cec_vios2": "9.114.252.223",
+    "cec_proc_memory": "40/4096",
+    "cec_model": "9040-MR9",
+    "cec_network_ports": "C3T1,C6T1",
+    "cec_fabric1": "9.114.254.30",
+    "cec_fabric2": "9.47.70.101",
+    "cec_pvlan": "2227",
+    "cec_storages": "SVC: 9.114.254.104",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.252.219/220",
+  "fields": {
+    "cec_ip_ping": false,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P7",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21C1B5V_SRIOV",
+    "cec_location": "C340f13 u5",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.70.171",
+    "cec_vios1": "9.47.70.172",
+    "cec_vios2": "9.47.70.173",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "C10-T1, C4-T1",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.252.227/9.114.253.237",
+  "fields": {
+    "cec_ip_ping": false,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P7",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "215443A",
+    "cec_location": "C340F20 U39",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.70.171",
+    "cec_vios1": "9.47.70.172",
+    "cec_vios2": "9.47.70.173",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "C10-T1, C4-T1",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.252.228/9.114.253.42",
+  "fields": {
+    "cec_ip_ping": false,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P7",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "130327X",
+    "cec_location": "C387f7u9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.69.149",
+    "cec_vios1": "9.47.66.185",
+    "cec_vios2": "9.47.66.186",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.252.243",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P7",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21C1B7V_SRIOV",
+    "cec_location": "C340f13 u1",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.70.167",
+    "cec_vios1": "9.47.70.168",
+    "cec_vios2": "9.47.70.169",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.252.247/9.114.253.140",
+  "fields": {
+    "cec_ip_ping": false,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P7",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "212104A",
+    "cec_location": "C340F18-U21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.79.30",
+    "cec_vios1": "9.47.79.31",
+    "cec_vios2": "9.47.79.32",
+    "cec_proc_memory": "16/128",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.252.248 /9.114.253.173",
+  "fields": {
+    "cec_ip_ping": false,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P7",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "212109A",
+    "cec_location": "C340F18-U13",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.69.149",
+    "cec_vios1": "9.47.66.185",
+    "cec_vios2": "9.47.66.186",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.253.165",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "TechM",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "1301AC8",
+    "cec_location": "C387f4u21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.240",
+    "cec_vios1": "9.47.72.241",
+    "cec_vios2": "9.47.72.242",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.253.169/9.114.252.245",
+  "fields": {
+    "cec_ip_ping": false,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P7",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "2120FEA",
+    "cec_location": "C340F18-U25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.79.33",
+    "cec_vios1": "9.47.79.34",
+    "cec_vios2": "9.47.79.35",
+    "cec_proc_memory": "16/128",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.253.240/9.114.254.227",
+  "fields": {
+    "cec_ip_ping": false,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P7",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "212106A",
+    "cec_location": "C340F18-U9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.70.171",
+    "cec_vios1": "9.47.70.172",
+    "cec_vios2": "9.47.70.173",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "C10-T1, C4-T1",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.253.29",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "TechM",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "13032DX",
+    "cec_location": "C387F6U19",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.237",
+    "cec_vios1": "9.47.72.238",
+    "cec_vios2": "9.47.72.239",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.253.31",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "10D6D9T_SRIOV",
+    "cec_location": "c340F3-u25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.79.30",
+    "cec_vios1": "9.47.79.31",
+    "cec_vios2": "9.47.79.32",
+    "cec_proc_memory": "16/128",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.253.32",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "10D6D7T",
+    "cec_location": "c340F3-u17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.79.33",
+    "cec_vios1": "9.47.79.34",
+    "cec_vios2": "9.47.79.35",
+    "cec_proc_memory": "16/128",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.254.152",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P7",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "NA",
+    "cec_serial": "2120FEA",
+    "cec_location": "C340F18-U25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.188",
+    "cec_vios1": "9.47.72.189",
+    "cec_vios2": "9.47.72.190",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.254.153",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P7",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "NA",
+    "cec_serial": "212104A",
+    "cec_location": "C340F18-U21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.75.243",
+    "cec_vios1": "9.47.75.244",
+    "cec_vios2": "9.47.75.245",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.254.154",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P7",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "NA",
+    "cec_serial": "212109A",
+    "cec_location": "C340F18-U13",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.75.240",
+    "cec_vios1": "9.47.75.241",
+    "cec_vios2": "9.47.75.242",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.254.170",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "VIOS1 only",
+    "cec_serial": "215E2EV",
+    "cec_location": "C387f19U25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.253.28",
+    "cec_vios1": "9.114.254.239 (single vios)",
+    "cec_vios2": "NA",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "U2C4E.001.DBJS047-P2-C2-T1",
+    "cec_fabric1": "brocde: 9.114.254.30\tadmin/P@ssw0rd",
+    "cec_fabric2": "cisco:  9.47.70.101\tadmin/passw0rd",
+    "cec_pvlan": "2227",
+    "cec_storages": "SVC1:9.114.254.32(superuser/passw0rd) SVC2: 9.114.254.104(superuser/passw0rd) DS8K: 9.114.230.57(pvcadmin/passw0rd)",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.254.183",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P9 ZZ",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "S21483EA",
+    "cec_location": "C340F19-U17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.75.240",
+    "cec_vios1": "9.47.75.241",
+    "cec_vios2": "9.47.75.242",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.114.254.219",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P9 ZZ",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21543AA",
+    "cec_location": "C340F20 U37",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.75.243",
+    "cec_vios1": "9.47.75.244",
+    "cec_vios2": "9.47.75.245",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.64.109",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P9 Zeppelin",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "13032AX",
+    "cec_location": "C387F6U23",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.10",
+    "cec_vios1": "9.114.252.204",
+    "cec_vios2": "9.114.252.205",
+    "cec_proc_memory": "",
+    "cec_model": "",
+    "cec_network_ports": "",
+    "cec_fabric1": "",
+    "cec_fabric2": "",
+    "cec_pvlan": "",
+    "cec_storages": "",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.64.112",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Interface",
+    "cec_owner": "",
+    "cec_name": "P8_107",
+    "cec_serial": "212106A",
+    "cec_location": "C340F18-U9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.237",
+    "cec_vios1": "9.47.72.238",
+    "cec_vios2": "9.47.72.239",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.64.113",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Interface",
+    "cec_owner": "",
+    "cec_name": "P8_108",
+    "cec_serial": "1301AC8",
+    "cec_location": "C387f4u21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.75.240",
+    "cec_vios1": "9.47.75.241",
+    "cec_vios2": "9.47.75.242",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.64.114",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Interface",
+    "cec_owner": "",
+    "cec_name": "P8_106",
+    "cec_serial": "212139A",
+    "cec_location": "C340f13 u25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.198",
+    "cec_vios1": "9.47.72.199",
+    "cec_vios2": "9.47.72.200",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.64.115",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Interface",
+    "cec_owner": "",
+    "cec_name": "P8_109",
+    "cec_serial": "10C62AW",
+    "cec_location": "c387f7u01",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.75.243",
+    "cec_vios1": "9.47.75.244",
+    "cec_vios2": "9.47.75.245",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.64.116",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P9 Zeppelin",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "13032DX",
+    "cec_location": "C387F6U19",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.253.170",
+    "cec_vios1": "9.114.253.245",
+    "cec_vios2": "9.114.254.80",
+    "cec_proc_memory": "",
+    "cec_model": "",
+    "cec_network_ports": "",
+    "cec_fabric1": "",
+    "cec_fabric2": "",
+    "cec_pvlan": "",
+    "cec_storages": "",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.64.63",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "10C62AW",
+    "cec_location": "c387f7u01",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.10",
+    "cec_vios1": "9.114.252.204",
+    "cec_vios2": "9.114.252.205",
+    "cec_proc_memory": "",
+    "cec_model": "",
+    "cec_network_ports": "",
+    "cec_fabric1": "",
+    "cec_fabric2": "",
+    "cec_pvlan": "",
+    "cec_storages": "",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.64.64",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "13C740W",
+    "cec_location": "C387F5U17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.253.170",
+    "cec_vios1": "9.114.253.245",
+    "cec_vios2": "9.114.254.80",
+    "cec_proc_memory": "",
+    "cec_model": "",
+    "cec_network_ports": "",
+    "cec_fabric1": "",
+    "cec_fabric2": "",
+    "cec_pvlan": "",
+    "cec_storages": "",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.64.65",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Interface",
+    "cec_owner": "",
+    "cec_name": "P8_75",
+    "cec_serial": "13C740W",
+    "cec_location": "C387F5U17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.188",
+    "cec_vios1": "9.47.72.189",
+    "cec_vios2": "9.47.72.190",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.66.178",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "P8_28",
+    "cec_serial": "21C1B7V_SRIOV",
+    "cec_location": "C340f13 u1",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.70.167",
+    "cec_vios1": "9.47.70.168",
+    "cec_vios2": "9.47.70.169",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.66.181",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "P8_29",
+    "cec_serial": "21C1B5V_SRIOV",
+    "cec_location": "C340f13 u5",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.70.171",
+    "cec_vios1": "9.47.70.172",
+    "cec_vios2": "9.47.70.173",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "C10-T1, C4-T1",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.66.184",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "P8_30",
+    "cec_serial": "21C1B6V",
+    "cec_location": "C340f13 u9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.69.149",
+    "cec_vios1": "9.47.66.185",
+    "cec_vios2": "9.47.66.186",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.66.200",
+  "fields": {
+    "cec_ip_ping": false,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "212109A",
+    "cec_location": "C340F18-U13",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.191",
+    "cec_vios1": "9.47.72.192",
+    "cec_vios2": "9.47.72.193",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.66.201",
+  "fields": {
+    "cec_ip_ping": false,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "212104A",
+    "cec_location": "C340F18-U21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.198",
+    "cec_vios1": "9.47.72.199",
+    "cec_vios2": "9.47.72.200",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.66.206",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P9 Boston",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "NA",
+    "cec_serial": "10D6D7T",
+    "cec_location": "c340F3-u17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.70.171",
+    "cec_vios1": "9.47.70.172",
+    "cec_vios2": "9.47.70.173",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "C10-T1, C4-T1",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.66.233",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21C1B5V_SRIOV",
+    "cec_location": "C340f13 u5",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.79.33",
+    "cec_vios1": "9.47.79.34",
+    "cec_vios2": "9.47.79.35",
+    "cec_proc_memory": "16/128",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.66.32",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Interface",
+    "cec_owner": "",
+    "cec_name": "P8_76",
+    "cec_serial": "21213CA",
+    "cec_location": "C340f13 u21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.191",
+    "cec_vios1": "9.47.72.192",
+    "cec_vios2": "9.47.72.193",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.66.34",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21213CA",
+    "cec_location": "C340f13 u21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.75.240",
+    "cec_vios1": "9.47.75.241",
+    "cec_vios2": "9.47.75.242",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.66.35",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "212139A",
+    "cec_location": "C340f13 u25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.75.243",
+    "cec_vios1": "9.47.75.244",
+    "cec_vios2": "9.47.75.245",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.66.36",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipsDev",
+    "cec_type": "P8",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "P8_80",
+    "cec_serial": "S21483DA",
+    "cec_location": "C340F19-U15",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.68.1",
+    "cec_vios1": ": 9.47.68.2",
+    "cec_vios2": ": 9.47.68.3",
+    "cec_proc_memory": "10/64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C9-T1",
+    "cec_fabric1": "9.114.181.33(admin/passw0rd)",
+    "cec_fabric2": "9.114.181.34(admin/passw0rd)",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC: 9.114.181.189 (superuser/passw0rd)",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.66.37",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipsDev",
+    "cec_type": "P8",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "P8_81",
+    "cec_serial": "S21483EA",
+    "cec_location": "C340F19-U17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.76.53",
+    "cec_vios1": "9.47.76.54",
+    "cec_vios2": "9.47.76.55",
+    "cec_proc_memory": "10/64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C9-T1",
+    "cec_fabric1": "9.114.181.33(admin/passw0rd)",
+    "cec_fabric2": "9.114.181.34(admin/passw0rd)",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC: 9.114.181.189 (superuser/passw0rd)",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.66.38",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "212106A",
+    "cec_location": "C340F18-U9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.188",
+    "cec_vios1": "9.47.72.189",
+    "cec_vios2": "9.47.72.190",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.67.123",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P9",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "215443A",
+    "cec_location": "C340F20 U39",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.246",
+    "cec_vios1": "9.114.248.179",
+    "cec_vios2": "9.114.248.180",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C12-T1",
+    "cec_fabric1": "9.114.181.184",
+    "cec_fabric2": "9.114.181.185",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.114.181.186",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.67.73",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "13032AX",
+    "cec_location": "C387F6U23",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.75.243",
+    "cec_vios1": "9.47.75.244",
+    "cec_vios2": "9.47.75.245",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.67.76",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21213CA",
+    "cec_location": "C340f13 u21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.240",
+    "cec_vios1": "9.47.72.241",
+    "cec_vios2": "9.47.72.242",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.67.77",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "13C740W",
+    "cec_location": "C387F5U17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.237",
+    "cec_vios1": "9.47.72.238",
+    "cec_vios2": "9.47.72.239",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.67.78",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "212139A",
+    "cec_location": "C340f13 u25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.70.167",
+    "cec_vios1": "9.47.70.168",
+    "cec_vios2": "9.47.70.169",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.67.79",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "215443A",
+    "cec_location": "C340F20 U39",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.253.170",
+    "cec_vios1": "9.114.253.245",
+    "cec_vios2": "9.114.254.80",
+    "cec_proc_memory": "",
+    "cec_model": "",
+    "cec_network_ports": "",
+    "cec_fabric1": "",
+    "cec_fabric2": "",
+    "cec_pvlan": "",
+    "cec_storages": "",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.67.80",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "1301AC8",
+    "cec_location": "C387f4u21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.191",
+    "cec_vios1": "9.47.72.192",
+    "cec_vios2": "9.47.72.193",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.67.82",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "10C62AW",
+    "cec_location": "c387f7u01",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.198",
+    "cec_vios1": "9.47.72.199",
+    "cec_vios2": "9.47.72.200",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.67.85",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "10D6D7T",
+    "cec_location": "c340F3-u17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.198",
+    "cec_vios1": "9.47.72.199",
+    "cec_vios2": "9.47.72.200",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.68.129",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P9",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "130327X",
+    "cec_location": "C387f7u9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.252.191",
+    "cec_vios1": "9.114.252.194",
+    "cec_vios2": "9.114.252.198",
+    "cec_proc_memory": "",
+    "cec_model": "",
+    "cec_network_ports": "",
+    "cec_fabric1": "",
+    "cec_fabric2": "",
+    "cec_pvlan": "",
+    "cec_storages": "",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.68.82",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21C1B6V",
+    "cec_location": "C340f13 u9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.68.1",
+    "cec_vios1": "9.47.68.2",
+    "cec_vios2": "9.47.68.3",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C9-T1",
+    "cec_fabric1": "9.114.181.33",
+    "cec_fabric2": "9.114.181.34",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC: 9.114.181.189",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.69.150",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "13032DX",
+    "cec_location": "C387F6U19",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.188",
+    "cec_vios1": "9.47.72.189",
+    "cec_vios2": "9.47.72.190",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.70.116",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipsDev",
+    "cec_type": "P8",
+    "cec_squad": "Currency",
+    "cec_owner": "",
+    "cec_name": "P8_104",
+    "cec_serial": "21543AA",
+    "cec_location": "C340F20 U37",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.248.177",
+    "cec_vios1": "9.114.248.178 (single vios host)",
+    "cec_vios2": "NA",
+    "cec_proc_memory": "10/64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C12-T1",
+    "cec_fabric1": "9.114.181.184 (admin/passw0rd)",
+    "cec_fabric2": "9.114.181.185 (admin/passw0rd)",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC :9.114.181.186 (superuser/passw0rd)",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.70.117",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "",
+    "cec_type": "P8",
+    "cec_squad": "Currency",
+    "cec_owner": "",
+    "cec_name": "P8_105",
+    "cec_serial": "215443A",
+    "cec_location": "C340F20 U39",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.248.179",
+    "cec_vios1": "9.114.248.180 (single vios host)",
+    "cec_vios2": "NA",
+    "cec_proc_memory": "10/64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C12-T1",
+    "cec_fabric1": "9.114.181.184 (admin/passw0rd)",
+    "cec_fabric2": "9.114.181.185 (admin/passw0rd)",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC: 9.114.181.186 (superuser/passw0rd)",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.70.89",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "TechM",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "13032AX",
+    "cec_location": "C387F6U23",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.198",
+    "cec_vios1": "9.47.72.199",
+    "cec_vios2": "9.47.72.200",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.70.92",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "TechM",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "130327X",
+    "cec_location": "C387f7u9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.191",
+    "cec_vios1": "9.47.72.192",
+    "cec_vios2": "9.47.72.193",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.101",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "10D6D9T_SRIOV",
+    "cec_location": "c340F3-u25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.75.240",
+    "cec_vios1": "9.47.75.241",
+    "cec_vios2": "9.47.75.242",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.104",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "10D6D7T",
+    "cec_location": "c340F3-u17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.75.243",
+    "cec_vios1": "9.47.75.244",
+    "cec_vios2": "9.47.75.245",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.107",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "S21483DA",
+    "cec_location": "C340F19-U15",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.188",
+    "cec_vios1": "9.47.72.189",
+    "cec_vios2": "9.47.72.190",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.110",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "S21483EA",
+    "cec_location": "C340F19-U17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.191",
+    "cec_vios1": "9.47.72.192",
+    "cec_vios2": "9.47.72.193",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.113",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "13032DX",
+    "cec_location": "C387F6U19",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.70.171",
+    "cec_vios1": "9.47.70.172",
+    "cec_vios2": "9.47.70.173",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "C10-T1, C4-T1",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.116",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "1301AC8",
+    "cec_location": "C387f4u21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.69.149",
+    "cec_vios1": "9.47.66.185",
+    "cec_vios2": "9.47.66.186",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.119",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "10C62AW",
+    "cec_location": "c387f7u01",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.79.30",
+    "cec_vios1": "9.47.79.31",
+    "cec_vios2": "9.47.79.32",
+    "cec_proc_memory": "16/128",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.131",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P9 Zeppelin",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21543AA",
+    "cec_location": "C340F20 U37",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.70.167",
+    "cec_vios1": "9.47.70.168",
+    "cec_vios2": "9.47.70.169",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.148",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P9 Boston",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "NA",
+    "cec_serial": "S21483DA",
+    "cec_location": "C340F19-U15",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.69.149",
+    "cec_vios1": "9.47.66.185",
+    "cec_vios2": "9.47.66.186",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.161",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "NA",
+    "cec_serial": "211F8AA",
+    "cec_location": "C387f2u16",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.71.163",
+    "cec_vios1": "9.47.71.162 (single vios)",
+    "cec_vios2": "NA",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "U78C9.001.WZS04BN-P1-C10-T1",
+    "cec_fabric1": "9.114.254.30\t(admin/P@ssw0rd)",
+    "cec_fabric2": "9.47.70.101 (admin/passw0rd)",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1:9.114.254.32(superuser/passw0rd) SVC2: 9.114.254.104(superuser/passw0rd) DS8K :9.114.230.57\tpvcadmin/passw0rd",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.165",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P9 Boston",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "NA",
+    "cec_serial": "S21483EA",
+    "cec_location": "C340F19-U17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.79.30",
+    "cec_vios1": "9.47.79.31",
+    "cec_vios2": "9.47.79.32",
+    "cec_proc_memory": "16/128",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.232",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P9 ZZ",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "S21483EA",
+    "cec_location": "C340F19-U17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.240",
+    "cec_vios1": "9.47.72.241",
+    "cec_vios2": "9.47.72.242",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.52",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P9 Boston",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "NA",
+    "cec_serial": "21543AA",
+    "cec_location": "C340F20 U37",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.79.33",
+    "cec_vios1": "9.47.79.34",
+    "cec_vios2": "9.47.79.35",
+    "cec_proc_memory": "16/128",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.68",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "13C740W",
+    "cec_location": "C387F5U17",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.70.171",
+    "cec_vios1": "9.47.70.172",
+    "cec_vios2": "9.47.70.173",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "C10-T1, C4-T1",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.71",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21213CA",
+    "cec_location": "C340f13 u21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.69.149",
+    "cec_vios1": "9.47.66.185",
+    "cec_vios2": "9.47.66.186",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.74",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "212139A",
+    "cec_location": "C340f13 u25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.79.30",
+    "cec_vios1": "9.47.79.31",
+    "cec_vios2": "9.47.79.32",
+    "cec_proc_memory": "16/128",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.77",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "212106A",
+    "cec_location": "C340F18-U9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.79.33",
+    "cec_vios1": "9.47.79.34",
+    "cec_vios2": "9.47.79.35",
+    "cec_proc_memory": "16/128",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.80",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "212109A",
+    "cec_location": "C340F18-U13",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.68.1",
+    "cec_vios1": "9.47.68.2",
+    "cec_vios2": "9.47.68.3",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C9-T1",
+    "cec_fabric1": "9.114.181.33",
+    "cec_fabric2": "9.114.181.34",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC: 9.114.181.189",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.83",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "212104A",
+    "cec_location": "C340F18-U21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.76.53",
+    "cec_vios1": "9.47.76.54",
+    "cec_vios2": "9.47.76.55",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C9-T1",
+    "cec_fabric1": "9.114.181.33",
+    "cec_fabric2": "9.114.181.34",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC: 9.114.181.189",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.86",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "2120FEA",
+    "cec_location": "C340F18-U25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.245",
+    "cec_vios1": "9.114.248.177",
+    "cec_vios2": "9.114.248.178",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C12-T1",
+    "cec_fabric1": "9.114.181.184",
+    "cec_fabric2": "9.114.181.185",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.114.181.186",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.89",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "2120F8A",
+    "cec_location": "C340F18-U29",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.246",
+    "cec_vios1": "9.114.248.179",
+    "cec_vios2": "9.114.248.180",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C12-T1",
+    "cec_fabric1": "9.114.181.184",
+    "cec_fabric2": "9.114.181.185",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.114.181.186",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.92",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21C1B7V_SRIOV",
+    "cec_location": "C340f13 u1",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.252.191",
+    "cec_vios1": "9.114.252.194",
+    "cec_vios2": "9.114.252.198",
+    "cec_proc_memory": "",
+    "cec_model": "",
+    "cec_network_ports": "",
+    "cec_fabric1": "",
+    "cec_fabric2": "",
+    "cec_pvlan": "",
+    "cec_storages": "",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.95",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21C1B5V_SRIOV",
+    "cec_location": "C340f13 u5",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.10",
+    "cec_vios1": "9.114.252.204",
+    "cec_vios2": "9.114.252.205",
+    "cec_proc_memory": "",
+    "cec_model": "",
+    "cec_network_ports": "",
+    "cec_fabric1": "",
+    "cec_fabric2": "",
+    "cec_pvlan": "",
+    "cec_storages": "",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.71.98",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Scale",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "21C1B6V",
+    "cec_location": "C340f13 u9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.253.170",
+    "cec_vios1": "9.114.253.245",
+    "cec_vios2": "9.114.254.80",
+    "cec_proc_memory": "",
+    "cec_model": "",
+    "cec_network_ports": "",
+    "cec_fabric1": "",
+    "cec_fabric2": "",
+    "cec_pvlan": "",
+    "cec_storages": "",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.72.27",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P9 Boston",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "NA",
+    "cec_serial": "215443A",
+    "cec_location": "C340F20 U39",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.68.1",
+    "cec_vios1": "9.47.68.2",
+    "cec_vios2": "9.47.68.3",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C9-T1",
+    "cec_fabric1": "9.114.181.33",
+    "cec_fabric2": "9.114.181.34",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC: 9.114.181.189",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.74.176",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "212109A",
+    "cec_location": "C340F18-U13",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.240",
+    "cec_vios1": "9.47.72.241",
+    "cec_vios2": "9.47.72.242",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.74.177",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Infra",
+    "cec_owner": "SHARATH",
+    "cec_name": "P8_56",
+    "cec_serial": "21213CA",
+    "cec_location": "C340f13 u21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.75.240",
+    "cec_vios1": "9.47.75.241",
+    "cec_vios2": "9.47.75.242",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188SVC2: 9.114.181.166XIV1: 9.114.63.32 VMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.74.178",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Infra",
+    "cec_owner": "SHARATH",
+    "cec_name": "P8_57",
+    "cec_serial": "212139A",
+    "cec_location": "C340f13 u25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.75.243",
+    "cec_vios1": "9.47.75.244",
+    "cec_vios2": "9.47.75.245",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188 (superuser/passw0rd) SVC2: 9.114.181.166 (superuser/passw0rd) XIV1: 9.114.63.32 (admin/adminadmin) VMAX(SMIS-4.6): 9.114.248.26 (user: admin, pass: #1Password, Port: 5989)",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.74.179",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "212104A",
+    "cec_location": "C340F18-U21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.70.167",
+    "cec_vios1": "9.47.70.168",
+    "cec_vios2": "9.47.70.169",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.74.180",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Framework",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "2120FEA",
+    "cec_location": "C340F18-U25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.70.171",
+    "cec_vios1": "9.47.70.172",
+    "cec_vios2": "9.47.70.173",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "C10-T1, C4-T1",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.76.10",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "P8_67",
+    "cec_serial": "212109A",
+    "cec_location": "C340F18-U13",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.191",
+    "cec_vios1": "9.47.72.192",
+    "cec_vios2": "9.47.72.193",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.76.11",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "1301AC8",
+    "cec_location": "C387f4u21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.252.191",
+    "cec_vios1": "9.114.252.194",
+    "cec_vios2": "9.114.252.198",
+    "cec_proc_memory": "",
+    "cec_model": "",
+    "cec_network_ports": "",
+    "cec_fabric1": "",
+    "cec_fabric2": "",
+    "cec_pvlan": "",
+    "cec_storages": "",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.76.12",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "P8_69",
+    "cec_serial": "212104A",
+    "cec_location": "C340F18-U21",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.198",
+    "cec_vios1": "9.47.72.199",
+    "cec_vios2": "9.47.72.200",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.76.13",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "P8_70",
+    "cec_serial": "2120FEA",
+    "cec_location": "C340F18-U25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.237",
+    "cec_vios1": "9.47.72.238",
+    "cec_vios2": "9.47.72.239",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.76.14",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Infra",
+    "cec_owner": "SRIVIDHYA",
+    "cec_name": "P8_71",
+    "cec_serial": "2120F8A",
+    "cec_location": "C340F18-U29",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.240",
+    "cec_vios1": "9.47.72.241",
+    "cec_vios2": "9.47.72.242",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188SVC2: 9.114.181.166XIV1: 9.114.63.32 VMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.76.4",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "130327X",
+    "cec_location": "C387f7u9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.76.53",
+    "cec_vios1": "9.47.76.54",
+    "cec_vios2": "9.47.76.55",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C9-T1",
+    "cec_fabric1": "9.114.181.33",
+    "cec_fabric2": "9.114.181.34",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC: 9.114.181.189",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.76.5",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "13032AX",
+    "cec_location": "C387F6U23",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.245",
+    "cec_vios1": "9.114.248.177",
+    "cec_vios2": "9.114.248.178",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C12-T1",
+    "cec_fabric1": "9.114.181.184",
+    "cec_fabric2": "9.114.181.185",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.114.181.186",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.76.6",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Storage",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "13032DX",
+    "cec_location": "C387F6U19",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.114.255.246",
+    "cec_vios1": "9.114.248.179",
+    "cec_vios2": "9.114.248.180",
+    "cec_proc_memory": "10\\64",
+    "cec_model": "8247-21L",
+    "cec_network_ports": "P1-C10-T1, P1-C12-T1",
+    "cec_fabric1": "9.114.181.184",
+    "cec_fabric2": "9.114.181.185",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.114.181.186",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.76.9",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "P8_66",
+    "cec_serial": "212106A",
+    "cec_location": "C340F18-U9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.188",
+    "cec_vios1": "9.47.72.189",
+    "cec_vios2": "9.47.72.190",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": "POK"
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.78.253",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8 Open Power",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "NA",
+    "cec_serial": "21C1B5V_SRIOV",
+    "cec_location": "C340f13 u5",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.237",
+    "cec_vios1": "9.47.72.238",
+    "cec_vios2": "9.47.72.239",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.78.254",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8 Open Power",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "NA",
+    "cec_serial": "21C1B6V",
+    "cec_location": "C340f13 u9",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.240",
+    "cec_vios1": "9.47.72.241",
+    "cec_vios2": "9.47.72.242",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.78.255",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8 Open Power",
+    "cec_squad": "Infra",
+    "cec_owner": "",
+    "cec_name": "NA",
+    "cec_serial": "10D6D9T_SRIOV",
+    "cec_location": "c340F3-u25",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.70.167",
+    "cec_vios1": "9.47.70.168",
+    "cec_vios2": "9.47.70.169",
+    "cec_proc_memory": "24/256",
+    "cec_model": "8286-42A",
+    "cec_network_ports": "",
+    "cec_fabric1": "9.114.181.114",
+    "cec_fabric2": "9.114.251.136",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC : 9.47.67.14",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hosts",
+  "pk": "9.47.78.64",
+  "fields": {
+    "cec_ip_ping": true,
+    "cec_fsp_credentials": "dev/FipSdev",
+    "cec_type": "P8",
+    "cec_squad": "TechM",
+    "cec_owner": "",
+    "cec_name": "",
+    "cec_serial": "215443A",
+    "cec_location": "C340F20 U39",
+    "cec_firmware": "",
+    "cec_hmc_ip": "",
+    "cec_neo_ip": "9.47.72.188",
+    "cec_vios1": "9.47.72.189",
+    "cec_vios2": "9.47.72.190",
+    "cec_proc_memory": "20/256",
+    "cec_model": "8247-42L",
+    "cec_network_ports": "P1-C10-T1, P1-C2-T3",
+    "cec_fabric1": "9.114.181.161",
+    "cec_fabric2": "9.114.181.162",
+    "cec_pvlan": "2230",
+    "cec_storages": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166\nXIV1: 9.114.63.32 \nVMAX(SMIS-4.6): 9.114.248.26",
+    "cec_lab": ""
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.144.51",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "hscroot/passw0rdpassw0rd",
+    "hmc_squad": "None",
+    "hmc_owner": "None",
+    "hmc_serial": "pvc-VHMC-1",
+    "hmc_location": "None",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.181.122",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "powervc_fvt/powervc@123",
+    "hmc_squad": "infra",
+    "hmc_owner": "None",
+    "hmc_serial": "VHMC",
+    "hmc_location": "None",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.181.227",
+  "fields": {
+    "hmc_ip_ping": false,
+    "hmc_credentials": "powervc_fvt/Test@123",
+    "hmc_squad": "infra",
+    "hmc_owner": "None",
+    "hmc_serial": "VHMC",
+    "hmc_location": "None",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.23.14",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "hscroot/abc123",
+    "hmc_squad": "Scale",
+    "hmc_owner": "None",
+    "hmc_serial": "S21E592C",
+    "hmc_location": "C387F9u20",
+    "hmc_private_ip": "172.16.255.230",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "9.114.23.13",
+    "hmc_mtms": "7042-CR8",
+    "hmc_imm_credentials": "USERID/PASSW0RD",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.23.148",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "hscroot/abc123",
+    "hmc_squad": "Scale",
+    "hmc_owner": "None",
+    "hmc_serial": "210515D",
+    "hmc_location": "C387f19u42",
+    "hmc_private_ip": "172.16.255.231",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "9.114.23.147",
+    "hmc_mtms": "7042-CR8",
+    "hmc_imm_credentials": "USERID/PASSW0RD",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.23.150",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "hscroot/abc123",
+    "hmc_squad": "Scale",
+    "hmc_owner": "None",
+    "hmc_serial": "Power vHMC",
+    "hmc_location": "None",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.23.152",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "powervc_fvt/Test@123",
+    "hmc_squad": "Storage",
+    "hmc_owner": "None",
+    "hmc_serial": "VHMC",
+    "hmc_location": "None",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "None"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.23.154",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "powervc_fvt/powervc@123",
+    "hmc_squad": "Storage",
+    "hmc_owner": "None",
+    "hmc_serial": "VHMC",
+    "hmc_location": "None",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "None"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.23.156",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "hscroot/abc123",
+    "hmc_squad": "Storage",
+    "hmc_owner": "None",
+    "hmc_serial": "Power vHMC",
+    "hmc_location": "None",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "None"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.23.158",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "powervc_fvt/Dro@123",
+    "hmc_squad": "Scale",
+    "hmc_owner": "None",
+    "hmc_serial": "10B6EDC",
+    "hmc_location": "c340f6 u20",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.23.16",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "powervc_fvt/powervc@123",
+    "hmc_squad": "DevOpsCT",
+    "hmc_owner": "None",
+    "hmc_serial": "210459D",
+    "hmc_location": "c340f10 u38",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.251.164",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "hscroot/abc123",
+    "hmc_squad": "None",
+    "hmc_owner": "None",
+    "hmc_serial": "None",
+    "hmc_location": "None",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.251.165",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "powervc_fvt/Test@123",
+    "hmc_squad": "infra",
+    "hmc_owner": "None",
+    "hmc_serial": "10B6ECC",
+    "hmc_location": "c340f6 u19",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "9.114.181.49",
+    "hmc_mtms": "7042-CR8",
+    "hmc_imm_credentials": "USERID/PASSW0RD",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.251.166",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "hscroot/abc123",
+    "hmc_squad": "Interface",
+    "hmc_owner": "None",
+    "hmc_serial": "210515D",
+    "hmc_location": "C387f19u42",
+    "hmc_private_ip": "172.16.255.231",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "9.114.23.147",
+    "hmc_mtms": "7042-CR8",
+    "hmc_imm_credentials": "USERID/PASSW0RD",
+    "hmclab": "None"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.251.72",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "powervc_fvt/powervc@123",
+    "hmc_squad": "Storage",
+    "hmc_owner": "None",
+    "hmc_serial": "210459D",
+    "hmc_location": "c340f10 u38",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "None"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.251.75",
+  "fields": {
+    "hmc_ip_ping": false,
+    "hmc_credentials": "powervc_fvt/Dro@123",
+    "hmc_squad": "Framework",
+    "hmc_owner": "None",
+    "hmc_serial": "10B6EDC",
+    "hmc_location": "c340f6 u20",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "9.114.181.76",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "USERID/PASSW0RD",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.251.90",
+  "fields": {
+    "hmc_ip_ping": false,
+    "hmc_credentials": "powervc_fvt/Test@123",
+    "hmc_squad": "Storage",
+    "hmc_owner": "None",
+    "hmc_serial": "10B6ECC",
+    "hmc_location": "c340f6 u19",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "None"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.251.91",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "powervc_fvt/Dro@123",
+    "hmc_squad": "infra",
+    "hmc_owner": "None",
+    "hmc_serial": "10B6EDC",
+    "hmc_location": "c340f6 u20",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "9.114.181.76",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "USERID/PASSW0RD",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.252.201",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "hscroot/Test@123",
+    "hmc_squad": "Scale",
+    "hmc_owner": "None",
+    "hmc_serial": "21DB64C",
+    "hmc_location": "C387f9u32",
+    "hmc_private_ip": "172.16.255.232",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "9.114.252.215",
+    "hmc_mtms": "7042-CR7",
+    "hmc_imm_credentials": "USERID/PASSW0RD",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.252.206",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "powervc_fvt/powervc@123",
+    "hmc_squad": "Framework",
+    "hmc_owner": "None",
+    "hmc_serial": "VHMC",
+    "hmc_location": "None",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.253.176",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "hscroot/passw0rdpassw0rd",
+    "hmc_squad": "Framework",
+    "hmc_owner": "None",
+    "hmc_serial": "pvc-VHMC-1",
+    "hmc_location": "None",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "None"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.253.34",
+  "fields": {
+    "hmc_ip_ping": false,
+    "hmc_credentials": "powervc_fvt/powervc@123",
+    "hmc_squad": "Scale",
+    "hmc_owner": "None",
+    "hmc_serial": "VHMC",
+    "hmc_location": "None",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.253.44",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "hscroot/abc123",
+    "hmc_squad": "Framework",
+    "hmc_owner": "None",
+    "hmc_serial": "S21E592C",
+    "hmc_location": "C387F9u20",
+    "hmc_private_ip": "172.16.255.230",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "9.114.23.13",
+    "hmc_mtms": "7042-CR8",
+    "hmc_imm_credentials": "USERID/PASSW0RD",
+    "hmclab": "None"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.253.45",
+  "fields": {
+    "hmc_ip_ping": false,
+    "hmc_credentials": "powervc_fvt/Test@123",
+    "hmc_squad": "Scale",
+    "hmc_owner": "None",
+    "hmc_serial": "VHMC",
+    "hmc_location": "None",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.253.46",
+  "fields": {
+    "hmc_ip_ping": false,
+    "hmc_credentials": "hscroot/abc123",
+    "hmc_squad": "Framework",
+    "hmc_owner": "None",
+    "hmc_serial": "Power vHMC",
+    "hmc_location": "None",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "None"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.253.47",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "powervc_fvt/Test@123",
+    "hmc_squad": "DevOpsCT",
+    "hmc_owner": "None",
+    "hmc_serial": "10B6ECC",
+    "hmc_location": "c340f6 u19",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.253.48",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "powervc_fvt/Test@123",
+    "hmc_squad": "Scale",
+    "hmc_owner": "None",
+    "hmc_serial": "10B6ECC",
+    "hmc_location": "c340f6 u19",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "9.114.181.49",
+    "hmc_mtms": "7042-CR8",
+    "hmc_imm_credentials": "USERID/PASSW0RD",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.114.254.146",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "hscroot/abc123",
+    "hmc_squad": "Framework",
+    "hmc_owner": "None",
+    "hmc_serial": "None",
+    "hmc_location": "None",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "None"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.47.67.12",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "powervc_fvt/powervc@123",
+    "hmc_squad": "Infra",
+    "hmc_owner": "None",
+    "hmc_serial": "210459D",
+    "hmc_location": "c340f10 u38",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "9.47.67.13",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "USERID/PASSW0RD",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.47.67.42",
+  "fields": {
+    "hmc_ip_ping": false,
+    "hmc_credentials": "powervc_fvt/powervc@123",
+    "hmc_squad": "Scale",
+    "hmc_owner": "None",
+    "hmc_serial": "210459D",
+    "hmc_location": "c340f10 u38",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "9.47.67.13",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "USERID/PASSW0RD",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.47.67.50",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "hscroot/Test@123",
+    "hmc_squad": "Interface",
+    "hmc_owner": "None",
+    "hmc_serial": "21DB64C",
+    "hmc_location": "C387f9u32",
+    "hmc_private_ip": "172.16.255.232",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "9.114.252.215",
+    "hmc_mtms": "7042-CR7",
+    "hmc_imm_credentials": "USERID/PASSW0RD",
+    "hmclab": "None"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.47.67.56",
+  "fields": {
+    "hmc_ip_ping": false,
+    "hmc_credentials": "powervc_fvt/Dro@123",
+    "hmc_squad": "Storage",
+    "hmc_owner": "None",
+    "hmc_serial": "10B6EDC",
+    "hmc_location": "c340f6 u20",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "None"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.47.67.57",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "powervc_fvt/Test@123",
+    "hmc_squad": "Framework",
+    "hmc_owner": "None",
+    "hmc_serial": "VHMC",
+    "hmc_location": "None",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.hmcs",
+  "pk": "9.47.67.58",
+  "fields": {
+    "hmc_ip_ping": true,
+    "hmc_credentials": "hscroot/abc123",
+    "hmc_squad": "infra",
+    "hmc_owner": "None",
+    "hmc_serial": "Power vHMC",
+    "hmc_location": "None",
+    "hmc_private_ip": "None",
+    "hmc_private_credentials": "",
+    "hmc_public_private": "None",
+    "hmc_imm_ip": "None",
+    "hmc_mtms": "None",
+    "hmc_imm_credentials": "None",
+    "hmclab": "POK"
+  }
+},
+{
+  "model": "hwt.storages",
+  "pk": "9.114.181.166",
+  "fields": {
+    "storage_ip_ping": false,
+    "storage_credentials": "superuser/passw0rd",
+    "storage_type": "V7000",
+    "storage_port": "None",
+    "storage_serial": "78RFNAG",
+    "storage_rest_api_server": "None",
+    "storage_ldev_id_range": "None",
+    "storage_location": "c340f9 u3",
+    "storage_capacity": "24x 1.2TB Disks",
+    "storage_service_ip": "None",
+    "storage_lab": "POK"
+  }
+},
+{
+  "model": "hwt.storages",
+  "pk": "9.114.181.188",
+  "fields": {
+    "storage_ip_ping": true,
+    "storage_credentials": "superuser/passw0rd",
+    "storage_type": "V7000",
+    "storage_port": "None",
+    "storage_serial": "78FRNB6",
+    "storage_rest_api_server": "None",
+    "storage_ldev_id_range": "None",
+    "storage_location": "c340f9 u5",
+    "storage_capacity": "24x 1.2TB Disks",
+    "storage_service_ip": "None",
+    "storage_lab": "POK"
+  }
+},
+{
+  "model": "hwt.storages",
+  "pk": "9.114.181.189",
+  "fields": {
+    "storage_ip_ping": true,
+    "storage_credentials": "superuser/passw0rd",
+    "storage_type": "V7000",
+    "storage_port": "None",
+    "storage_serial": "78RET26",
+    "storage_rest_api_server": "None",
+    "storage_ldev_id_range": "None",
+    "storage_location": "c340f9 u7",
+    "storage_capacity": "24x 1.2TB Disks",
+    "storage_service_ip": "None",
+    "storage_lab": "POK"
+  }
+},
+{
+  "model": "hwt.storages",
+  "pk": "9.114.230.57",
+  "fields": {
+    "storage_ip_ping": true,
+    "storage_credentials": "pvcadmin/passw0rd",
+    "storage_type": "IBM DS8K",
+    "storage_port": "None",
+    "storage_serial": "75ALC80",
+    "storage_rest_api_server": "None",
+    "storage_ldev_id_range": "None",
+    "storage_location": "2831-980",
+    "storage_capacity": "14",
+    "storage_service_ip": "9.114.254.105",
+    "storage_lab": "POK"
+  }
+},
+{
+  "model": "hwt.storages",
+  "pk": "9.114.254.104",
+  "fields": {
+    "storage_ip_ping": true,
+    "storage_credentials": "superuser/passw0rd",
+    "storage_type": "V7000",
+    "storage_port": "None",
+    "storage_serial": "78RX084",
+    "storage_rest_api_server": "None",
+    "storage_ldev_id_range": "None",
+    "storage_location": "c387f15u05",
+    "storage_capacity": "16.27",
+    "storage_service_ip": "9.114.254.103",
+    "storage_lab": "POK"
+  }
+},
+{
+  "model": "hwt.storages",
+  "pk": "9.114.254.32",
+  "fields": {
+    "storage_ip_ping": true,
+    "storage_credentials": "superuser/passw0rd",
+    "storage_type": "V7000",
+    "storage_port": "None",
+    "storage_serial": "78RT1F3",
+    "storage_rest_api_server": "None",
+    "storage_ldev_id_range": "None",
+    "storage_location": "c387f15u03",
+    "storage_capacity": "16.27",
+    "storage_service_ip": "None",
+    "storage_lab": "POK"
+  }
+},
+{
+  "model": "hwt.storages",
+  "pk": "9.47.67.14",
+  "fields": {
+    "storage_ip_ping": true,
+    "storage_credentials": "superuser/passw0rd",
+    "storage_type": "V7000",
+    "storage_port": "None",
+    "storage_serial": "782110K",
+    "storage_rest_api_server": "None",
+    "storage_ldev_id_range": "None",
+    "storage_location": "C340f9  u17",
+    "storage_capacity": "None",
+    "storage_service_ip": "None",
+    "storage_lab": "POK"
+  }
+},
+{
+  "model": "hwt.fabrics",
+  "pk": "9.114.181.161",
+  "fields": {
+    "fabric_ip_ping": true,
+    "fabric_credentials": "admin/passw0rd",
+    "fabric_type": "Brocade",
+    "fabric_primary": "Primary",
+    "fabric_primary_port": "None",
+    "fabric_vsan_id": "None",
+    "fabric_serial": "10155ZH",
+    "fabric_location": "c340f11 u6",
+    "fabric_lab": "POK",
+    "fabric_storwise": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166",
+    "fabric_ds8k": "None",
+    "fabric_emc_vmax": "VMAX(SMIS-4.6): 9.114.248.26",
+    "fabric_emc_vnx": "None",
+    "fabric_hitachi": "None",
+    "fabric_xiv": "XIV1: 9.114.63.32"
+  }
+},
+{
+  "model": "hwt.fabrics",
+  "pk": "9.114.181.162",
+  "fields": {
+    "fabric_ip_ping": true,
+    "fabric_credentials": "admin/passw0rd",
+    "fabric_type": "Brocade",
+    "fabric_primary": "Secondary",
+    "fabric_primary_port": "None",
+    "fabric_vsan_id": "None",
+    "fabric_serial": "10155ZN",
+    "fabric_location": "c340f11 u5",
+    "fabric_lab": "POK",
+    "fabric_storwise": "SVC1: 9.114.181.188\nSVC2: 9.114.181.166",
+    "fabric_ds8k": "None",
+    "fabric_emc_vmax": "VMAX(SMIS-4.6): 9.114.248.26",
+    "fabric_emc_vnx": "None",
+    "fabric_hitachi": "None",
+    "fabric_xiv": "XIV1: 9.114.63.32"
+  }
+},
+{
+  "model": "hwt.fabrics",
+  "pk": "9.114.181.184",
+  "fields": {
+    "fabric_ip_ping": true,
+    "fabric_credentials": "admin/passw0rd",
+    "fabric_type": "Brocade",
+    "fabric_primary": "Primary",
+    "fabric_primary_port": "None",
+    "fabric_vsan_id": "None",
+    "fabric_serial": "10A7A3V",
+    "fabric_location": "c340f4 u8",
+    "fabric_lab": "POK",
+    "fabric_storwise": "SVC : 9.114.181.186",
+    "fabric_ds8k": "None",
+    "fabric_emc_vmax": "None",
+    "fabric_emc_vnx": "None",
+    "fabric_hitachi": "None",
+    "fabric_xiv": "None"
+  }
+},
+{
+  "model": "hwt.fabrics",
+  "pk": "9.114.181.185",
+  "fields": {
+    "fabric_ip_ping": true,
+    "fabric_credentials": "admin/passw0rd",
+    "fabric_type": "Brocade",
+    "fabric_primary": "Secondary",
+    "fabric_primary_port": "None",
+    "fabric_vsan_id": "None",
+    "fabric_serial": "10151PN",
+    "fabric_location": "c340f4 u7",
+    "fabric_lab": "POK",
+    "fabric_storwise": "SVC : 9.114.181.186",
+    "fabric_ds8k": "None",
+    "fabric_emc_vmax": "None",
+    "fabric_emc_vnx": "None",
+    "fabric_hitachi": "None",
+    "fabric_xiv": "None"
+  }
+},
+{
+  "model": "hwt.fabrics",
+  "pk": "9.114.181.33",
+  "fields": {
+    "fabric_ip_ping": true,
+    "fabric_credentials": "admin/passw0rd",
+    "fabric_type": "Brocade",
+    "fabric_primary": "Primary",
+    "fabric_primary_port": "None",
+    "fabric_vsan_id": "None",
+    "fabric_serial": "10430KA",
+    "fabric_location": "c340f11 u20",
+    "fabric_lab": "POK",
+    "fabric_storwise": "SVC: 9.114.181.189",
+    "fabric_ds8k": "None",
+    "fabric_emc_vmax": "None",
+    "fabric_emc_vnx": "None",
+    "fabric_hitachi": "None",
+    "fabric_xiv": "None"
+  }
+},
+{
+  "model": "hwt.fabrics",
+  "pk": "9.114.181.34",
+  "fields": {
+    "fabric_ip_ping": true,
+    "fabric_credentials": "admin/passw0rd",
+    "fabric_type": "Brocade",
+    "fabric_primary": "Secondary",
+    "fabric_primary_port": "None",
+    "fabric_vsan_id": "None",
+    "fabric_serial": "10430XK",
+    "fabric_location": "c340f11 u22",
+    "fabric_lab": "POK",
+    "fabric_storwise": "SVC: 9.114.181.189",
+    "fabric_ds8k": "None",
+    "fabric_emc_vmax": "None",
+    "fabric_emc_vnx": "None",
+    "fabric_hitachi": "None",
+    "fabric_xiv": "None"
+  }
+},
+{
+  "model": "hwt.fabrics",
+  "pk": "9.114.23.141",
+  "fields": {
+    "fabric_ip_ping": true,
+    "fabric_credentials": "admin/passw0rd",
+    "fabric_type": "Cisco",
+    "fabric_primary": "B-Secondary",
+    "fabric_primary_port": "None",
+    "fabric_vsan_id": "None",
+    "fabric_serial": "13JP008",
+    "fabric_location": "C387F14u27",
+    "fabric_lab": "POK",
+    "fabric_storwise": "None",
+    "fabric_ds8k": "None",
+    "fabric_emc_vmax": "None",
+    "fabric_emc_vnx": "None",
+    "fabric_hitachi": "None",
+    "fabric_xiv": "None"
+  }
+},
+{
+  "model": "hwt.fabrics",
+  "pk": "9.114.251.136",
+  "fields": {
+    "fabric_ip_ping": true,
+    "fabric_credentials": "admin/passw0rd",
+    "fabric_type": "Brocade",
+    "fabric_primary": "None",
+    "fabric_primary_port": "None",
+    "fabric_vsan_id": "None",
+    "fabric_serial": "S10490GX",
+    "fabric_location": "c340f11 u12",
+    "fabric_lab": "POK",
+    "fabric_storwise": "SVC : 9.47.67.14",
+    "fabric_ds8k": "None",
+    "fabric_emc_vmax": "None",
+    "fabric_emc_vnx": "None",
+    "fabric_hitachi": "None",
+    "fabric_xiv": "None"
+  }
+},
+{
+  "model": "hwt.fabrics",
+  "pk": "9.114.254.30",
+  "fields": {
+    "fabric_ip_ping": true,
+    "fabric_credentials": "admin/passw0rd",
+    "fabric_type": "Brocade",
+    "fabric_primary": "A - Primary",
+    "fabric_primary_port": "None",
+    "fabric_vsan_id": "None",
+    "fabric_serial": "10159PA",
+    "fabric_location": "c387f14u33",
+    "fabric_lab": "POK",
+    "fabric_storwise": "None",
+    "fabric_ds8k": "None",
+    "fabric_emc_vmax": "None",
+    "fabric_emc_vnx": "None",
+    "fabric_hitachi": "None",
+    "fabric_xiv": "None"
+  }
+},
+{
+  "model": "hwt.fabrics",
+  "pk": "9.47.70.101",
+  "fields": {
+    "fabric_ip_ping": true,
+    "fabric_credentials": "admin/passw0rd",
+    "fabric_type": "Cisco",
+    "fabric_primary": "B-Secondary",
+    "fabric_primary_port": "None",
+    "fabric_vsan_id": "None",
+    "fabric_serial": "Loaned Cisco",
+    "fabric_location": "c387f10MDS",
+    "fabric_lab": "POK",
+    "fabric_storwise": "None",
+    "fabric_ds8k": "None",
+    "fabric_emc_vmax": "None",
+    "fabric_emc_vnx": "None",
+    "fabric_hitachi": "None",
+    "fabric_xiv": "None"
+  }
+},
+{
+  "model": "hwt.supportedlevels",
+  "pk": "PVC 1.4.4.2",
+  "fields": {
+    "sld": "https://ibm.ent.box.com/notes/694344938500",
+    "test_plan": "https://jazz04.rchland.ibm.com:12443/jazz/web/projects/Janus#action=com.ibm.team.workitem.viewWorkItem&id=79631",
+    "management_node": "PowerVC:\n\n1.4.4.2 on ppcle / x86 with RHEL7.7 / RHEL7.8  and RHEL7.9\n\nNOTE:\n\nRHEL7.9 RC build is currently not available and would be tested during regression phase.\nFirmware:\n\n940 and 950",
+    "hmc_level": "HMC :\n\nV9R1.920 for x86 and ppc (N-2)\nor\nV9R1.930 for x86 and ppc (N-1)\nV9R1.941 for x86 and ppc (N)\n950 (vHMC) for ppc (N)\n\nV9R9.1.920 - https://ausgsa.ibm.com/projects/h/hmc_images/release_notes/RockBand_HMC_drivers.html",
+    "vios_level": "VIOS:\n2.2.6.51 (61r)\n3.1.1.10 (72Q)\n3.1.2.0 (72V)\n\nVIOS minipack - https://ausgsa.ibm.com/gsa/ausgsa/projects/s/service/images/61/update/VIOS_MP_2.2.6.23/\n\nDownload above VIOS versions from -  https://pcajet.aus.stglabs.ibm.com/cgi-bin/netload.pl",
+    "novalink_level": "Novalink Version: 1.0.0.16\nVersion: 1.0.0.16",
+    "novalink_os": "PowerVM                  :    On Ubuntu 16.04 and RHEL 7.6/RHEL7.6",
+    "guest_os": "Guest OS Support:\nRHEL 7.6 (LE) on P8 and P9\nRHEL7.9 (LE) on P8 and P9\nRHEL 8.0  / 8.1 / 8.2  (LE) on P9\n[RHEL 7.5+ (LE) on P9]\nSLES 12.3 (LE) on P8 and P9\nSLES 15+ (LE) on P8 and P9\nSLES 15 SP2 (LE) on P8 and P9\nAIX 6.1 TL9 SP12 (BE) on P7, P8 and P9\nAIX 7.1 TL5 SP3 (BE) on P7, P8 and P9\nAIX 7.2 TL3 SP1 (BE) on P7, P8 and P9\nIBM i 7.2 TR9 (BE) on P7, P8 and P9\nIBM i 7.3 TR8 (BE) on P7, P8 and P9\nIBM i 7.4 TR2 (BE) on P7, P8 and P9",
+    "storages": "",
+    "comments": "PowerVC 1.4.4.2 Schedule -\nRefer : https://ibm.ent.box.com/notes/694344938500\n\nTest Environment :\n\nPowerVC:\n\n1.4.4.2 on ppcle / x86 with RHEL7.7 / RHEL7.8  and RHEL7.9\n\nNOTE:\n\nRHEL7.9 RC build is currently not available and would be tested during regression phase.\n\nFirmware:\n\n940 and 950\n\nHMC :\n\nV9R1.920 for x86 and ppc (N-2)\nor\nV9R1.930 for x86 and ppc (N-1)\nV9R1.941 for x86 and ppc (N)\n950 (vHMC) for ppc (N)\n\nV9R9.1.920 - https://ausgsa.ibm.com/projects/h/hmc_images/release_notes/RockBand_HMC_drivers.html\n\n\nVIOS:\n2.2.6.51 (61r)\n3.1.1.10 (72Q)\n3.1.2.0 (72V)\n\nVIOS minipack - https://ausgsa.ibm.com/gsa/ausgsa/projects/s/service/images/61/update/VIOS_MP_2.2.6.23/\n\nDownload above VIOS versions from -  https://pcajet.aus.stglabs.ibm.com/cgi-bin/netload.pl\n\nNovalink Version: 1.0.0.16\nVersion: 1.0.0.16\nPowerVM                  :    On Ubuntu 16.04 and RHEL 7.6/RHEL7.6\n\nGuest OS Support:\nRHEL 7.6 (LE) on P8 and P9\nRHEL7.9 (LE) on P8 and P9\nRHEL 8.0  / 8.1 / 8.2  (LE) on P9\n[RHEL 7.5+ (LE) on P9]\nSLES 12.3 (LE) on P8 and P9\nSLES 15+ (LE) on P8 and P9\nSLES 15 SP2 (LE) on P8 and P9\nAIX 6.1 TL9 SP12 (BE) on P7, P8 and P9\nAIX 7.1 TL5 SP3 (BE) on P7, P8 and P9\nAIX 7.2 TL3 SP1 (BE) on P7, P8 and P9\nIBM i 7.2 TR9 (BE) on P7, P8 and P9\nIBM i 7.3 TR8 (BE) on P7, P8 and P9\nIBM i 7.4 TR2 (BE) on P7, P8 and P9\n\nPlease make sure all the test environment cleaned up and fresh install required.\n\nTest Exclusions :\n1) no AVT testing will be performed\n2) GVT testing to be performed only for new LIs.\n\nNOTE:\n1) Provide some high level summary on LI specific test coverage for each squad and provide the reference for detailed test case document.\n2) Ensure individual squad to execute component specific tempest runs until DevOpsCT is available.\n\n\nTest Coverage    :   Squad Based\n============      =============\n=====================================================================\nInfrastructure Squad :  FVT / SVT Tests (Jay)\n=====================================================================\n79007 Test Only: CoLo: HTTP connection issues for provisioning failures\n79006 Test Only: CoLo: Ref_Codesupport for AIX & Linux VMs\n79005 BNPP: DRO - Formula update -\n79005 Test Only: BNPP: DRO - Formula update -----                                   \n79184 [1442] Validate 1440 -> 1441 -> 1442 update with infoblox registered\n79280 TTV: Update version check for VIOS and HMC in TTV\n79003 Test Only: CoLo: VLAN allocation algorithm change\n79293 FW 950 verification with PVC 1442\n79004 Test Only: CoLo: Improvement in time taken for VMs to show OK state (RMC state)\nLife cycle operations.\n\n=====================================================================\nStorage Squad :  FVT / SVT Tests (Jagdish / Li Jun Zhu - IBMi for FVT coverage)\n=====================================================================\n1- Coverage testing for all new API implementation , which are added in previous sprints stories.\n2-Test Image capture function of PowerVC and make sure that it has not regressed.\n3-clone set of source disks. Clone the cloned disks: Prepare ( 10 volume + start + execute ( 10 clone volume) + prepare ( new 10 clone volumes)).\n4-Create a script calling clone API regularly may be once in 15-20 mins of 100 GB multi disk. Script should run for an hour and delete the 6 clones created earlier. run the script back to back for 48 hours. Review the storage controller and make sure there are no disk mappings or consistency groups or residual snapshots are left behind.\n5-After how much time customer can run the next set for prepare+start+execute for the same VM.\n6- Run clone async API for available volumes(50) , same time attach 1/2 volume to an VM.\n7- PowerMAX regression\n8- Hitachi regression for Apple iFix, related to bulk/parallel attach\n9- Regression around zoning policy\n\nibmi:\n1. Prepare/Start/Execute/Cleanup/Clone_volume API testing\n2. A script for running duration testing for Prepare/Start/Execute/Cleanup/Clone_volume API\n3. Test tape volume lifecycle.\n\nOther two stories as added as child\n\nSVT-\nconcurrent prepare: 4 concurrent * 128 volumes\nconcurrent execute: 4 concurrent * 128 volumes\n\n======================================================================\nFramework Squad :  FVT / SVT Tests (Sravan)\n======================================================================\n1)  1440 -> 1441 -> 1442 (cloud edition) with LDAP , multiple projects,users and groups -     NIharika\n2) 1440 -> 1442(standard edition)  with Non-LDAP , multiple projects ,users and groups  -    Niharika\n3)  CLI validation :              - Chandan\n   powervc-diag\n   powervc-log\n   powervc-config identity all subcommands\n   powervc-config general ifconfig\n   audit commands\n   powervc-services\n   openstack token issue\n   openstack token revoke\n4) powervc upgrade from 1441 to 1442 with ipv6   - Chandan\n5) upgrade validation 1440  -> 1441 -> 1442 with HMC and novalink managed hosts   -  Chandan\n6) upgrade validation 1440  -> 1442  with HMC and novalink managed hosts   - Sowmya\n7) Basic regression with HMC 930 \n\nAdded few stories as child to this story\n\n======================================================================\nInterface Squad :  FVT / SVT Tests (Nirmala)\n======================================================================\nPlease update the detailed regression tests here .\nWill be covering following as part of Regression :\n1. SSK flow\n2. Cloud Policies\n3. Email Notifications\n4. VM ownership\n5. Key Pair Testing\n6. Vm Lifecycle\n\n\n======================================================================\nScale Tests\n======================================================================\nPlease update the detailed regression tests here .\n\nThe 1K Scale test will be tested during Regression phase."
+  }
+},
+{
+  "model": "hwt.supportedlevels",
+  "pk": "PVC 2.0",
+  "fields": {
+    "sld": "https://ibm.ent.box.com/file/621876038753",
+    "test_plan": "https://jazz04.rchland.ibm.com:12443/jazz/web/projects/Janus#action=com.ibm.team.workitem.viewWorkItem&id=80959",
+    "management_node": "PowerVC , HMC , VIOS and Novalink supported versions can be found on the HLD document ( https://ibm.ent.box.com/file/621876038753 )",
+    "hmc_level": "HMC Versions :\nV9R1.941 for x86 and ppc ( May 2020 ) (N-1)\nV9R1.950 for x86 and ppc (Nov-2020) (N)",
+    "vios_level": "VIOS Versions:\n2.2.6.51\n\n3.1.1.25(72Q, GA 17-July-2020)\n3.1.2.0 (72V, GA  Nov-13-2020 )",
+    "novalink_level": "NovaLinkVersion:\n2.0 PowerVM:On Ubuntu 18.04 and RHEL 8.2",
+    "novalink_os": "",
+    "guest_os": "",
+    "storages": "",
+    "comments": "PowerVC 2.0 Regression Schedule -\n\n10/22/2020 to 11/11/2020\n\nTest Environment :\n\nPlease refer to the https://ibm.ent.box.com/file/621876038753 for supported test environments . \n\nPowerVC , HMC , VIOS and Novalink supported versions can be found on the HLD document ( https://ibm.ent.box.com/file/621876038753 )\n\nHMC Versions :\nV9R1.941 for x86 and ppc ( May 2020 ) (N-1)\nV9R1.950 for x86 and ppc (Nov-2020) (N)\n\nVIOS Versions:\n2.2.6.51\n\n3.1.1.25(72Q, GA 17-July-2020)\n3.1.2.0 (72V, GA  Nov-13-2020 )\n\nNovaLinkVersion:\n2.0 PowerVM:On Ubuntu 18.04 and RHEL 8.2\n\n\nPlease make sure all the test environment cleaned up and fresh install required.\n\nTest Exclusions :\nNone\n\nNOTE:\n1) Provide some high level summary on LI specific test coverage for each squad and provide the reference for detailed test case document.\n2) Ensure individual squad to execute component specific tempest runs until DevOpsCT is available.\n\n\nSquad Based regression Test coverage \n\n=====================================================================\nInfrastructure Squad :  FVT / SVT Tests\n=====================================================================\nDRO new policies and old functionality.:Abhinesh\nCLone VM:Harsha\nPMEM support: Jay\nImmediate Shutdown: Pranavi\nVIOS SDI: Ram\n\nAlong with that old regression\n\nCompute Templates: Chola/Dinesh/Pranavi\nHost Groups : Chola/Dinesh/Pranavi\nCollacotion rules: Chola/Dinesh/Pranavi\nNW support both SEA and SRIOV: Ram\nHost Add/Edit/Remove : Chola/Dinesh/Pranavi\nVM life cycles and other operations.: Chola/Dinesh/Pranavi\n\nSystem Test : Prabhakar.\n\n=====================================================================\nStorage Squad :  FVT / SVT Tests\n=====================================================================\nPlease update the regression test coverage here .\nregression plan:\n\nbelow tests across all storage providers :\nVM life cycle\nAll SCGs\nStorage templates\nIPG and PG with match True/False/\nConsistency group \nSnapshot/Restore\nVolume clone/VM clone\nRefactored clone\npluggable test suite\npowervc-config commands\nZone related testing\nFabrics(port tagging)\n\nProviders                                 Owner\nSVC                                         Jagdish/Preeti\nSVC Global mirror                      Jagdish\nPowerMAX                               Rakesh\nPowerMAX Replication              Rakesh\nHitachi                                      Swetha\nHitachi GAD                              Mounica\nXIV                                          Janapriya\nXIV hyperswap/multisite*           Preeti/Jagdish\nDS8000                                    Haritha\nPure storage                             Srikanth\nHMC -SSP                                Srilaxmi\nNvl -SSP                                   Salman\nVNX                                          Vijay\nZone related testing                    Ravinder\npowervc-config commands          Preeti\npluggable test suite                     Preeti\n\nsystem test plan:           Nisar/Mahalaxmi\n\nPowerVC Regression with Sles 15.02. and Rhel 8.2 with Novalink ( Ubuntu and Rhel) and HMC\n\nDeployment of 100 VM's with 8 concurrent per host\nClone of VM / Clone of volumes with 8 concurrent\nImage Agility Testing with multi volumes atleast 4\nVM life cycle with 8 concurrent\nAll SCGs\nStorage templates\nIPG and PG with match True/False/\nConsistency group\nSnapshot/Restore\nRefactoring clone\nRetype with SVC/PowerMAX/Hitachi\nset storage template from GUI for onboarded volumes and run some operation using that volume\n\n======================================================================\nFramework Squad :  FVT / SVT Tests\n======================================================================\nInstall  :\n=====\n1) Install PVC  on RHEL 8.2   - Standard and cloud      (Sowmya) -Done\n2) Install PVC on SLES15 SP1 - standard and cloud   (Sowmya)\n3) Install PVC on SLES15 SP2 - standard and cloud   (Pragnya)   -   Done\n4) Install PVC using non-resolvable hostname. (Install By IP) -   RHEL 8.2 and SLES15 SP2 -  Standard and cloud      (Chandan)   - Done\n\n   For each of above case , validate\n     a)    Check the install options i.e. silent and prompt.\n     b)    Verify the pre-requisite checks for installation\n     c)     Verify the firewall configuration\n     d)    Verify the errors & warnings & stack traces in the installation log.\n     e)    Verify the version.properties & osee.properties files.\n     f)     Perform VM lifecyle\n     f)     Uninstall and check if all PowerVC services stopped and /opt/ibm/powervc removed.\n     g)     Uninstall and verify the removal of installed RPM’s\n\n5) powervc-config regression testing\n\n     a)Install powervc 2.0 by IP when /etc/hosts file is having only short hostname , change hostname to fqdn and run powervc-config    - RHEL82   - Chandan  - Done\n     b)Install powervc 2.0 by Hostname and change the IP and run powervc-config     - SLES15 SP2  - Sravan\n     c)Re-installing powervc , after running config with Install by IP and change IP with novalink registration and run powervc-config   - SLES15 SP1   - Sravan\n\n       For each of above case , validate :\n         ->Validate Powervc-services status before and after changing hostname/IP.\n         ->Validate Powervc certificate before and after changing hostname/IP.\n         ->Validate endpoint before and after changing hostname/IP.\n         ->Validate TTV before and after changing hostname/IP.\n\nUpgrade/Backup/restore testing:\n========================\n1)  1442 to 2.0\n       a) PowerVC (cloud) Backup/restore with HMC and NL (RE-OS) P&C   (RHEL7.x  (ppcle) to RHEL8.2 (x86) )  -Chandan - Done\n             ->  NL Ubuntu1604 /1442/10016 to NL Ubuntu1804/2.0/2.0\n             ->  NL Ubuntu1604 /1442/10016 to NL Ubuntu1804/2.0/2.0\n\n       b) PowerVC(standard) Upgrade with HMC and NL (RE-OS) P&C   (RHEL7.x (x86) to SLES15 SP2)   --Pragnya \n            -> NL RHEL7 /1442/1.0.0.16 to NL RHEL8/2.0/2.0\n            -> NL RHEL7 /1442/1.0.0.16 to NL RHEL8/2.0/2.0\n\n2) 1441 to 2.0  (LDAP)    -\n       a) PowerVC(standard) Backup/restore with HMC and NL (RE-OS) P&C   (RHEL7.x  (x86) to RHEL8.2 (x86) )  --Chandan\n             -> NL RHEL7 /1441/1.0.0.16 to NL RHEL8/2.0/2.0\n            -> NL RHEL7 /1441/1.0.0.16 to NL RHEL8/2.0/2.0\n\n       b) PowerVC(cloud) Backup/restore  with HMC and NL (RE-OS) P&C   (RHEL7.x (ppcle) to SLES15 SP1)  --Pragnya \n             ->  NL Ubuntu1604 /1441/10016 to NL Ubuntu1804/2.0/2.0\n             ->  NL Ubuntu1604 /1441/10016 to NL Ubuntu1804/2.0/2.0\n\n3) 1440 to 2.0   -   Sravan/Chandan/Pragnya\n       a) PowerVC(cloud) Backup/restore with HMC and NL (RE-OS) P&C   (RHEL7.x  (x86) to RHEL8.2 (x86) )\n             ->  NL Ubuntu1604 /1440/10016 to NL Ubuntu1804/2.0/2.0\n             -> NL RHEL7 /1440/1.0.0.16 to NL RHEL8/2.0/2.0\n\n4) 2.0 to 2.0 with HMC/novalink and mix of standard/cloud, ppcle/x86,\n        a) Backup restore from RHEL 8.2 to RHEL 8.2 (same and different systems)   -  Niharika   - Done\n        b) Backup restore from RHEL 8.2 to SLES 15 SP2   - Rupa   - Done\n        c) Backup/restore from SLES15 SP1 to RHEL 8.2  -   Niharika\n        d) Backup/restore from SLES15 SP1 to SLES 15 SP2  - Rupa\n        e) Backup/restore from SLES15 SP2 to RHEL 8.2  - Rupa  - Done\n        f) Backup/restore from SLES15 SP2 to SLES15 SP2 (same and different systems)  - sowmya  - Done"
+  }
+},
+{
+  "model": "hwt.pvc_images",
+  "pk": "DND_ABH_SLES15_SP1_CI19",
+  "fields": {
+    "owner": "Abhinesh",
+    "storage": "SVC_9.114.181.188",
+    "operating_system": "RHEL81"
+  }
+},
+{
+  "model": "hwt.pvc_images",
+  "pk": "RHEL75-GA_DND_2",
+  "fields": {
+    "owner": "Chola",
+    "storage": "SVC_9.114.254.104",
+    "operating_system": "RHEL82"
+  }
+},
+{
+  "model": "hwt.pvc_images",
+  "pk": "RHEL81_CI_DND",
+  "fields": {
+    "owner": "Jay",
+    "storage": "SVC_9.114.181.188",
+    "operating_system": "RHEL"
+  }
+},
+{
+  "model": "hwt.pvc_images",
+  "pk": "RHEL81_UPD_DND",
+  "fields": {
+    "owner": "Jay",
+    "storage": "SVC_9.114.254.104",
+    "operating_system": "RHEL"
+  }
+},
+{
+  "model": "hwt.networks",
+  "pk": "2227",
+  "fields": {
+    "subnet_mask": "255.255.248.0",
+    "gateway": "9.114.255.254",
+    "dns1": "9.12.16.2",
+    "dns2": "9.0.130.50"
+  }
+},
+{
+  "model": "hwt.networks",
+  "pk": "2230",
+  "fields": {
+    "subnet_mask": "255.255.240.0",
+    "gateway": "9.47.79.254",
+    "dns1": "9.12.16.2",
+    "dns2": "9.0.128.50"
+  }
+},
+{
+  "model": "hwt.networknodes",
+  "pk": "9.114.23.231",
+  "fields": {
+    "network_node_ip_ping": false,
+    "credentials": "",
+    "x_ppc": "",
+    "operating_system": ""
+  }
+},
+{
+  "model": "hwt.networknodes",
+  "pk": "9.114.23.233",
+  "fields": {
+    "network_node_ip_ping": false,
+    "credentials": "root/passw0rd",
+    "x_ppc": "x86",
+    "operating_system": "Ubuntu 16.04"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2020-11-09T11:19:30.610",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1604900969.919436.json",
+    "comments": "Weekly Backup"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2020-11-09T11:19:30.610",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1604900969.919436.json",
+    "comments": "Weekly Backup"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2020-11-09T13:06:51.458",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1604907410.743546.json",
+    "comments": "Full List"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2020-11-09T13:06:51.458",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1604907410.743546.json",
+    "comments": "Full List"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-02T06:17:09.335",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1612226661.192793.json",
+    "comments": "Sample"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-02T06:17:09.335",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1612226661.192793.json",
+    "comments": "Sample"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-02T06:18:10.224",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1612226889.435299.json",
+    "comments": "Sample1"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-02T06:18:10.224",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1612226889.435299.json",
+    "comments": "Sample1"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-02T06:52:19.543",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1612228938.734929.json",
+    "comments": "Sample2"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-02T06:52:19.543",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1612228938.734929.json",
+    "comments": "Sample2"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-03T23:49:07.260",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1612376346.590616.json",
+    "comments": "Sample3"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-03T23:49:07.260",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1612376346.590616.json",
+    "comments": "Sample3"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-03T23:57:00.994",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1612376820.261255.xml",
+    "comments": "Sample4"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-03T23:57:00.994",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1612376820.261255.xml",
+    "comments": "Sample4"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T00:05:44.022",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1612377343.384848.xml",
+    "comments": "Sample 5"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T00:05:44.022",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1612377343.384848.xml",
+    "comments": "Sample 5"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T00:07:21.739",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1612377441.015694.json",
+    "comments": "Sample 6"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T00:07:21.739",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1612377441.015694.json",
+    "comments": "Sample 6"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T00:27:21.231",
+  "fields": {
+    "filepath": "PVC1612378640.461948.json",
+    "comments": "Sample7"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T00:27:21.231",
+  "fields": {
+    "filepath": "PVC1612378640.461948.json",
+    "comments": "Sample7"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T00:38:49.028",
+  "fields": {
+    "filepath": "PVC1612379328.323089.json",
+    "comments": "Sample8"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T00:38:49.028",
+  "fields": {
+    "filepath": "PVC1612379328.323089.json",
+    "comments": "Sample8"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T00:41:25.270",
+  "fields": {
+    "filepath": "PVC1612379484.590927.json",
+    "comments": "Sample 9"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T00:41:25.270",
+  "fields": {
+    "filepath": "PVC1612379484.590927.json",
+    "comments": "Sample 9"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T01:43:38.725",
+  "fields": {
+    "filepath": "PVC1612383218.034102.json",
+    "comments": "Sample10"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T01:43:38.725",
+  "fields": {
+    "filepath": "PVC1612383218.034102.json",
+    "comments": "Sample10"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T01:58:43.707",
+  "fields": {
+    "filepath": "PVC1612384122.967811.json",
+    "comments": "xx"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T01:58:43.707",
+  "fields": {
+    "filepath": "PVC1612384122.967811.json",
+    "comments": "xx"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T02:01:35.032",
+  "fields": {
+    "filepath": "PVC1612384294.301554.json",
+    "comments": "fg"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T02:01:35.032",
+  "fields": {
+    "filepath": "PVC1612384294.301554.json",
+    "comments": "fg"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T02:11:30.286",
+  "fields": {
+    "filepath": "PVC1612384889.612397.json",
+    "comments": "ff"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T02:11:30.286",
+  "fields": {
+    "filepath": "PVC1612384889.612397.json",
+    "comments": "ff"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T02:22:18.978",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1612385538.244137.json",
+    "comments": "GG"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T02:22:18.978",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1612385538.244137.json",
+    "comments": "GG"
+  }
+},
+{
+  "model": "hwt.snapshots",
+  "pk": "2021-02-04T02:23:30.520",
+  "fields": {
+    "filepath": "/root/proj/hw/dump/PVC1612385609.808393.json",
+    "comments": "HH"
+  }
+},
+{
+  "model": "hwt.hostgroups",
+  "pk": "KVM",
+  "fields": {
+    "descreption": "KVM Systems"
+  }
+},
+{
+  "model": "hwt.hostgroups",
+  "pk": "P7",
+  "fields": {
+    "descreption": "P7 Systesm"
+  }
+},
+{
+  "model": "hwt.hostgroups",
+  "pk": "P8",
+  "fields": {
+    "descreption": "P8 Systems"
+  }
+},
+{
+  "model": "hwt.hostgroups",
+  "pk": "P9",
+  "fields": {
+    "descreption": "P9 Systems"
+  }
+},
+{
+  "model": "hwt.hosttypes",
+  "pk": "P7",
+  "fields": {
+    "descreption": "P7 System",
+    "host_group": "P7"
+  }
+},
+{
+  "model": "hwt.hosttypes",
+  "pk": "P8",
+  "fields": {
+    "descreption": "P8 Systems",
+    "host_group": "P8"
+  }
+},
+{
+  "model": "hwt.hosttypes",
+  "pk": "P8 Open Power",
+  "fields": {
+    "descreption": "P8 Open Power",
+    "host_group": "KVM"
+  }
+},
+{
+  "model": "hwt.hosttypes",
+  "pk": "P9",
+  "fields": {
+    "descreption": "P9 Systems",
+    "host_group": "P9"
+  }
+},
+{
+  "model": "hwt.hosttypes",
+  "pk": "P9 Boston",
+  "fields": {
+    "descreption": "P9 Boston",
+    "host_group": "KVM"
+  }
+},
+{
+  "model": "hwt.hosttypes",
+  "pk": "P9 Fleetwood",
+  "fields": {
+    "descreption": "P9 Fleetwood",
+    "host_group": "P9"
+  }
+},
+{
+  "model": "hwt.hosttypes",
+  "pk": "P9 Zeppelin",
+  "fields": {
+    "descreption": "P9 Zeppelin",
+    "host_group": "P9"
+  }
+},
+{
+  "model": "hwt.hosttypes",
+  "pk": "P9 ZZ",
+  "fields": {
+    "descreption": "P9 ZZ systems",
+    "host_group": "P9"
+  }
+},
+{
+  "model": "hwt.squads",
+  "pk": "Currency",
+  "fields": {
+    "descreption": "Currency Squad"
+  }
+},
+{
+  "model": "hwt.squads",
+  "pk": "DevOpsCT",
+  "fields": {
+    "descreption": "DevOpsCT"
+  }
+},
+{
+  "model": "hwt.squads",
+  "pk": "Framework",
+  "fields": {
+    "descreption": "Framework Squad"
+  }
+},
+{
+  "model": "hwt.squads",
+  "pk": "Infra",
+  "fields": {
+    "descreption": "Infrastructure Squad"
+  }
+},
+{
+  "model": "hwt.squads",
+  "pk": "Interface",
+  "fields": {
+    "descreption": "Interface Squad"
+  }
+},
+{
+  "model": "hwt.squads",
+  "pk": "MultiNode",
+  "fields": {
+    "descreption": "Multi Node"
+  }
+},
+{
+  "model": "hwt.squads",
+  "pk": "Pool",
+  "fields": {
+    "descreption": "Pool Systems"
+  }
+},
+{
+  "model": "hwt.squads",
+  "pk": "Scale",
+  "fields": {
+    "descreption": "Scale Systems"
+  }
+},
+{
+  "model": "hwt.squads",
+  "pk": "Storage",
+  "fields": {
+    "descreption": "Storage Squad"
+  }
+},
+{
+  "model": "hwt.squads",
+  "pk": "TechM",
+  "fields": {
+    "descreption": "Tech Mahindra Squad"
+  }
+},
+{
+  "model": "hwt.schedules",
+  "pk": "1.2.3.4",
+  "fields": {
+    "timestamp": "2021-02-04T00:00:06.181",
+    "status": "Down",
+    "notify_date": "2021-02-04",
+    "notified_today": true,
+    "notify_id": "bjayasan@in.ibm.com"
+  }
+},
+{
+  "model": "hwt.schedules",
+  "pk": "2.3.4.5",
+  "fields": {
+    "timestamp": "2021-02-01T12:03:29.943",
+    "status": "Up",
+    "notify_date": "2021-02-01",
+    "notified_today": false,
+    "notify_id": "bjayasan@in.ibm.com"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2020-11-07T20:05:22",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "editor",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2020-11-07T20:05:53.531",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "3",
+    "object_repr": "user",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+}
+]

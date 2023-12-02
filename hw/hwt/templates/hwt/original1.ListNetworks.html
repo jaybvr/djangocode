@@ -1,0 +1,87 @@
+{% include './base_layout.html' with menu="ln" %}
+
+{% block content %}
+{% load static %}
+  
+<div class="col-sm-9"> 
+        
+        
+      {% if user.get_username != "user" %}
+      
+        <div class="col-sm-offset-9">
+           <a type="button" class="btn btn-primary" href="{% url 'add_network' %}">Add Network</a>
+           <a type="button" class="btn btn-primary" href="{% url 'edit_network' %}">Edit Network</a>
+           
+      {% if user.get_username != "editor" %}      
+           <a type="button" class="btn btn-primary" href="{% url 'delete_network' %}">Delete Network</a>
+      {% endif %}
+      
+    </div>
+        
+      {% endif %}
+    <h3> List Networks</h3>
+<br>
+<br>
+<b>SLRC: </b> <a href="https://slrc.stglabs.ibm.com/">https://slrc.stglabs.ibm.com/</a>
+<br>
+    <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>VLAN ID</th> </th>
+                <th> Subnet Mask</th>
+                <th>Gateway</th>
+                <th> DNS1 </th>
+                <th> DNS2 </th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for network in networks %}
+            <tr>
+            <td>{{ network.vlan_id }}</td>
+            <td>{{ network.subnet_mask }}</td>
+            <td>{{ network.gateway }}</td>
+            <td>{{ network.dns1 }}</td>
+            <td>{{ network.dns2 }}</td>
+            </tr>
+            {% endfor %}
+            </tbody></table>
+            
+        <h3>Network Nodes </h3>
+<!--    <div class="col-sm-offset-9">
+           <a type="button" class="btn btn-primary" href="{% url 'add_network' %}">Add Network Node</a>
+           <a type="button" class="btn btn-primary" href="{% url 'edit_network' %}">Edit Network Node</a>
+           <a type="button" class="btn btn-primary" href="{% url 'delete_network' %}">Delete Network Node</a>
+           
+    </div>
+-->
+<br>
+        <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Network Node IP</th> </th>
+                <th></th>
+                <th>Credentials</th>
+                <th>X86 / PPC </th>
+                <th> Operating System</th>
+                                              
+              </tr>
+            </thead>
+            <tbody>
+            
+            {% for network_node in network_nodes %}
+            <tr>
+            <td>{{ network_node.network_node_ip }}</td>
+            <td><img src="{% if network_node.network_node_ip_ping == True %} {% static 'hwt/green.jpeg' %} {% else %} {% static 'hwt/red.jpeg' %} {% endif %} " height=20 width=20></td>
+            <td>{{ network_node.credentials }}</td>
+            <td>{{ network_node.x_ppc }}</td>
+            <td>{{ network_node.operating_system }}</td>
+            
+            </tr>
+            {% endfor %}
+            </tbody></table>
+              <br><br><br><br>
+
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,137 @@
+{% include './base_layout.html' with menu="sl" %}
+
+{% block content %}
+      
+<div class="col-sm-9"> 
+            <h3>Delete Supported Levels</h3>
+{% if error %}
+        <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ error }}
+                    </div>
+     {% endif %}
+<form class="form-horizontal" action="{% url 'delete_supported_level' %}" method="POST">
+          {% csrf_token %}
+        <div class="form-group">
+        <label class="control-label col-sm-2" >Enter Release *:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" id="edit_releaes_id" name="drelease_id" placeholder="Enter Release ID" {% if not drelease %} required="required"{% endif %}>
+        </div>        
+      </div>
+      
+       <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary" {% if drelease %} disabled {% endif %} >Submit</button>
+      </div>
+  </div>
+  
+  </form>
+  
+  
+      <form class="form-horizontal" action="{% url 'delete_supported_level' %}" method="POST">
+{% csrf_token %}
+
+        <div class="form-group">
+            <div class="col-xs-6">
+                <input type="hidden" class="form-control input-default" value="{{ drelease.pvc_release }}" id="pvc_release" name="pvc_release">
+            </div>
+      </div>
+      
+      <div class="form-group">
+            <label class="control-label col-sm-2" >Release *:</label>
+            <div class="col-xs-6">
+                <label class="control-label" >{{ drelease.pvc_release }}</label>
+            </div>
+      </div>      
+      
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="email">SLD:</label>
+          <div class="col-xs-6">
+                            <label class="control-label" >{{ drelease.sld }}</label>
+            
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Test Plan:</label>
+          <div class="col-xs-6">
+                            <label class="control-label" >{{ drelease.test_plan }}</label>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Management Node:</label>
+          <div class="col-xs-6">
+                            <label class="control-label" >{{ drelease.management_node }}</label>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">HMC Level:</label>
+          <div class="col-xs-6">
+                            <label class="control-label" >{{ drelease.hmc_level }}</label>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">VIOS Level:</label>
+          <div class="col-xs-6">
+                            <label class="control-label" >{{ drelease.vios_level }}</label>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Novalink Level:</label>
+          <div class="col-xs-6">
+                            <label class="control-label" >{{ drelease.novalink_level }}</label>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Novalink Host OS:</label>
+          <div class="col-xs-6">
+                            <label class="control-label" >{{ drelease.novalink_os }}</label>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Guest OS:</label>
+          <div class="col-xs-6">
+                            <label class="control-label" >{{ drelease.guest_os }}</label>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Storages:</label>
+          <div class="col-xs-6">
+                            <label class="control-label" >{{ drelease.storages }}</label>
+            
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Comments:</label>
+            <div class="col-xs-6">
+            <textarea class="form-control" rows="10" id="comments" name="comments">{{ drelease.comments }}</textarea>
+            
+            </div>
+        </div>
+        <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-primary" {% if not drelease %} disabled {% endif %} >Delete</button>
+            </div>
+        </div>
+      </form>
+       <br><br><br><br>
+
+  </div>
+      
+
+
+{% endblock %}

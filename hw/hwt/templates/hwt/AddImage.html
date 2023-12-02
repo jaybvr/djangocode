@@ -1,0 +1,62 @@
+{% include './base_layout.html' with menu="li" %}
+
+{% block content %}
+
+<div class="col-sm-9"> 
+   
+     <h3>Add Images</h3>
+      <h3> </h3>
+      
+    {% if error %}
+        <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ error }}
+                    </div>
+     {% endif %}
+     
+     <form class="form-horizontal" action="{% url 'add_image' %}" method="POST">
+        {% csrf_token %}
+        
+      <div class="form-group">
+          <label class="control-label col-sm-2" >Owner :</label>
+          <div class="col-xs-6">
+            <input type="text" class="form-control input-default" id="image_owner" name="image_owner" placeholder="Enter Owner">
+          </div>
+      </div>
+     
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Storage:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" id="image_storage" name="image_storage" placeholder="Enter Storage">
+        </div>
+    </div>
+    
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Image Operating System</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" id="image_os" name="image_os" placeholder="Enter Operating System">
+    </div>
+  </div>
+  
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Image Volume Name:</label>
+      <div class="col-xs-6">
+        <input type="text" class="form-control input-default" id="image_vol_name" name="image_vol_name" placeholder="Enter Image Volume Name">
+      </div>
+  </div>
+  
+  
+  <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+  </div>
+    
+  </form>
+
+</div>
+  <br><br><br><br>
+  </div>
+
+{% endblock %}
+
+

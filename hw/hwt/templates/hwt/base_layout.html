@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="navi.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+   </head>
+
+
+  <div style="text-align:center;color:#00008B;">
+        <i><h1>Hardware Tracker</h1></i>
+      </div>
+                 
+ 
+ 
+  <nav class="navbar navbar-defult">
+  <div class="container-fluid">
+       <ul class="nav navbar-nav">
+            <li class="active"><a href="{% url 'list_main' %}"><span class="glyphicon glyphicon-home"></span></a></li>
+          </ul>
+          
+          
+<ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Logged in as <span class="glyphicon glyphicon-user"></span>{{ request.user }}</a></li>
+      <li><a href="{% url 'logout_user' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+   
+ <div class="btn-group-vertical col-sm-2">
+   <a type="button" class="btn {% if menu == 'sl' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'list_supported_levels' %}"><span class="glyphicon glyphicon-blackboard"></span>  Supported Level</a>
+   <a type="button" class="btn {% if menu == 'li' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'list_images' %}"><span class="glyphicon glyphicon-camera"></span>  PVC Images</a>
+   <a type="button" class="btn {% if menu == 'ah' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'list_hosts' %}"> <span class="glyphicon glyphicon-th-list"></span>  All Hosts</a>
+  <a type="button" class="btn {% if menu == 'lht' %} btn-primary {% endif %}" style="text-align:left !important;"  href="{% url 'list_hosts_type' %}"><i class='fas fa-chart-line'></i>  Hosts by Host Groups</a>
+  <a type="button" class="btn {% if menu == 'lsq' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'list_squad_wise' %}"><i class='fas fa-chart-pie'></i>  Squadwise Assignment</a>
+  <a type="button" class="btn {% if menu == 'lh' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'list_hmcs' %}"><span class="glyphicon glyphicon-list-alt"></span>  HMC</a>
+    <a type="button" class="btn {% if menu == 'ls' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'list_storages' %}"><i class='fas fa-database'></i>  Storages</a>
+    <a type="button" class="btn {% if menu == 'lf' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'list_fabrics' %}"><span class="glyphicon glyphicon-list-alt"></span>  Fabrics</a>
+        <a type="button" class="btn {% if menu == 'ln' %} btn-primary {% endif %}" style="text-align:left !important;"  href="{% url 'list_networks' %}"><i class='fas fa-network-wired'></i>  Networks</a>    
+            {% if user.get_username == "admin" %}
+        <a type="button" class="btn {% if menu == 'sr' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'snapshot' %}"><i class='material-icons'>backup</i>  Backup / Restore</a>  
+        <a type="button" class="btn {% if menu == 'en' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'email_notify' %}"><span class="glyphicon glyphicon-envelope"></span>  Email Notifications</a>  
+        <a type="button" class="btn {% if menu == 'lsch' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'list_scheduler' %}"><i class="material-icons">schedule</i>  Schedule Notifications</a>  
+        <a type="button" class="btn {% if menu == 'hg' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'host_groups' %}"><span class="glyphicon glyphicon-list-alt"></span>  Host Groups / Types</a>  
+        <a type="button" class="btn {% if menu == 'sq' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'squad_update' %}"><span class="glyphicon glyphicon-list"></span>  Squad Details</a>  
+
+        
+                     {% endif %}
+          {% if user.get_username != "user" %}
+        <a type="button" class="btn {% if menu == 'id' %} btn-primary {% endif %}" style="text-align:left !important;" href="{% url 'import_data' %}"><span class="glyphicon glyphicon-import"></span> Import Data</a>  
+        <a type="button" class="btn text-left {% if menu == 'll' %} btn-primary {% endif %} " style="text-align:left !important;" href="{% url 'list_logs' %}"><span class="glyphicon glyphicon-list-alt"></span>  Logs</a>  
+        
+              {% endif %}  
+</div>
+
+</html>

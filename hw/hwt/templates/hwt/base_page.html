@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="navi.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+</head>
+<body>
+    <div style="text-align:center;color:Tomato;">
+        <i><h2>PowerVC Hardware Tracker</h2></i>
+      </div>
+<nav class="navbar navbar-defult">
+  <div class="container-fluid">
+   
+     {% if request.user == 'admin' or 'editor' %}
+       <ul class="nav navbar-nav">
+            <li class="active"><a href="{% url 'list_supported_levels' %}"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li><a href="{% url 'add_supported_level' %}"> ++ Supported Levels</a></li>
+            <li><a href="{% url 'add_host' %}"> ++ Host</a></li>
+            <li><a href="{% url 'add_hmc' %}">++ HMC</a></li>
+            <li><a href="{% url 'add_storage' %}"> ++ Storage</a></li>
+            <li><a href="{% url 'add_fabric' %}">++ Fabric</a></li>
+            <li><a href="{% url 'add_network' %}">++ Networks</a></li>
+            <li><a href="{% url 'add_image' %}">++ PVC Images</a></li>
+          </ul>
+     {% endif %}
+<ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Logged in as <span class="glyphicon glyphicon-user"></span>{{ request.user }}</a></li>
+      <li><a href="{% url 'logout_user' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+ 
+ <div class="btn-group-vertical col-sm-2">
+  <a type="button" class="btn btn-primary" href="{% url 'list_supported_levels' %}">Supported Level</a>
+  <a type="button" class="btn btn-link" href="{% url 'list_hosts' %}">All Hosts</a>
+  <a type="button" class="btn btn-link" href="{% url 'list_hosts_type' %}">Hosts by type</a>
+  <a type="button" class="btn btn-link" href="{% url 'list_squad_wise' %}">Squadwise Assignment</a>
+  <a type="button" class="btn btn-link" href="{% url 'list_hmcs' %}">HMC's</a>
+    <a type="button" class="btn btn-link" href="{% url 'list_storages' %}">Storages</a>
+    <a type="button" class="btn btn-link" href="{% url 'list_fabrics' %}">Fabrics</a>
+        <a type="button" class="btn btn-link"  href="{% url 'list_networks' %}">Networks</a>    
+        <a type="button" class="btn btn-link" href="{% url 'list_images' %}">PVC Images</a>  
+</div>
+</body>
+</html>
+

@@ -1,0 +1,35 @@
+
+
+Jai Sriman Narayana
+Jai Gurudeva Datta
+
+My Unique List of Team area are >>>>{{ list }}
+{% if defects %}
+<table class="table table-bordered  table-striped">
+    <thead>
+      <tr>
+        <th>Defect ID</th>
+        <th>Status</th>
+        <th>Creator</th>
+        <th>Filed Against</th>
+        <th>Team Area</th>              
+        <th>Creation Date</th>
+        <th>Modification Date</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+          {% for defect in defects %}
+     <tr>
+      <td>{{ defect.defect_id }} </td>
+      <td>{{ defect.status }} </td>
+      <td>{{ defect.creator }} </td>            
+      <td>{{ defect.filed_against }} </td>
+      <td>{{ defect.team_area }} </td>
+      <td>{{ defect.created_dt }} </td>
+      <td>{{ defect.modified_dt }} </td>
+      
+    </tr>
+          {% endfor %}    
+    </tbody></table>
+{% endif %}

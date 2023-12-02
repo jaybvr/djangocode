@@ -1,0 +1,90 @@
+{% include './base_layout.html' with menu="li" %}
+
+{% block content %}
+
+<div class="col-sm-9"> 
+   
+     <h3>Delete Images</h3>
+      <h3> </h3>
+      {% if error %}
+        <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ error }}
+                    </div>
+     {% endif %}
+    <form class="form-horizontal" action="{% url 'delete_image' %}" method="POST">
+          {% csrf_token %}
+        <div class="form-group">
+        <label class="control-label col-sm-2" >Enter Image Volume name *:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" id="delete_image_vol" name="dimage_vol" placeholder="Enter Image Volume name " {% if not dimage %} required="required"         {% endif %}>
+        </div>        
+      </div>
+      
+       <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary"        {% if dimage %} disabled         {% endif %}>Submit</button>
+        
+          </div>
+  </div>
+  
+  </form>
+  
+  
+  <h3> Image Details </h3>
+     
+  
+     <form class="form-horizontal" action="{% url 'delete_image' %}" method="POST">
+        {% csrf_token %}
+        
+        
+        <div class="form-group">
+            <div class="col-xs-6">
+                <input type="hidden" class="form-control input-default" value="{{ dimage.image_volume }}" id="image_vol" name="image_vol" placeholder="Enter HMC IP">
+            </div>
+      </div>
+      
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Image Volume Name:</label>
+      <div class="col-xs-6">
+            <label class="control-label" >{{ dimage.image_volume }}</label>
+        
+      </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Image Operating System</label>
+    <div class="col-xs-6">
+                        <label class="control-label" >{{ dimage.operating_system }}</label>
+      
+    </div>
+  </div>
+  
+        
+        
+      <div class="form-group">
+          <label class="control-label col-sm-2" >Owner :</label>
+          <div class="col-xs-6">
+                                 <label class="control-label" >{{ dimage.owner }}</label>
+            
+          </div>
+      </div>
+     
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Storage:</label>
+        <div class="col-xs-6">
+                           <label class="control-label" >{{ dimage.storage }}</label>
+          
+          
+        </div>
+    </div>
+    
+   <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+             <button type="submit" class="btn btn-primary"      {% not if dimage %} disabled        {% endif %}>Delete</button>
+          </div>
+  </div>
+    </form>
+
+{% endblock %}
+
+

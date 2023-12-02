@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="navi.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  
+   </head>
+
+
+  <div style="text-align:center;color:#228B22;">
+        <h2>Defect Verification Status</h2>
+      </div>
+                 
+ 
+ 
+          
+
+   
+ <div class="btn-group-vertical col-sm-2">
+   <a type="button" class="btn {% if menu == 'inf' %} btn-success  {% endif %}" style="text-align:left !important;" href="{% url 'list_infra' %}"> Infra Defects</a>
+   <a type="button" class="btn {% if menu == 'st' %} btn-success {% endif %}" style="text-align:left !important;" href="{% url 'list_storage' %}">Storage Defects</a>
+   <a type="button" class="btn {% if menu == 'fr' %} btn-success {% endif %}" style="text-align:left !important;" href="{% url 'list_framework' %}"> Framework Defects</a>
+  <a type="button" class="btn {% if menu == 'int' %} btn-success {% endif %}" style="text-align:left !important;"  href="{% url 'list_interface' %}"> Interface Defects</a>
+  <a type="button" class="btn {% if menu == 'tech' %} btn-success {% endif %}" style="text-align:left !important;" href="{% url 'list_techm' %}"> TechM Defects</a>
+  <a type="button" class="btn {% if menu == 'nova' %} btn-success {% endif %}" style="text-align:left !important;" href="{% url 'list_novalink' %}"> Novalink Defects</a>
+  <a type="button" class="btn {% if menu == 'ext' %} btn-success {% endif %}" style="text-align:left !important;" href="{% url 'list_external' %}"> External Defects</a>         
+</div>
+
+</html>

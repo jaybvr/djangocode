@@ -1,0 +1,208 @@
+{% include './base_layout.html' with menu="ah" %}
+
+{% block content %}
+      
+      
+<div class="col-sm-9"> 
+      <h3>Delete Host</h3>
+ {% if error %}
+        <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ error }}
+                    </div>
+     {% endif %}      
+     <form class="form-horizontal" action="{% url 'delete_host' %}" method="POST">
+          {% csrf_token %}
+        <div class="form-group">
+        <label class="control-label col-sm-2" >Enter Host FSP/BMC IP*:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" id="edit_host_id" name="delete_id" placeholder="Enter FSP/BMC IP" {% if not ehost %} required="required" {% endif %}>
+        </div>        
+      </div>
+      
+       <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+      
+            <button type="submit" class="btn btn-primary"  {% if ehost %} disabled {% endif %}>Submit</button>
+        
+          </div>
+  </div>
+  
+  </form>
+  
+  <h3>Host Details</h3>
+      <h3> </h3>
+    
+   <form class="form-horizontal" action="{% url 'delete_host' %}" method="POST">
+          {% csrf_token %}
+      
+      <div class="form-group">
+            <div class="col-xs-6">
+                <input type="hidden" class="form-control input-default" value="{{ ehost.cec_fsp_bmc_ip }}" id="cec_name" name="cec_fsp_bmc_ip" placeholder="Enter CEC Name">
+            </div>
+      </div>
+      <div class="form-group">
+            <label class="control-label col-sm-2" >FSP / BMC IP*:</label>
+            <div class="col-xs-6">
+                <label class="control-label" >{{ ehost.cec_fsp_bmc_ip }}</label>
+            </div>
+      </div>      
+     
+
+      <div class="form-group">
+          <label class="control-label col-sm-2" >Serial:</label>
+          <div class="col-xs-6">
+            <label class="control-label" >{{ ehost.cec_serial }}</label>
+          </div>
+      </div>
+     
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Location:</label>
+        <div class="col-xs-6">
+            <label class="control-label" >{{ ehost.cec_location }}</label>
+        </div>
+    </div>
+    
+     <div class="form-group">
+        <label class="control-label col-sm-2" >CEC Name:</label>
+        <div class="col-xs-6">
+          <label class="control-label" >{{ ehost.cec_name }}</label>
+        </div>        
+      </div>
+      
+  <div class="form-group">
+    <label class="control-label col-sm-2" >FSP/BMC Credentials:</label>
+    <div class="col-xs-6">
+        <label class="control-label" >{{ ehost.cec_fsp_credentials }}</label>
+    </div>
+</div>
+<div class="form-group">
+  <label class="control-label col-sm-2" >Host type:</label>
+  <div class="col-xs-6">
+      <label class="control-label" >{{ ehost.cec_type }}</label>
+  </div>
+</div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Firmware Level:</label>
+    <div class="col-xs-6">
+        <label class="control-label" >{{ ehost.cec_firmware }}</label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >HMC IP:</label>
+    <div class="col-xs-6">
+        <label class="control-label" >{{ ehost.cec_hmc_ip }}</label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Novalik / KVM IP:</label>
+    <div class="col-xs-6">
+        <label class="control-label" >{{ ehost.cec_neo_ip }}</label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >VIOS1:</label>
+    <div class="col-xs-6">
+      <label class="control-label" >{{ ehost.cec_vios1 }}</label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >VIOS2:</label>
+    <div class="col-xs-6">
+        <label class="control-label" >{{ ehost.cec_vios2 }}</label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Proc / Memory:</label>
+    <div class="col-xs-6">
+       <label class="control-label" >{{ ehost.cec_proc_memory }}</label>
+    </div>
+  </div>
+
+  <div class="form-group">
+      <label class="control-label col-sm-2" >Model:</label>
+      <div class="col-xs-6">
+        <label class="control-label" >{{ ehost.cec_model }}</label>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label class="control-label col-sm-2" >Network Ports:</label>
+      <div class="col-xs-6">
+            <label class="control-label" >{{ ehost.cec_network_ports }}</label>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label class="control-label col-sm-2" >Fabric Switch1:</label>
+      <div class="col-xs-6">
+          <label class="control-label" >{{ ehost.cec_fabric1 }}</label>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label class="control-label col-sm-2" >Fabric Switch2:</label>
+      <div class="col-xs-6">
+        <label class="control-label" >{{ ehost.cec_fabric2 }}</label>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label class="control-label col-sm-2" >Primary VLAN:</label>
+      <div class="col-xs-6">
+        <label class="control-label" >{{ ehost.cec_pvlan }}</label>
+      </div>
+  </div>
+
+
+  <div class="form-group">
+      <label class="control-label col-sm-2" >Connected Storages:</label>
+      <div class="col-xs-6">
+        <label class="control-label" >{{ ehost.cec_storages }}</label>
+      </div>
+  </div>
+
+
+  <div class="form-group">
+      <label class="control-label col-sm-2" >Owner:</label>
+      <div class="col-xs-6">
+          <label class="control-label" >{{ ehost.cec_owner }}</label>
+      </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Squad:</label>
+    <div class="col-xs-6">
+        <label class="control-label" >{{ ehost.cec_squad }}</label>
+    </div>
+</div>
+<div class="form-group">
+  <label class="control-label col-sm-2" >LAB:</label>
+  <div class="col-xs-6">
+      <label class="control-label" >{{ ehost.cec_lab }}</label>
+  </div>
+</div>
+
+
+  <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+       
+            
+       <button type="submit" class="btn btn-primary" {% if not ehost %} disabled {% endif %}>Delete</button>
+    
+          </div>
+  </div>
+    
+  </form>
+    <br><br><br><br>
+
+  </div>
+
+
+{% endblock %}
+
+

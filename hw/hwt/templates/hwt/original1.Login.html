@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="navi.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  
+ 
+  </head>
+
+<body>
+<i><h2> </h2></i>
+<div class="container ">
+ 
+    <h3>Log in</h3>
+<style>
+p{
+         top: 50px; 
+         right: 10px; 
+         padding: 2px;
+  }        
+</style>
+<p class="position-relative">
+
+<form  class="form-horizontal" action="{% url 'login_user' %}" method="POST" >
+          {% csrf_token %}
+        <div class="form-group">
+            <label class="control-label col-sm-2 " >User ID:</label>
+            <div class="col-xs-3 ">
+                <input type="text" class="form-control" id="uid" name="uid" placeholder="Enter UserID">
+            </div>
+        </div>
+        
+      
+        <div class="form-group">
+            <label class="control-label col-sm-2" >Password:</label>
+            <div class="col-xs-3 ">
+                <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter Password">
+            </div>
+        </div>
+      <div class="form-group">
+            <div class="col-xs-3 ">
+                {% if request.GET.next %}
+               
+                <input type="hidden" class="form-control" id="next" name="next" value={{ request.GET.next }} placeholder="Enter Password">
+                {% endif %}
+            </div>
+        </div>
+      
+      
+      
+        <div class="col-sm-offset-3">        
+                    
+                        <button type="submit" class="btn btn-primary" >Login</button>
+                    
+                    
+        </div>
+        {% if error %}
+                    <div class="alert alert-danger">
+                        <strong>Login failed!</strong> {{ error }}
+                    </div>
+                    {% endif %}
+  {% if success %}
+  <div class="alert alert-success">
+                        <strong>Loged Out!</strong> {{ success }}
+                    </div>
+                    {% endif %}
+    </form>
+    </p>
+</div>
+</body>
+</html>
+
+
+
+

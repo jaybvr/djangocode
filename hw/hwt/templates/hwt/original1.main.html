@@ -1,0 +1,94 @@
+{% include './base_layout.html' with menu="" %}
+
+{% block content %}
+
+
+
+
+
+<style>
+.foo {
+  float: left;
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgba(0, 0, 0, .2);
+  font-size:30px;
+  color:white;
+  font-style:italic;
+  font-family:Verdana;
+  text-align: center;
+  margin: 50px 50px 50px 50px;
+}
+
+.storage {
+  background: #13b4ff;
+}
+
+.purple {
+  background: #ab3fdd;
+}
+
+.Crimson{
+background: #DC143C;  
+}
+
+.fg{
+  background:#228B22;
+}
+
+.wine{
+  
+  background:#8B0000;
+}
+
+.network {
+  background: #00008B;
+}
+.a{
+    color: white;
+}
+.mail{
+    background:#2F4F4F;
+
+}
+.import{
+    background:#663399;
+}
+.schedule{
+    background:#20B2AA;
+}
+
+
+
+.hg{
+    background:#FFA07A;
+}
+
+
+.squad{
+    background:#C71585;
+}
+
+</style>
+
+<div class=" col-sm-offset-2">
+
+  <a href="{% url 'list_hosts' %}" style="color:white;"><div class="foo purple"><br><i class='fas fa-server' style="font-size:50px;"></i><br>Hosts ({{hcount}})</div></a>
+<a href="{% url 'list_storages' %}" style="color:white;"><div class="foo storage"><br><i class='fas fa-database' style="font-size:50px;"></i><br>Storages({{scount}})</div></a>
+<a href="{% url 'list_networks' %}" style="color:white;"><div class="foo network"><br><i class='fas fa-network-wired' style="font-size:50px;"></i><br>Networks({{ncount}})</div></a>
+<a href="{% url 'list_hmcs' %}" style="color:white;"><div class="foo wine"><br><i class='fa fa-align-justify' style="font-size:100px;"></i><br>HMC({{hmcount}})</div></a>
+<a href="{% url 'list_fabrics' %}" style="color:white;"><div class="foo Crimson"><br><i class='fas fa-table' style="font-size:50px;"></i><br>Fabrics({{fcount}})</div></a>
+
+{% if user.get_username == "admin" %}
+<a href="{% url 'snapshot' %}" style="color:white;"><div class="foo fg"><br><i class='material-icons'style="font-size:100px;">backup</i><br>Backup</div></a>
+<a href="{% url 'email_notify' %}" style="color:white;"><div class="foo mail"><br><i class='material-icons'style="font-size:100px;">mail_outline</i><br>Notifications</div></a>
+<a href="{% url 'list_scheduler' %}" style="color:white;"><div class="foo schedule"><br><i class="material-icons" style="font-size:100px;">schedule</i><br>Scheduler</div></a>
+<a href="{% url 'import_data' %}" style="color:white;"><div class="foo import"><br><span class="glyphicon glyphicon-import" style="font-size:100px;"></span><br>Import Data</div></a>
+<a href="{% url 'host_groups' %}" style="color:white;"><div class="foo hg"><br><i class='fas fa-layer-group' style="font-size:50px;"></i><br>Host Groups</div></a>
+<a href="{% url 'squad_update' %}" style="color:white;"><div class="foo squad"><br><i class="fa fa-pie-chart" style="font-size:100px;"></i><br>Squads</div></a>
+{% endif %}
+
+</div>
+
+{% endblock %}
+

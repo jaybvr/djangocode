@@ -1,0 +1,117 @@
+{% include './base_layout.html' with menu="ln" %}
+
+{% block content %}
+
+
+  
+<div class="col-sm-9"> 
+      <h3>Add Network</h3>
+      <h3> </h3>
+ {% if error %}
+        <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ error }}
+                    </div>
+     {% endif %}
+     <form class="form-horizontal" action="{% url 'add_network' %}" method="POST">
+        
+{% csrf_token %}
+
+      <div class="form-group">
+          <label class="control-label col-sm-2" >VLAN ID * :</label>
+          <div class="col-xs-6">
+            <input type="text" class="form-control input-default" id="nw_vlan_id" name="nw_vlan_id" placeholder="Enter VLAN ID">
+          </div>
+      </div>
+     
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Subnet Mask:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" id="nw_subnet_mask" name="nw_subnet_mask" placeholder="Enter Subnet Mask">
+        </div>
+    </div>
+    
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Gateway:</label>
+      <div class="col-xs-6">
+        <input type="text" class="form-control input-default" id="nw_gateway" name="nw_gateway" placeholder="Enter Gateway ">
+      </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-sm-2" >DNS1:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" id="nw_dns1" name="nw_dns1" placeholder="Enter DNS1">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >DNS2:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" id="nw_dns2" name="nw_dns2" placeholder="Enter DNS2">
+    </div>
+  </div>
+  <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+  </div>
+    
+  </form>
+
+
+
+  </div>
+
+  <div class="col-sm-offset-2 col-sm-10"> 
+    <h3>Add Network Node</h3>
+    <h3> </h3>
+   
+    
+</div>
+
+<div class=" col-sm-offset-2 col-sm-10">
+
+   <form class="form-horizontal" action="{% url 'add_network' %}" method="POST">
+
+{% csrf_token %}
+
+    <div class="form-group">
+        <label class="control-label col-sm-2" >Network Node IP * :</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" id="nw_node_ip" name="nw_node_ip" placeholder="Enter Network Node ID">
+        </div>
+    </div>
+   
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Credentials:</label>
+      <div class="col-xs-6">
+        <input type="text" class="form-control input-default" id="nw_node_credentials" name="nw_node_credentials" placeholder="Enter Network Node Credentials ">
+      </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-sm-2" >X86 / PPC:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" id="nw_node_type" name="nw_node_type"  placeholder="Enter NW node type ">
+    </div>
+</div>
+
+<div class="form-group">
+  <label class="control-label col-sm-2" >Operating System:</label>
+  <div class="col-xs-6">
+    <input type="text" class="form-control input-default" id="nw_node_os" name="nw_node_os" placeholder="Enter NW node OS">
+  </div>
+</div>
+
+<div class="form-group">        
+    <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+</div>
+  
+</form>
+  <br><br><br><br>
+</div>
+
+{% endblock %}
+

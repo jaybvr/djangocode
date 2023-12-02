@@ -1,0 +1,230 @@
+{% include './base_layout.html' with menu="id" %}
+{% block content %}
+  
+<div class="col-xs-6">
+
+<h3>Import Data :</h3>
+<br> <br>
+  {% if error %}
+        <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ error }}
+                    </div>
+     {% endif %}
+  
+  {% if success %}
+        <div class="alert alert-success">
+                        <strong>Success!</strong> {{ success }}
+                    </div>
+     {% endif %}
+     
+     
+ <form class="form-horizontal" action="{% url 'import_data' %}" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+  <div class="form-group">
+      <label class="control-label col-sm-2" >Resource Type *  :</label>
+      <div class="col-xs-6">
+        <select class="form-control" name="rtype">
+            <option>Hosts</option>
+            <option>HMCs</option>
+            <option>Storages</option>
+            <option>Fabrics</option>
+            
+        </select>
+        <br><br>
+        <input type="file" title="Upload excel file" id="excel_file" name="excel_file" required="required"><br><br>
+        
+      </div>
+  </div>
+
+ 
+
+         
+           <br>
+  <div class=" col-sm-offset-2">
+        
+       <button type="submit" class="btn btn-primary" >Import</button>
+  </div>
+          
+
+  
+           
+  </form>
+  <br><br><br>
+          
+<!--
+  <div class="progress">
+    <div class="progress-bar  progress-bar-striped" role="progressbar"
+    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:{%if cprogress %} cprogress {% endif %}%">
+      40% Complete (success)
+    </div>
+  </div>
+-->
+
+{% if task_id %}
+   <div class="progress">
+    <div class="bar"></div>
+   </div>
+   {% endif %}
+
+   {% if task_id %}
+   <script type="text/javascript">
+    jQuery(document).ready(function() {
+     
+     // pole state of the current task
+     var PollState = function(task_id) {
+      jQuery.ajax({
+       url: "task_status",
+       type: "POST",
+       data: "task_id=" + task_id,
+      }).done(function(task){
+       console.log(task);
+       if (task.process_percent) {
+        jQuery('.bar').css({'width': task.process_percent + '%'});
+        jQuery('.bar').html(task.process_percent + '%')
+       } else {
+        jQuery('.status').html(task);
+       };
+       
+       // create the infinite loop of Ajax calls to check the state
+       // of the current task
+       PollState(task_id);
+      });
+     }
+     
+     PollState('{{ task_id }}');
+    });
+   </script>
+   {% endif %}
+
+
+
+  
+   <br> <br>
+          
+       
+  
+  
+  
+ 
+  
+<br>
+<br>
+{% if inclusions or exclusions or htexclusions or sqexclusions %}
+
+<div class="col-sm-offset-2 ">
+ {% if inclusions %}
+<h3> Added List </h3>              
+    
+  <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Added Resource IP</th>                 
+              </tr>
+            </thead>
+            <tbody>
+              {% for ip in inclusions %}
+           <tr>
+            <td> {{ ip }} </td>
+           </tr>
+            {% endfor %}
+            </tbody></table>
+  {% endif %}
+  {% if  exclusions %}
+  <h3> Exclusion List </h3>
+  <h5>(* The below resources are excluded as they are already present )</h5>
+              <table class="table table-bordered table-striped">
+            <thead><tr><th>Excluded Resources IP </th></tr></thead>
+            <tbody>
+            {% for ip in exclusions %}
+           <tr>
+            <td> {{ ip }} </td>
+           </tr>
+            {% endfor %}
+            </tbody></table>
+  {% endif %}
+  
+  {% if  htexclusions %}
+  <h3> Exclusion List by Host Type </h3>
+  <h5> (* The below resources are excluded as given Host type is not available in HWT)</h5>
+  
+              <table class="table table-bordered table-striped">
+            <thead><th>Resource IP</th>
+                   <th>Host Type</th>
+            </thead>
+            {% for i in htexclusions %}
+           <tr>
+            <td> {{ i.ip }} </td>
+            <td> {{ i.htype }} </td>
+           </tr>
+            {% endfor %}
+            </table>
+  {% endif %}
+  
+  {% if  sqexclusions %}
+  <h3> Exclusion List by Squad name</h3>
+  <h5>(* The below resources are excluded as given Squad is not available in HWT)</h5>
+  
+              <table class="table table-bordered table-striped">
+            <thead><th>Resource IP</th>
+                   <th>Squad Name</th>
+            </thead>
+            {% for i in sqexclusions %}
+           <tr>
+            <td> {{ i.ip }} </td>
+            <td> {{ i.squad }} </td>
+           </tr>
+            {% endfor %}
+            </table>
+  {% endif %}
+  
+            
+</div>
+  
+{% endif %}
+<br> 
+<br>
+<br> 
+<br>
+<br> 
+<br>
+<br> 
+<br>
+<br> 
+<br>
+
+<!--
+
+<h3>Excluded Resources :</h3>
+
+<br>
+<div class="col-sm-offset-6">
+
+  <h6> * The below resources are excluded as they are already present </h6>
+  <table class="table table-bordered table-hover table-striped">
+            <thead>
+              <tr>
+                <th>Resource IP</th>
+                
+                 
+              </tr>
+            </thead>
+            <tbody>
+             {% for ip in exclusions %}
+           <tr>
+            <td> {{ ip }} </td>
+           </tr>
+            {% endfor %}
+            </tbody></table>
+</div>
+  
+  
+<br> <br> <br> <br> <br> <br>
+<br> <br> <br> 
+
+
+-->  
+<br><br><br><br>
+
+</div>
+{% endblock %}
+

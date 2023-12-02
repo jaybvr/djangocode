@@ -1,0 +1,110 @@
+{% include './base_layout.html' with menu="ls" %}
+
+{% block content %}
+
+      
+<div class="col-sm-9"> 
+      <h3>Add Storage</h3>
+      <h3> </h3>
+      {% if error %}
+        <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ error }}
+                    </div>
+     {% endif %}
+     <form class="form-horizontal" action="{% url 'add_storage' %}" method="POST">
+        {% csrf_token %}
+        
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Storage IP * :</label>
+      <div class="col-xs-6">
+        <input type="text" class="form-control input-default" id="storage_ip" name="storage_ip" placeholder="Enter Storage IP " required="required">
+      </div>
+  </div>
+   
+      <div class="form-group">
+          <label class="control-label col-sm-2" >Serial:</label>
+          <div class="col-xs-6">
+            <input type="text" class="form-control input-default" id="storage_serial" name="storage_serial" placeholder="Enter Storage Serial">
+          </div>
+      </div>
+     
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Location:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" id="storage_location" name="storage_location" placeholder="Enter Storage Location">
+        </div>
+    </div>
+    
+    
+  
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Storage Credentials:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" id="storage_credentials" name="storage_credentials" placeholder="Enter Storage Credentials">
+    </div>
+  </div>
+ <div class="form-group">
+        <label class="control-label col-sm-2" >Storage Type:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" id="storage_type" name="storage_type" placeholder="Enter Storage Type" onkeyup="this.value = this.value.toUpperCase();">
+        </div>        
+      </div>
+
+<div class="form-group">
+    <label class="control-label col-sm-2" >Storage Port:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" id="storage_port" name="storage_port" placeholder="Enter Storage Port">
+    </div>
+  </div>
+
+<div class="form-group">
+    <label class="control-label col-sm-2" >Storage REST API Server:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" id="storage_rest_api_server" name="storage_rest_api_server" placeholder="Enter Storage REST API server (Hitachi Storage)">
+    </div>
+  </div>
+
+<div class="form-group">
+    <label class="control-label col-sm-2" >Storage LDEV ID range:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" id="storage_ldev_id_range" name="storage_ldev_id_range"  placeholder="Enter LDEV ID range (Hitachi Storage)">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Capacity in TB:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" id="storage_capacity" name="storage_capacity" placeholder="Enter Capacity in TB">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Service IP:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" id="storage_serviceip" name="storage_serviceip" placeholder="Enter Service IP">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >LAB:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" id="storage_lab" name="storage_lab" placeholder="Enter the LAB where this storage is present" onkeyup="this.value = this.value.toUpperCase();">
+    </div>
+  </div>
+
+
+
+  <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">Add</button>
+          </div>
+  </div>
+    
+  </form>
+  <br><br><br><br>
+  </div>
+
+{% endblock %}
+
+

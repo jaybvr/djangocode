@@ -1,0 +1,226 @@
+{% include './base_layout.html' with menu="ah" %}
+
+{% block content %}
+      
+      
+<div class="col-sm-9"> 
+      <h3>Edit Hosts</h3>
+      {% if error %}
+        <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ error }}
+                    </div>
+     {% endif %}
+      
+      
+     <form class="form-horizontal" action="{% url 'edit_host' %}" method="POST">
+          {% csrf_token %}
+        <div class="form-group">
+        <label class="control-label col-sm-2" >Enter Host FSP/BMC IP*:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" id="edit_host_id" name="edit_id" placeholder="Enter FSP/BMC IP" {% if not ehost %} required="required"  {% endif %}>
+        </div>        
+      </div>
+      
+       <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+      
+            <button type="submit" class="btn btn-primary"  {% if ehost %} disabled  {% endif %}>Submit</button>
+       
+        
+          </div>
+  </div>
+  
+  </form>
+  
+  
+  
+  <h3>Host Details</h3>
+      <h3> </h3>
+    
+   <form class="form-horizontal" action="{% url 'edit_host' %}" method="POST">
+          {% csrf_token %}
+          <div class="form-group">
+            <div class="col-xs-6">
+                <input type="hidden" class="form-control input-default" value="{{ ehost.cec_fsp_bmc_ip }}" id="cec_name" name="cec_fsp_bmc_ip" placeholder="Enter CEC Name">
+            </div>
+      </div>
+      <div class="form-group">
+            <label class="control-label col-sm-2" >FSP / BMC IP*:</label>
+            <div class="col-xs-6">
+                <label class="control-label" >{{ ehost.cec_fsp_bmc_ip }}</label>
+            </div>
+      </div> 
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" >CEC Name:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" value="{{ ehost.cec_name }}" id="cec_name" name="cec_name" placeholder="Enter CEC Name">
+        </div>        
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Owner:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" value="{{ ehost.cec_owner }}"  id="cec_owner" name="cec_owner" placeholder="Enter Owner name" onkeyup="this.value = this.value.toUpperCase();">
+        </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Squad:</label>
+      <div class="col-xs-6">
+       <select class="form-control" name="cec_squad">
+              {% for s in squads %}
+              <option>{{ s }}</option>
+              {% endfor %}
+              {% if  ehost.cec_squad %} <option selected>{{ ehost.cec_squad }}</option> {% endif %}
+          </select>
+     <!--   <input type="text" class="form-control input-default" value="{{ ehost.cec_squad }}" id="cec_squad" name="cec_squad" placeholder="Enter Squad" onkeyup="this.value = this.value.toUpperCase();"> -->
+      </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Host type:</label>
+    <div class="col-xs-6">
+    <select class="form-control" name="cec_type" required="required">
+              {% for h in htypes %}
+              <option >{{ h }}</option>
+              {% endfor %}
+              {% if  ehost.cec_type %} <option selected>{{ ehost.cec_type }}</option> {% endif %}
+          </select>
+      <!--<input type="text" class="form-control input-default" value="{{ ehost.cec_type }}" id="cec_type" name="cec_type" onkeyup="this.value = this.value.toUpperCase();" placeholder="ex: P7, P8, P9-ZZ, KVM-OPEN-POWER, P9-ZEPPELIN, P9-FLEETWOOD ">-->
+    </div>
+  </div>
+  
+      <div class="form-group">
+          <label class="control-label col-sm-2" >Serial:</label>
+          <div class="col-xs-6">
+            <input type="text" class="form-control input-default" value="{{ ehost.cec_serial }}" id="cec_serial" name="cec_serial" placeholder="Enter Serial">
+          </div>
+      </div>
+     
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Location:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" value="{{ ehost.cec_location }}" id="cec_location" name="cec_location" placeholder="Enter Location">
+        </div>
+    </div>
+    
+    
+    
+  <div class="form-group">
+    <label class="control-label col-sm-2" >FSP/BMC Credentials:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ ehost.cec_fsp_credentials }}" id="cec_fsp_bmc_uid" name="cec_fsp_bmc_uid" placeholder="Enter FSP Credentials ">
+    </div>
+</div>
+
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Firmware Level:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ ehost.cec_firmware }}" id="cec_firmware" name="cec_firmware" placeholder="Enter Firmware Level">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >HMC IP:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ ehost.cec_hmc_ip }}" id="cec_hmc" name="cec_hmc" placeholder="Enter HMC IP">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Novalik / KVM IP:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ ehost.cec_neo_ip }}" id="cec_novalink" name="cec_novalink" placeholder="Enter Novalik IP">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >VIOS1:</label>
+    <div class="col-xs-6">
+    <input type="text" class="form-control input-default" value="{{ ehost.cec_vios1 }}" id="cec_vios1" name="cec_vios1" placeholder="Enter VIOS1">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >VIOS2:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ ehost.cec_vios2 }}" id="cec_vios2" name="cec_vios2" placeholder="Enter VIOS2">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Proc / Memory:</label>
+    <div class="col-xs-6">
+     <input type="text" class="form-control input-default" value="{{ ehost.cec_proc_memory }}" id="cec_proc_mem" name="cec_proc_mem" placeholder="Enter Proc / Memory">
+    </div>
+  </div>
+
+  <div class="form-group">
+      <label class="control-label col-sm-2" >Model:</label>
+      <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ ehost.cec_model }}" id="cec_model" name="cec_model" placeholder="Enter Model">
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label class="control-label col-sm-2" >Network Ports:</label>
+      <div class="col-xs-6">
+          <input type="text" class="form-control input-default" value="{{ ehost.cec_network_ports }}" id="cec_nw_ports" name="cec_nw_ports"  placeholder="Enter Network Ports">
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label class="control-label col-sm-2" >Fabric Switch1:</label>
+      <div class="col-xs-6">
+        <input type="text" class="form-control input-default" value="{{ ehost.cec_fabric1 }}" id="cec_fabric1" name="cec_fabric1" placeholder="Enter Fabric Switch1">
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label class="control-label col-sm-2" >Fabric Switch2:</label>
+      <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ ehost.cec_fabric2 }}" id="cec_fabric2" name="cec_fabric2" placeholder="Enter Fabric Switch2">
+      </div>
+  </div>
+
+<div class="form-group">
+      <label class="control-label col-sm-2" >Primary VLAN:</label>
+      <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ ehost.cec_pvlan }}" id="cec_pvlan" name="cec_pvlan" placeholder="Enter Primay VLAN ID">
+      </div>
+  </div>
+
+<div class="form-group">
+      <label class="control-label col-sm-2" >Connected Storages</label>
+      <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ ehost.cec_storages }}" id="cec_storages" name="cec_storages" placeholder="Enter Connected Storages">
+      </div>
+  </div>
+  
+  
+<div class="form-group">
+  <label class="control-label col-sm-2" >LAB:</label>
+  <div class="col-xs-6">
+    <input type="text" class="form-control input-default" value="{{ ehost.cec_lab }}" id="cec_lab" name="cec_lab" placeholder="Enter LAB" onkeyup="this.value = this.value.toUpperCase();">
+  </div>
+</div>
+
+
+  <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+       
+       <button type="submit" class="btn btn-primary" {% if not ehost %} disabled {% endif %}>Update</button>
+        
+    
+          </div>
+  </div>
+    
+  </form>
+    <br><br><br><br>
+
+  </div>
+
+
+{% endblock %}
+
+

@@ -1,0 +1,207 @@
+{% include './base_layout.html' with menu="ah" %}
+
+{% block content %}
+
+{% load static %}
+
+
+ 
+ 
+<style> .
+#container {
+    height: 400px; 
+}
+
+.highcharts-figure, .highcharts-data-table table {
+    min-width: 310px; 
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #EBEBEB;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+.highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
+    padding: 0.5em;
+}
+.highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+    </style> 
+
+
+<figure class="highcharts-figure">
+    <div id="container"></div>
+
+</figure>
+    <div class="container">
+    <script>
+    
+Highcharts.chart('container', {
+    colors:['#7cb5ec','#f7a35c','#90ed7d','#8085e9','#f15c80','#e4d354','#2b908f','#f45b5b','#91e8e1'],
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'PowerVC All Hosts'
+    },
+    xAxis: {
+        categories: {{ squads|safe }}
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Total number of Hosts'
+        },
+        stackLabels: {
+            enabled: true,
+            
+            style: {
+                fontWeight: 'bold',
+                color: ( // theme
+                    Highcharts.defaultOptions.title.style &&
+                    Highcharts.defaultOptions.title.style.color
+                ) || 'gray'
+            }
+        }
+    },
+    legend: {
+        align: 'right',
+        x: -30,
+        verticalAlign: 'top',
+        y: 25,
+        floating: true,
+        backgroundColor:
+            Highcharts.defaultOptions.legend.backgroundColor || 'white',
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
+    },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+    },
+    plotOptions: {
+     
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: true,
+                formatter:function() {
+                         if(this.y != 0) {
+                                return this.y;
+                                }
+                    }
+            }
+        }
+    },
+    series: {{ data|safe }}
+});
+    </script>
+    </div>
+
+ 
+ <div class="col-sm-offset-7">
+            <a type="button" class="btn btn-primary" href="{% url 'export_host_list' %}">Export to CSV</a>
+       
+       {% if user.get_username != "user" %} 
+          <a type="button" class="btn btn-primary" href="{% url 'import_data' %}">Import Hosts</a>
+           <a type="button" class="btn btn-primary" href="{% url 'add_host' %}">Add Host</a>
+           <a type="button" class="btn btn-primary" href="{% url 'edit_host' %}">Edit Host</a>
+           {% if user.get_username != "editor" %}
+           <a type="button" class="btn btn-primary" href="{% url 'delete_host' %}">Delete Host</a>
+           {% endif %}
+        {% endif %}
+        
+    </div>
+    
+     <div class="container horizontal-scrollable"> 
+ <h3>List Hosts</h3>
+                <div class="row text-center"> 
+
+      <table class="table table-bordered table-responsive table-striped">
+          <thead>
+            <tr>
+              <th>FSP / BMC IP</th>
+              <th></th>
+              <th>CEC Name</th>              
+              <th>Owner</th>
+              <th>Squad</th>
+              <th>Host type</th>
+              <th>Serial</th>
+              <th>Location</th>
+              <th>FSP Credentials</th>
+              <th>Firmware Level</th>
+              <th>HMC IP</th>
+              <th>Novalik IP</th>
+              <th>VIOS1</th>
+              <th>VIOS2</th>
+              <th>Proc / Memory</th>
+              <th>Model</th>
+              <th>Network Ports</th>
+              <th>Fabric Switch1</th>
+              <th>Fabric Switch2</th>
+              <th>Primary VLAN</th>
+              <th>Connected Storages</th>
+              
+              <th>LAB</th>
+            </tr>
+          </thead>
+          <tbody>
+                {% for host in hosts %}
+           <tr>
+           <td>{{ host.cec_fsp_bmc_ip}} </td>
+            <td><img  src="{% if host.cec_ip_ping == True %} {% static 'hwt/green.jpeg' %} {% else %}  {% static 'hwt/red.jpeg' %} {% endif %}" height=20 width=20 > </td>
+            <td>{{ host.cec_name}} </td>            
+            <td>{{ host.cec_owner}} </td>
+            <td>{{ host.cec_squad}} </td>
+            <td>{{ host.cec_type}} </td>
+            <td>{{ host.cec_serial}} </td>
+            <td>{{ host.cec_location}} </td>
+            <td>{{ host.cec_fsp_credentials}} </td>
+            <td>{{ host.cec_firmware}} </td>
+            <td>{{ host.cec_hmc_ip}} </td>
+            <td>{{ host.cec_neo_ip}} </td>
+            <td>{{ host.cec_vios1}} </td>
+            <td>{{ host.cec_vios2}} </td>
+            <td>{{ host.cec_proc_memory}} </td>
+            <td>{{ host.cec_model}} </td>
+            <td>{{ host.cec_network_ports}} </td>
+            <td>{{ host.cec_fabric1}} </td>
+            <td>{{ host.cec_fabric2}} </td>
+            <td>{{ host.cec_pvlan}} </td>
+            <td>{{ host.cec_storages}} </td>            
+            <td>{{ host.cec_lab}} </td>
+          </tr>
+                {% endfor %}    
+          </tbody></table>
+          
+      </div> 
+      
+  <br><br><br><br>
+  
+      </div>
+
+
+{% endblock %}
+
+

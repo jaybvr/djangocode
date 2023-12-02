@@ -1,0 +1,119 @@
+{% include './base_layout.html' with menu="sq" %}
+{% block content %}
+
+<div class="col-xs-5">
+
+    <h3>Squad Details :</h3>
+    <br> <br>
+    {% if error %}
+    <div class="alert alert-danger">
+        <strong>Error!</strong> {{ error }}
+    </div>
+    {% endif %}
+
+    {% if success %}
+    <div class="alert alert-success">
+        <strong>Success!</strong> {{ success }}
+    </div>
+    {% endif %}
+    <div style="border-style:outset">
+
+        <form class="form-horizontal" action="{% url 'squad_update' %}" method="POST">
+            {% csrf_token %}
+
+            <div class=" col-sm-offset-4">
+
+                <h3> Add Squad</h3>
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="control-label col-sm-4">Squad Name * :</label>
+                <div class="col-xs-6">
+                    <input type="text" class="form-control input-default" name="sq_name"
+                        placeholder="Enter Squad Name ">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-4">Descreption :</label>
+                <div class="col-xs-6">
+                    <input type="text" class="form-control input-default" name="sq_descreption"
+                        placeholder="Enter Descreption ">
+                </div>
+            </div>
+
+            <br>
+            <div class=" col-sm-offset-4">
+
+                <button type="submit" class="btn btn-primary">Add Squad</button>
+            </div>
+
+            <br>
+
+
+
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+    <br>
+    <br>
+
+    <br>
+    <br>
+
+    <div>
+
+    </div>
+    <div>
+       
+        
+        <form class="form-horizontal" action="{% url 'squad_delete' %}" method="POST">
+            {% csrf_token %}
+            
+            <div class=" col-sm-offset-10">
+
+                <button type="submit" class="btn btn-primary">Delete Squad</button>
+            </div>
+            <br>
+
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>Squad Name</th>
+                        <th>Descreption</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for sq in sqs %}
+                    <tr>
+                        <td> {{ sq.name }} </td>
+                        <td> {{ sq.descreption }} </td>
+                        <td> <input type="radio" id="choice{{ forloop.counter }}" name="sqopt" value="{{ sq.name }}">
+                        </td>
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br>
+           
+            <br>
+        </form>
+    </div>
+  <br><br><br><br>
+
+</div>
+
+
+
+
+
+{% endblock %}

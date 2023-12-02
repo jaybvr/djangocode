@@ -1,0 +1,77 @@
+
+{% include './base_layout.html' with menu="ls" %}
+
+{% block content %}
+{% load static %}
+
+      
+<div class="col-sm-10"> 
+
+      
+      
+   <div class="col-sm-offset-7">
+   
+               <a type="button" class="btn btn-primary" href="{% url 'export_storage_list' %}">Export to CSV</a>
+         {% if user.get_username != "user" %}
+   
+          <a type="button" class="btn btn-primary" href="{% url 'import_data' %}">Import Storages</a>
+          <a type="button" class="btn btn-primary" href="{% url 'add_storage' %}">Add Storage</a>
+           <a type="button" class="btn btn-primary" href="{% url 'edit_storage' %}">Edit Storage</a>
+         
+      {% if user.get_username != "editor" %}
+      
+           <a type="button" class="btn btn-primary" href="{% url 'delete_storage' %}">Delete Storage</a>
+      
+      {% endif %}
+            {% endif %}
+      
+    </div>
+    
+      
+    <h3>List Storages</h3>
+      <h3> </h3>
+     <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+          
+                <th>Storage_IP</th>
+                <th></th>
+                <th>Serial</th>
+                <th>Location</th>
+                <th>Storage_Type</th>
+                <th>Storage_Credentials</th>
+                <th>Storage_Port</th>
+                <th>Storage_REST_API_Server</th>
+                <th>Storage_LDEV_ID_range</th>
+                <th>Capacity_in_TB</th>
+                <th>Service_IP</th>
+                <th>LAB</th>  
+                </tr>
+          </thead>
+          <tbody>
+          {% for storage in storages %}
+          <tr>
+                                <td> {{ storage.storage_ip }} </td>
+                                <td><img src="{% if storage.storage_ip_ping == True %} {% static 'hwt/green.jpeg' %} {% else %} {% static 'hwt/red.jpeg' %} {% endif %} " height=20 width=20></td>
+                                <td> {{ storage.storage_serial  }} </td>
+                                <td> {{ storage.storage_location    }} </td>
+                                <td> {{ storage.storage_type    }} </td>
+                                <td> {{ storage.storage_credentials }} </td>
+                                <td> {{ storage.storage_port    }} </td>
+                                <td> {{ storage.storage_rest_api_server }} </td>
+                                <td> {{ storage.storage_ldev_id_range   }} </td>
+                                <td> {{ storage.storage_capacity    }} </td>
+                                <td> {{ storage.storage_service_ip  }} </td>
+                                <td> {{ storage.storage_lab }} </td>
+
+          </tr>
+          {% endfor %}
+          </tbody></table>
+            <br><br><br><br>
+
+          
+  </div>
+
+
+{% endblock %}
+

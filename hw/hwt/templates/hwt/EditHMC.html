@@ -1,0 +1,157 @@
+{% include './base_layout.html' with menu="lh" %}
+
+{% block content %}
+
+      
+<div class="col-sm-9"> 
+<h3>Edit HMC</h3>
+{% if error %}
+        <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ error }}
+                    </div>
+     {% endif %}
+     
+      <form class="form-horizontal" action="{% url 'edit_hmc' %}" method="POST">
+          {% csrf_token %}
+        <div class="form-group">
+        <label class="control-label col-sm-2" >Enter HMC IP*:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" id="edit_hmc_id" name="ehmc_id" placeholder="Enter HMC IP" {% if not ehmc %} required = "required" {% endif %}>
+        </div>        
+      </div>
+      
+       <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+       
+            <button type="submit" class="btn btn-primary" {% if ehmc %} disabled {% endif %} >Submit</button>
+       
+        
+          </div>
+  </div>
+  
+  </form>
+  
+  
+  
+  <h3>HMC Details</h3>
+      <h3> </h3>
+    
+ 
+     <form class="form-horizontal" action="{% url 'edit_hmc' %}" method="POST">
+       {% csrf_token %}
+     <div class="form-group">
+            <div class="col-xs-6">
+                <input type="hidden" class="form-control input-default" value="{{ ehmc.hmc_public_ip }}" id="hmc_public_ip" name="hmc_public_ip" placeholder="Enter HMC IP">
+            </div>
+      </div>
+      
+      <div class="form-group">
+            <label class="control-label col-sm-2" >HMC IP:</label>
+            <div class="col-xs-6">
+                <label class="control-label" >{{ ehmc.hmc_public_ip }}</label>
+            </div>
+      </div>      
+
+    <div class="form-group">
+          <label class="control-label col-sm-2" >Serial:</label>
+          <div class="col-xs-6">
+            <input type="text" class="form-control input-default" value="{{ ehmc.hmc_serial }}" id="hmc_serial" name="hmc_serial" placeholder="Enter HMC Serial">
+          </div>
+    </div>
+     
+    <div class="form-group">
+        <label class="control-label col-sm-2" >Location:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" value="{{ ehmc.hmc_location }}" id="hmc_location" name="hmc_location" placeholder="Enter HMC Location">
+         </div>
+    </div>
+    
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Enter HMC Credentials</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ ehmc.hmc_credentials }}" id="hmc_credentials" name="hmc_credentials" placeholder="Enter HMC Credentials">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >HMC Private IP:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ ehmc.hmc_private_ip }}" id="hmc_private_ip" name="hmc_private_ip" placeholder="Enter HMC Private IP">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Public / Private:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ ehmc.hmc_public_private }}" id="hmc_public_private" name="hmc_public_private" placeholder="Enter Public / Private">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >IMM IP:</label>
+    <div class="col-xs-6">
+    <input type="text" class="form-control input-default" value="{{ ehmc.hmc_imm_ip }}"  id="hmc_imm_ip" name="hmc_imm_ip" placeholder="Enter IMM IP">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >IMM Credentials:</label>
+    <div class="col-xs-6">
+     <input type="text" class="form-control input-default" value="{{ ehmc.hmc_imm_credentials }}" id="hmc_imm_credentials" name="hmc_imm_credentials" placeholder="Enter IMM Credentials">
+    </div>
+  </div>
+
+
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >MTMS:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ ehmc.hmc_mtms }}" id="hmc_mtms" name="hmc_mtms" placeholder="Enter MTMS">
+    </div>
+  </div>
+
+  <div class="form-group">
+      <label class="control-label col-sm-2" >Owner:</label>
+      <div class="col-xs-6">
+        <input type="text" class="form-control input-default" value="{{ ehmc.hmc_owner }}" id="hmc_owner" name="hmc_owner" placeholder="Enter Owner name" onkeyup="this.value = this.value.toUpperCase();">
+      </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Squad:</label>
+    <div class="col-xs-6">
+    <select class="form-control" name="hmc_squad">
+            {% for s in squads %}
+            <option>{{ s }}</option>
+            {% endfor %}
+        </select>
+        
+      <!-- <input type="text" class="form-control input-default" value="{{ ehmc.hmc_squad }}" id="hmc_squad" name="hmc_squad" placeholder="Enter the Squad " onkeyup="this.value = this.value.toUpperCase();"> -->
+    </div>
+</div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >LAB:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ ehmc.hmclab }}" id="hmc_lab" name="hmc_lab" placeholder="Enter the LAB where this HMC is present" onkeyup="this.value = this.value.toUpperCase();">
+    </div>
+</div>
+
+
+
+  <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary"       {% if not ehmc %} disabled {% endif %}>Update</button>
+       
+          </div>
+  </div>
+    
+  </form>
+    <br><br><br><br>
+
+  </div>
+
+{% endblock %}
+
+

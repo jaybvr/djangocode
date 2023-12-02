@@ -1,0 +1,271 @@
+{% include './base_layout.html' with menu="lsq" %}
+
+{% block content %}
+{% load static %}
+
+
+<style>
+    .highcharts-figure,
+    .highcharts-data-table table {
+        min-width: 320px;
+        max-width: 660px;
+        margin: 1em auto;
+    }
+
+    .highcharts-data-table table {
+        font-family: Verdana, sans-serif;
+        border-collapse: collapse;
+        border: 1px solid #EBEBEB;
+        margin: 10px auto;
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .highcharts-data-table caption {
+        padding: 1em 0;
+        font-size: 1.2em;
+        color: #555;
+    }
+
+    .highcharts-data-table th {
+        font-weight: 600;
+        padding: 0.5em;
+    }
+
+    .highcharts-data-table td,
+    .highcharts-data-table th,
+    .highcharts-data-table caption {
+        padding: 0.5em;
+    }
+
+    .highcharts-data-table thead tr,
+    .highcharts-data-table tr:nth-child(even) {
+        background: #f8f8f8;
+    }
+
+    .highcharts-data-table tr:hover {
+        background: #f1f7ff;
+    }
+</style>
+
+
+<div id="container col-sm-offset-3">
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+
+        </p>
+    </figure>
+    <script>
+        var colors = Highcharts.getOptions().colors,
+
+            categories = {{ squads| safe }},
+        data = {{ data | safe }},
+        squadData = [],
+            hostsData = [],
+            i,
+            j,
+            dataLen = data.length,
+            drillDataLen,
+            brightness;
+
+
+        // Build the data arrays
+        for (i = 0; i < dataLen; i += 1) {
+
+            // add squad data
+            squadData.push({
+                name: categories[i],
+                y: data[i].y,
+                color: data[i].color
+            });
+
+            // add hosts data
+            drillDataLen = data[i].drilldown.data.length;
+            for (j = 0; j < drillDataLen; j += 1) {
+                brightness = 0.2 - (j / drillDataLen) / 5;
+                hostsData.push({
+                    name: data[i].drilldown.categories[j],
+                    y: data[i].drilldown.data[j],
+                    color: Highcharts.color(data[i].color).brighten(brightness).get()
+                });
+            }
+        }
+
+        // Create the chart
+        Highcharts.chart('container', {
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: 'PowerVC Hardware Squadwise assignment'
+            },
+            subtitle: {
+                text: ''
+            },
+            plotOptions: {
+                pie: {
+                    shadow: false,
+                    center: ['50%', '50%']
+                }
+            },
+            tooltip: {
+                valueSuffix: ''
+            },
+            series: [{
+                name: 'Hosts',
+                data: squadData,
+                size: '70%',
+                dataLabels: {
+                    formatter: function () {
+                        return this.y > 0 ? this.point.name : null;
+                    },
+                    color: '#ffffff',
+                    distance: -30
+                }
+            }, {
+                name: 'Hosts',
+                data: hostsData,
+                size: '100%',
+                innerSize: '70%',
+                dataLabels: {
+                    formatter: function () {
+                        // display only if larger than 0
+                        return this.y > 0 ? '<b>' + this.point.name + ':</b> ' +
+                            this.y + '' : null;
+                    }
+                },
+                id: 'versions'
+            }],
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 400
+                    },
+                    chartOptions: {
+                        series: [{
+                        }, {
+                            id: 'Hosts',
+                            dataLabels: {
+                                enabled: false
+                            }
+                        }]
+                    }
+                }]
+            }
+        });
+    </script>
+
+</div>
+<div class="col-sm-offset-2">
+    {% if user.get_username != "user" %}
+
+    <div class="col-sm-offset-7">
+        <a type="button" class="btn btn-primary" href="{% url 'import_data' %}">Import Hosts</a>
+        <a type="button" class="btn btn-primary" href="{% url 'add_host' %}">Add Host</a>
+        <a type="button" class="btn btn-primary" href="{% url 'edit_host' %}">Edit Host</a>
+
+        {% if user.get_username != "editor" %}
+        <a type="button" class="btn btn-primary" href="{% url 'delete_host' %}">Delete Host</a>
+        {% endif %}
+    </div>
+    {% endif %}
+
+
+</div>
+
+
+
+<div class="col-sm-offset-2 floating">
+
+    <h2>Squads</h2>
+    <div class="panel-group" id="accordion">
+
+        {% for sq in sqs %}
+        <div class="panel panel-default">
+
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#{{ sq.name }}">{{ sq.name }}</a>
+                </h4>
+            </div>
+
+            <div id="{{ sq.name }}" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <table class="table table-bordered table-responsive ">
+                        <thead>
+                            <tr>
+                                <th>FSP / BMC IP</th>
+                                <th></th>
+                                <th>CEC Name</th>
+                                <th>Owner</th>
+                                <th>Squad</th>
+                                <th>Host type</th>
+
+                                <th>Serial</th>
+                                <th>Location</th>
+                                <th>FSP Credentials</th>
+                                <th>Firmware Level</th>
+                                <th>HMC IP</th>
+                                <th>Novalik IP</th>
+                                <th>VIOS1</th>
+                                <th>VIOS2</th>
+                                <th>Proc / Memory</th>
+                                <th>Model</th>
+                                <th>Network Ports</th>
+                                <th>Fabric Switch1</th>
+                                <th>Fabric Switch2</th>
+                                <th>Primary VLAN</th>
+                                <th>Connected Storages</th>
+                                <th>LAB</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for h in sq.hosts %}
+
+                            <tr>
+                                <td>{{ h.cec_fsp_bmc_ip}} </td>
+                                <td><img src="{% if h.cec_ip_ping == True %} {% static 'hwt/green.jpeg' %} {% else %} {% static 'hwt/red.jpeg' %} {% endif %} " height=20 width=20></td>
+                                <td>{{ h.cec_name}} </td>
+                                <td>{{ h.cec_owner}} </td>
+                                <td>{{ h.cec_squad}} </td>
+                                <td>{{ h.cec_type}} </td>
+                                <td>{{ h.cec_serial}} </td>
+                                <td>{{ h.cec_location}} </td>
+                                <td>{{ h.cec_fsp_credentials}} </td>
+                                <td>{{ h.cec_firmware}} </td>
+                                <td>{{ h.cec_hmc_ip}} </td>
+                                <td>{{ h.cec_neo_ip}} </td>
+                                <td>{{ h.cec_vios1}} </td>
+                                <td>{{ h.cec_vios2}} </td>
+                                <td>{{ h.cec_proc_memory}} </td>
+                                <td>{{ h.cec_model}} </td>
+                                <td>{{ h.cec_network_ports}} </td>
+                                <td>{{ h.cec_fabric1}} </td>
+                                <td>{{ h.cec_fabric2}} </td>
+                                <td>{{ h.cec_pvlan}} </td>
+                                <td>{{ h.cec_storages}} </td>
+                                <td>{{ h.cec_lab}} </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+
+    </div>
+  <br><br><br><br>
+    
+</div>
+
+
+
+
+
+
+
+{% endblock %}

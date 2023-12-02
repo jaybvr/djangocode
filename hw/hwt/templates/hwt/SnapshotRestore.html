@@ -1,0 +1,112 @@
+{% include './base_layout.html' with menu="sr" %}
+{% block content %}
+
+<div class=" col-sm-6">
+
+{{ comment }}
+  <div style="border-style:outset">
+      <br>
+  <div class="col-sm-offset-4 ">
+
+<h3>Backup</h3>
+</div>
+<br>
+ <form class="form-horizontal" action="{% url 'snapshot' %}" method="POST">
+          {% csrf_token %}
+        <div class="form-group">
+            <div class="col-xs-4">
+                <input type="hidden" class="form-control input-default" value="1" name="snap">
+            </div>
+      </div>
+        
+         <div class="col-xs-6"></textarea>
+           <textarea class="form-control" rows="5"  id="comments" name="comments" placeholder="Enter comments"></textarea>
+          
+        </div>
+         <br>
+           <br>
+          <div class=" col-sm-offset-5">
+        
+       <button type="submit" class="btn btn-primary" name="snap">Take Backup</button>
+           </div>
+           
+          
+           <br><br>
+           <br><br>
+           <br><br>
+           
+  </form>
+</div>  
+  </div>
+  
+  
+  
+  <div class=" col-sm-6">
+   <br>
+       
+  <br>
+  <br>
+  <br>
+  
+  
+  
+  {% if error %}
+        <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ error }}
+                    </div>
+     {% endif %}
+  
+  {% if success %}
+        <div class="alert alert-success">
+                        <strong>Success!</strong> {{ success }}
+                    </div>
+     {% endif %}
+  
+    
+    
+<div>
+  <br>
+         
+  
+      <br>
+<form class="form-horizontal" action="{% url 'restore' %}" method="POST">
+  {% csrf_token %}
+        <div class="col-sm-offset-9 ">
+        <button type="submit" class="btn btn-primary" name="rest">Restore</button>
+        </div>
+        <br><br>
+        <div>
+              <table class="table table-bordered table-hover table-striped">
+                        <thead>
+                          <tr>
+                            <th>Backup Taken</th>
+                            <!-- <th>sshot.filepath</th>          -->      
+                            <th>Comments</th>
+                            <th>Select</th>                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                        {% for sshot in snapshots %}
+                      <tr>
+                        <td> {{ sshot.timestamp }} </td>
+                      <!--  <td> {{ sshot.filepath }} </td> -->
+                        
+                        <td><textarea class="form-control" rows="5"  id="comments" name="comments">{{ sshot.comments}}</textarea></td>
+                        <td> <input type="radio" id="choice{{ forloop.counter }}" name="optradio" value="{{ sshot.filepath }}"></td>
+                        
+                            </tr>
+                        {% endfor %}
+                </tbody></table>
+        </div>
+        
+        <br>
+        
+</form>
+
+
+</div>
+     <br><br><br><br>
+
+</div>
+{% endblock %}
+

@@ -1,0 +1,95 @@
+{% include './base_layout.html' with menu="nova" %}
+
+{% block content %}
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script>
+google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawBasic);
+
+function drawBasic() {
+
+      var data = google.visualization.arrayToDataTable({{ flist|safe }});
+
+      var options = {
+        title: 'Verification Queue',
+        chartArea: {width: '50%'},
+        hAxis: {
+          title: 'Number of Defects',
+          minValue: 0,
+          format:0
+        },
+        vAxis: {
+          title: 'Owner'
+        }
+      };
+
+      var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }
+</script>
+
+<div class="col-sm-10">
+    <b><h3 style="color:green;">Novalink Verification Defects</h3></b>
+    <br><br><br>
+    <div id="chart_div"></div>
+
+    <b><h3 style="color:green;">Total :</h3></b>
+    
+    <table class="table table-bordered  table-striped">
+      <thead>
+        <tr>
+          <th>Total Num of Verify Defects</th>
+          <th>Defects List</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>{{ total }} </td>
+        <td>{{ tlist }}</td>
+      </tr>
+              
+      </tbody></table>
+      
+    
+
+    <br><br><br>
+    <b><h3 style="color:green;"> Details : </h3></b>
+    
+    <table class="table table-bordered  table-striped">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Verify</th>
+            <th>Closed</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+              {% for x in pending %}
+         <tr>
+          <td>{{ x.date }} </td>
+          <td>{{ x.verify }} </td>
+          <td>{{ x.closed }} </td>            
+          
+        </tr>
+              {% endfor %}    
+
+        </tbody></table>
+    
+
+    
+   
+   
+    <br><br><br><br>
+    
+          
+      </div>
+    
+
+{% endblock %}
+
+
+

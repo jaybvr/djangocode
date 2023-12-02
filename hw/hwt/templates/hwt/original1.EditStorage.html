@@ -1,0 +1,144 @@
+{% include './base_layout.html' with menu="ls" %}
+
+{% block content %}
+      
+<div class="col-sm-9"> 
+    <h3>Edit Storage</h3>
+      <h3> </h3>
+  {% if error %}
+        <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ error }}
+                    </div>
+     {% endif %}
+<form class="form-horizontal" action="{% url 'edit_storage' %}" method="POST">
+          {% csrf_token %}
+        <div class="form-group">
+        <label class="control-label col-sm-2" >Enter Storage IP*:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" id="edit_storage_id" name="estorage_id" placeholder="Enter Storage IP" {% if not estorage %} required="required" {% endif %}>
+        </div>        
+      </div>
+      
+       <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+       
+            <button type="submit" class="btn btn-primary" {% if estorage %} disabled    {% endif %}>Submit</button>
+     
+        
+          </div>
+  </div>
+  
+  </form>
+  
+      <h3>Storage Details</h3>
+      <h3> </h3>
+     
+     <form class="form-horizontal" action="{% url 'edit_storage' %}" method="POST">
+        {% csrf_token %}
+        
+     
+     <div class="form-group">
+            <div class="col-xs-6">
+                <input type="hidden" class="form-control input-default" value="{{ estorage.storage_ip }}" id="storage_ip" name="storage_ip" placeholder="Enter Storage IP">
+            </div>
+      </div>
+      
+      <div class="form-group">
+            <label class="control-label col-sm-2" >Storage IP*:</label>
+            <div class="col-xs-6">
+                <label class="control-label" >{{ estorage.storage_ip }}</label>
+            </div>
+      </div>      
+     
+     
+      <div class="form-group">
+          <label class="control-label col-sm-2" >Serial:</label>
+          <div class="col-xs-6">
+            <input type="text" class="form-control input-default" value="{{ estorage.storage_serial }}" id="storage_serial" name="storage_serial" placeholder="Enter Storage Serial">
+          </div>
+      </div>
+     
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Location:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" value="{{ estorage.storage_location }}" id="storage_location" name="storage_location" placeholder="Enter Storage Location">
+        </div>
+    </div>
+    
+   
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Storage Credentials:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ estorage.storage_credentials }}"  id="storage_credentials" name="storage_credentials" placeholder="Enter Storage Credentials">
+    </div>
+  </div>
+  
+ <div class="form-group">
+        <label class="control-label col-sm-2" >Storage Type:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" value="{{ estorage.storage_type }}" id="storage_type" name="storage_type" placeholder="Enter Storage Type" onkeyup="this.value = this.value.toUpperCase();">
+        </div>        
+      </div>
+
+<div class="form-group">
+    <label class="control-label col-sm-2" >Storage Port:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ estorage.storage_port }}" id="storage_port" name="storage_port" placeholder="Enter Storage Port">
+    </div>
+  </div>
+
+<div class="form-group">
+    <label class="control-label col-sm-2" >Storage REST API Server:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ estorage.storage_rest_api_server }}" id="storage_rest_api_server" name="storage_rest_api_server" placeholder="Enter Storage REST API server (Hitachi Storage)">
+    </div>
+  </div>
+
+<div class="form-group">
+    <label class="control-label col-sm-2" >Storage LDEV ID range:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ estorage.storage_ldev_id_range }}" id="storage_ldev_id_range" name="storage_ldev_id_range"  placeholder="Enter LDEV ID range (Hitachi Storage)">
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Capacity in TB:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ estorage.storage_capacity }}" id="storage_capacity" name="storage_capacity" placeholder="Enter Capacity in TB">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Service IP:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ estorage.storage_service_ip }}" id="storage_serviceip" name="storage_serviceip" placeholder="Enter Service IP">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >LAB:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" value="{{ estorage.storage_lab }}" id="storage_lab" name="storage_lab" placeholder="Enter the LAB where this storage is present" onkeyup="this.value = this.value.toUpperCase();">
+    </div>
+  </div>
+
+
+
+  <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        
+            
+       <button type="submit" class="btn btn-primary" {% if not estorage %} disabled         {% endif %}>Update</button>
+       </div>
+  </div>
+    
+  </form>
+    <br><br><br><br>
+
+  </div>
+
+
+{% endblock %}
+
+

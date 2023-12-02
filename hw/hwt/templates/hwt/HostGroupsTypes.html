@@ -1,0 +1,228 @@
+{% include './base_layout.html' with menu="hg" %}
+{% block content %}
+
+<div class="col-xs-5">
+<br>
+<br>
+<ul class="nav nav-tabs">
+    <li {% if not htsuccess and not hterror %} class="active" {% endif %}><a data-toggle="tab" href="#home">Host Groups</a></li>
+    <li {% if htsuccess or hterror %} class="active" {% endif %}><a data-toggle="tab" href="#menu1">Host Types</a></li>
+  </ul>
+  
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade {% if not htsuccess and not hterror %} in active {% endif %}">
+        
+        <h3>Host Groups </h3>
+
+
+            <br><br>
+            {% if hgerror %}
+            <div class="alert alert-danger">
+                <strong>Error!</strong> {{ hgerror }}
+            </div>
+            {% endif %}
+        
+            {% if hgsuccess %}
+            <div class="alert alert-success">
+                <strong>Success!</strong> {{ hgsuccess }}
+            </div>
+            {% endif %}
+
+            <div style="border-style:outset">
+                <form class="form-horizontal" action="{% url 'host_groups' %}" method="POST">
+                    {% csrf_token %}
+                    <div class=" col-sm-offset-4">
+        
+                        <h3>Add Host Groups </h3>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Host Group Name * :</label>
+                        <div class="col-xs-6">
+                            <input type="text" class="form-control input-default" name="hg_name"
+                                placeholder="Enter Host Group Name ">
+                        </div>
+                    </div>
+        
+                    <div class="form-group">
+                        <label class="control-label col-sm-4">Descreption :</label>
+                        <div class="col-xs-6">
+                            <input type="text" class="form-control input-default" name="hg_descreption"
+                                placeholder="Enter Descreption ">
+                        </div>
+                    </div>
+        
+        
+        
+        
+        
+                    <br><br>
+        
+                    <div class=" col-sm-offset-4">
+                        <button type="submit" class="btn btn-primary">Add Host Group</button>
+                    </div>
+        
+                    <br>
+                    <br>
+        
+                </form>
+            </div>
+            <br>
+            <br>
+        
+        
+        
+            
+            <div>
+                <form class="form-horizontal" action="{% url 'delete_host_groups' %}" method="POST">
+                    {% csrf_token %}
+                    <div class=" col-sm-offset-9">
+        
+                        <button type="submit" class="btn btn-primary">Delete Host Group</button>
+                    </div>
+            
+                    <br>
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>Host Group Name</th>
+                                <th>Descreption</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for hg in hgs %}
+                            <tr>
+                                <td> {{ hg.name }} </td>
+                                <td> {{ hg.descreption }} </td>
+                                <td> <input type="radio" id="choice{{ forloop.counter }}" name="hgopt" value="{{ hg.name }}">
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+        
+                    <br>
+                    <br>
+        
+                </form>
+        
+                <br>
+            </div>
+        
+
+    </div>
+    <div id="menu1" class="tab-pane fade {% if htsuccess or hterror %} in active {% endif %}">
+        <h3>Host Types </h3>
+
+        <br><br>
+        {% if hterror %}
+        <div class="alert alert-danger">
+            <strong>Error!</strong> {{ hterror }}
+        </div>
+        {% endif %}
+    
+        {% if htsuccess %}
+        <div class="alert alert-success">
+            <strong>Success!</strong> {{ htsuccess }}
+        </div>
+        {% endif %}
+
+        <div style="border-style:outset">
+
+    <form class="form-horizontal" action="{% url 'host_types' %}" method="POST">
+        {% csrf_token %}
+        <div class=" col-sm-offset-4">
+
+            <h3> Add Host Types </h3>
+        </div>
+        <br>
+        <div class="form-group">
+            <label class="control-label col-sm-4">Host Type Name * :</label>
+            <div class="col-xs-6">
+                <input type="text" class="form-control input-default" name="ht_name"
+                    placeholder="Enter Host Type Name ">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-4">Host Type Descreption :</label>
+            <div class="col-xs-6">
+                <input type="text" class="form-control input-default" name="ht_descreption"
+                    placeholder="Enter Descreption ">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-4">Host Group * :</label>
+            <div class="col-xs-6">
+                <select class="form-control" name="htgroup">
+                    {% for hg in hgs %}
+                    <option>{{ hg.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <br>
+
+        <div class=" col-sm-offset-4">
+
+            <button type="submit" class="btn btn-primary">Add Host Type</button>
+        </div>
+        <br><br>
+
+    </form>
+</div>
+
+<br><br><br>
+
+<div>
+    
+    <form class="form-horizontal" action="{% url 'delete_host_types' %}" method="POST">
+        {% csrf_token %}
+        <div class=" col-sm-offset-9">
+
+            <button type="submit" class="btn btn-primary">Delete Host Type</button>
+        </div>
+
+        <br>
+
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>Host Type Name</th>
+                    <th>Descreption</th>
+                    <th>Host Group</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for ht in hts %}
+                <tr>
+                    <td> {{ ht.name }} </td>
+                    <td> {{ ht.descreption }} </td>
+                    <td> {{ ht.host_group.name }} </td>
+                    <td> <input type="radio" id="choice{{ forloop.counter }}" name="htopt" value="{{ ht.name }}">
+                    </td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
+        <br><br>
+    </form>
+</div>
+
+<br><br><br><br>
+
+
+
+    </div>
+   
+  </div>
+
+
+
+</div>
+{% endblock %}

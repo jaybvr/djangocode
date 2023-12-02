@@ -1,0 +1,129 @@
+{% include './base_layout.html' with menu="lsch" %}
+{% block content %}
+
+<div class="col-xs-5">
+
+    <h3>Schedule Notifications :</h3>
+    <br> <br>
+    {% if error %}
+    <div class="alert alert-danger">
+        <strong>Error!</strong> {{ error }}
+    </div>
+    {% endif %}
+
+    {% if success %}
+    <div class="alert alert-success">
+        <strong>Success!</strong> {{ success }}
+    </div>
+    {% endif %}
+    <div style="border-style:outset">
+
+        <form class="form-horizontal" action="{% url 'list_scheduler' %}" method="POST">
+            {% csrf_token %}
+
+            <div class=" col-sm-offset-4">
+
+                <h3> Add Schedule </h3>
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="control-label col-sm-4">IP address * :</label>
+                <div class="col-xs-6">
+                    <input type="text" class="form-control input-default" name="ip_add" required="required" placeholder="Enter IP address ">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="sel1" class="control-label col-sm-4">Status to be Checked:</label>
+                <div class="col-xs-6">
+
+                <select class="form-control" name="status">
+                  <option value="Up">Up</option>
+                  <option value="Down">Down</option>                  
+                </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-4">Notify mail Ids :</label>
+                <div class="col-xs-6">
+                    <input type="text" class="form-control input-default" name="notify_ids" required="required" placeholder="Enter Notification mail id's with coma separated ">
+                </div>
+            </div>
+
+            <br>
+            <div class=" col-sm-offset-4">
+
+                <button type="submit" class="btn btn-primary">Add Schedule</button>
+            </div>
+
+            <br>
+
+
+
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <div>
+
+        <form class="form-horizontal" action="{% url 'delete_scheduler' %}" method="POST">
+            {% csrf_token %}
+
+            <div class=" col-sm-offset-9">
+
+                <button type="submit" class="btn btn-primary">Delete Schedule</button>
+            </div>
+
+            <div class=" col-sm-offset-4">
+
+            </div>
+            <br>
+
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>IP</th>
+                        <th>Status</th>
+                        <th>Notify mail id's</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for sq in schedules %}
+                    <tr>
+                        <td> {{ sq.timestamp }} </td>
+                        <td> {{ sq.ip_add }} </td>
+                        <td> {{ sq.status }} </td>
+                        <td> <textarea class="form-control" rows="2"  id="comments" name="comments">{{ sq.notify_id }} </textarea></td>
+                        <td> <input type="radio" id="choice{{ forloop.counter }}" name="scopt" value="{{ sq.ip_add }}">
+                        </td>
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <br>
+            
+            <br>
+        </form>
+    </div>
+  <br><br><br><br>
+
+</div>
+
+
+
+
+
+{% endblock %}

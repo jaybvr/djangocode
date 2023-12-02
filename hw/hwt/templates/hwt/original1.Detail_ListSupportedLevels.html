@@ -1,0 +1,115 @@
+{% include './base_layout.html' with menu="sl" %}
+
+{% block content %}
+      
+<div class="col-sm-9"> 
+            <h3>Detail Supported Levels</h3>
+ {% if error %}
+        <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ error }}
+                    </div>
+     {% endif %}
+     
+      <form class="form-horizontal" action="{% url 'edit_supported_level' %}" method="POST">
+{% csrf_token %}
+
+        <div class="form-group">
+            <div class="col-xs-6">
+                <input type="hidden" class="form-control input-default" value="{{ rel.pvc_release }}" id="pvc_release" name="pvc_release">
+            </div>
+      </div>
+      
+      <div class="form-group">
+            <label class="control-label col-sm-2" >Release *:</label>
+            <div class="col-xs-6">
+                <label class="control-label" >{{ rel.pvc_release }}</label>
+            </div>
+      </div>      
+      
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="email">SLD:</label>
+          <div class="col-xs-6">
+            <textarea class="form-control" rows="10"  id="comments" name="sld" placeholder="Enter SLD Link">{{ rel.sld }}</textarea>
+            
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Test Plan:</label>
+          <div class="col-xs-6">
+              <textarea class="form-control" rows="10"  id="comments" name="test_plan" placeholder="Enter Test Plan">{{ rel.test_plan }}</textarea>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Management Node:</label>
+          <div class="col-xs-6">
+             <textarea class="form-control" rows="10"  id="comments" name="management_node" placeholder="Enter Management Node">{{ rel.management_node }}</textarea>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">HMC Level:</label>
+          <div class="col-xs-6">
+            <textarea class="form-control" rows="10"  id="comments" name="hmc_level" placeholder="Enter HMC Level">{{ rel.hmc_level }}</textarea>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">VIOS Level:</label>
+          <div class="col-xs-6">
+            <textarea class="form-control" rows="10"  id="comments" name="vios_level" placeholder="Enter VIOS Level">{{ rel.vios_level }}</textarea>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Novalink Level:</label>
+          <div class="col-xs-6">
+            <textarea class="form-control" rows="10"  id="comments" name="novalink_level" placeholder="Enter Novalink Level">{{ rel.novalink_level }}</textarea>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Novalink Host OS:</label>
+          <div class="col-xs-6">
+            <textarea class="form-control" rows="10"  id="comments" name="novalink_os" placeholder="Enter Novalink host OS">{{ rel.novalink_os }}</textarea>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Guest OS:</label>
+          <div class="col-xs-6">
+            <textarea class="form-control" rows="10"  id="comments" name="guest_os" placeholder="Enter Guest OS">{{ rel.guest_os }}</textarea>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Storages:</label>
+          <div class="col-xs-6">
+            <textarea class="form-control" rows="10"  id="comments" name="storages" placeholder="Enter Storages">{{ rel.storages }}</textarea>
+            
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Comments:</label>
+            <div class="col-xs-6">
+            <textarea class="form-control" rows="10"  id="comments" name="comments">{{ rel.comments }}</textarea>
+            </div>
+        </div>
+        
+      </form>
+       <br><br><br><br>
+
+  </div>
+      
+
+
+{% endblock %}

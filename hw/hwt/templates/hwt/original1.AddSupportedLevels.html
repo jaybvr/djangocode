@@ -1,0 +1,115 @@
+{% include './base_layout.html' with menu="sl" %}
+
+{% block content %}
+      
+<div class="col-sm-9"> 
+            <h3>Add Supported Levels</h3>
+       {% if error %}
+        <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ error }}
+                    </div>
+     {% endif %}     
+                  
+      <form class="form-horizontal" action="{% url 'add_supported_level' %}" method="POST">
+{% csrf_token %}
+
+       
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Release * :</label>
+          <div class="col-xs-6">
+            <input type="text" class="form-control input-sm" id="release" name="release" placeholder="Enter Release" required="required">
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">SLD:</label>
+          <div class="col-xs-6">
+            <textarea class="form-control" rows="10"  id="comments" name="sld" placeholder="Enter SLD Link"></textarea>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Test Plan:</label>
+          <div class="col-xs-6">
+          
+            <textarea class="form-control" rows="10"  id="comments" name="test_plan" placeholder="Enter Test Plan"></textarea>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Management Node:</label>
+          <div class="col-xs-6"></textarea>
+           <textarea class="form-control" rows="10"  id="comments" name="management_node" placeholder="Enter Management Node"></textarea>
+          
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">HMC Level:</label>
+          <div class="col-xs-6">
+          <textarea class="form-control" rows="10"  id="comments" name="hmc_level" placeholder="Enter HMC Level"></textarea>
+          
+          
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">VIOS Level:</label>
+          <div class="col-xs-6">
+          <textarea class="form-control" rows="10"  id="comments" name="vios_level" placeholder="Enter VIOS Level"></textarea>
+          
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Novalink Level:</label>
+          <div class="col-xs-6">
+                      <textarea class="form-control" rows="10"  id="comments" name="novalink_level" placeholder="Enter Novalink Level"></textarea>
+          
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Novalink Host OS:</label>
+          <div class="col-xs-6">
+           <textarea class="form-control" rows="10"  id="comments" name="novalink_os" placeholder="Enter Novalink host OS"></textarea>
+          
+          
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Guest OS:</label>
+          <div class="col-xs-6">
+            <textarea class="form-control" rows="10"  id="comments" name="guest_os" placeholder="Enter Guest OS"></textarea>
+          
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Storages:</label>
+          <div class="col-xs-6">
+           <textarea class="form-control" rows="10"  id="comments" name="storages" placeholder="Enter Storages"></textarea>
+          
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Comments:</label>
+            <div class="col-xs-6">
+            <textarea class="form-control" rows="10" id="comments" name="comments" placeholder="Enter Comments"></textarea>
+            </div>
+        </div>
+        <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-primary">ADD</button>
+            </div>
+        </div>
+      </form>
+  <br><br><br><br>
+  </div>
+      
+
+
+{% endblock %}

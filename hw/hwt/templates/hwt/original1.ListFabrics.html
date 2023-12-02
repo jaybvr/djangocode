@@ -1,0 +1,84 @@
+{% include './base_layout.html' with menu="lf" %}
+
+{% block content %}
+{% load static %}
+
+  
+<div class="col-sm-10">
+
+      
+<div class="col-sm-offset-7">
+      
+               <a type="button" class="btn btn-primary" href="{% url 'export_fabric_list' %}">Export to CSV</a>
+
+      {% if user.get_username != "user" %}
+          <a type="button" class="btn btn-primary" href="{% url 'import_data' %}">Import Fabrics</a>
+           <a type="button" class="btn btn-primary" href="{% url 'add_fabric' %}">Add Fabric</a>
+           <a type="button" class="btn btn-primary" href="{% url 'edit_fabric' %}">Edit Fabric</a>
+           
+      {% if user.get_username != "editor" %}
+              <a type="button" class="btn btn-primary" href="{% url 'delete_fabric' %}">Delete Fabric</a>
+        {% endif %}
+      
+      {% endif %}
+           
+    </div>
+ 
+      
+      <h3>List Fabrics</h3>
+      <h3> </h3>
+
+<table class="table table-bordered table-hover table-striped">
+            <thead>
+              <tr>
+                <th>Fabric IP </th>
+                <th></th>
+                <th>Serial</th>
+                <th>Location</th>
+                <th>Credentials</th>
+                <th>Brocade_/_Cisco</th>
+                <th>Primary_/_Secondary</th>
+                <th>Fabric_Port</th>
+                <th>VSAN_ID</th>
+                <th>LAB</th>
+                <th>Connected_Storwises</th>
+                <th>Connected_DS8K</th>
+                <th>Connected_EMC_VMAX</th>
+                <th>Connected_EMC_VNX</th>
+                <th>Connected_Hitachi</th>
+                <th>Connected_XIV</th>
+                
+                
+              </tr>
+            </thead>
+            <tbody>
+             {% for fabric in fabrics %}
+           <tr>
+            <td> {{ fabric.fabric_ip    }} </td>
+            <td><img src="{% if fabric.fabric_ip_ping == True %} {% static 'hwt/green.jpeg' %} {% else %} {% static 'hwt/red.jpeg' %} {% endif %} " height=20 width=20></td>
+            <td> {{ fabric.fabric_serial    }} </td>
+            <td> {{ fabric.fabric_location  }} </td>
+            <td> {{ fabric.fabric_credentials   }} </td>
+            <td> {{ fabric.fabric_type  }} </td>
+            <td> {{ fabric.fabric_primary   }} </td>
+            <td> {{ fabric.fabric_primary_port }} </td>
+            <td> {{ fabric.fabric_vsan_id   }} </td>
+            <td> {{ fabric.fabric_lab   }} </td>
+            <td> {{ fabric.fabric_storwise }} </td>
+            <td> {{ fabric.fabric_ds8k  }} </td>
+            <td> {{ fabric.fabric_emc_vmax  }} </td>
+            <td> {{ fabric.fabric_emc_vnx   }} </td>
+            <td> {{ fabric.fabric_hitachi   }} </td>
+            <td> {{ fabric.fabric_xiv   }} </td>
+                </tr>
+            {% endfor %}
+            </tbody></table>
+              <br><br><br><br>
+
+    
+  </div>
+
+
+{% endblock %}
+
+

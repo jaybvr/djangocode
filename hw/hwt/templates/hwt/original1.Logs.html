@@ -1,0 +1,35 @@
+{% include './base_layout.html' with menu="ll" %}
+
+{% block content %}
+ <div class="col-sm-offset-2">
+<h3> Logs </h3>
+<table class="table table-bordered table-responsive table-striped">
+          <thead>
+            <tr>
+              <th>Level</th>
+              <th>TimeStamp</th>
+              <th>Message</th>
+              <th>User</th>              
+             
+            </tr>
+          </thead>
+          <tbody>
+                {% for log in logs %}
+           <tr>
+           {% if log.level == 'INFO' %}
+           <td> <span class="glyphicon glyphicon-thumbs-up" style="color:green;"></span> Success</td>
+           {% else %}
+          <td> <span class="glyphicon glyphicon-thumbs-down" style="color:red;"></span> Error</td>
+           {% endif %}
+           
+            <td>{{ log.time }} </td>
+            <td>{{ log.message }} </td>
+            <td>{{  log.user }} </td>            
+            
+          </tr>
+                {% endfor %}    
+          </tbody></table>
+      
+
+
+{% endblock %}

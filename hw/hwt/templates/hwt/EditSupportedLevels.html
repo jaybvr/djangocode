@@ -1,0 +1,136 @@
+{% include './base_layout.html' with menu="sl" %}
+
+{% block content %}
+      
+<div class="col-sm-9"> 
+            <h3>Edit Supported Levels</h3>
+{% if error %}
+        <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ error }}
+                    </div>
+     {% endif %}
+<form class="form-horizontal" action="{% url 'edit_supported_level' %}" method="POST">
+          {% csrf_token %}
+        <div class="form-group">
+        <label class="control-label col-sm-2" >Enter Release *:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" id="edit_releaes_id" name="erelease_id" placeholder="Enter Release ID" {% if not erelease %} required="required" {% endif %} >
+        </div>        
+      </div>
+      
+       <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary" {% if erelease %} disabled {% endif %} >Submit</button>
+      </div>
+  </div>
+  
+  </form>
+  
+  
+      <form class="form-horizontal" action="{% url 'edit_supported_level' %}" method="POST">
+{% csrf_token %}
+
+        <div class="form-group">
+            <div class="col-xs-6">
+                <input type="hidden" class="form-control input-default" value="{{ erelease.pvc_release }}" id="pvc_release" name="pvc_release">
+            </div>
+      </div>
+      
+      <div class="form-group">
+            <label class="control-label col-sm-2" >Release *:</label>
+            <div class="col-xs-6">
+                <label class="control-label" >{{ erelease.pvc_release }}</label>
+            </div>
+      </div>      
+      
+      <div class="form-group">
+          <label class="control-label col-sm-2" for="email">SLD:</label>
+          <div class="col-xs-6">
+            <textarea class="form-control" rows="10"  id="comments" name="sld" placeholder="Enter SLD Link">{{ erelease.sld }}</textarea>
+            
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Test Plan:</label>
+          <div class="col-xs-6">
+              <textarea class="form-control" rows="10"  id="comments" name="test_plan" placeholder="Enter Test Plan">{{ erelease.test_plan }}</textarea>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Management Node:</label>
+          <div class="col-xs-6">
+             <textarea class="form-control" rows="10"  id="comments" name="management_node" placeholder="Enter Management Node">{{ erelease.management_node }}</textarea>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">HMC Level:</label>
+          <div class="col-xs-6">
+            <textarea class="form-control" rows="10"  id="comments" name="hmc_level" placeholder="Enter HMC Level">{{ erelease.hmc_level }}</textarea>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">VIOS Level:</label>
+          <div class="col-xs-6">
+            <textarea class="form-control" rows="10"  id="comments" name="vios_level" placeholder="Enter VIOS Level">{{ erelease.vios_level }}</textarea>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Novalink Level:</label>
+          <div class="col-xs-6">
+            <textarea class="form-control" rows="10"  id="comments" name="novalink_level" placeholder="Enter Novalink Level">{{ erelease.novalink_level }}</textarea>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Novalink Host OS:</label>
+          <div class="col-xs-6">
+            <textarea class="form-control" rows="10"  id="comments" name="novalink_os" placeholder="Enter Novalink host OS">{{ erelease.novalink_os }}</textarea>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Guest OS:</label>
+          <div class="col-xs-6">
+            <textarea class="form-control" rows="10"  id="comments" name="guest_os" placeholder="Enter Guest OS">{{ erelease.guest_os }}</textarea>
+            
+        </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="email">Storages:</label>
+          <div class="col-xs-6">
+            <textarea class="form-control" rows="10"  id="comments" name="storages" placeholder="Enter Storages">{{ erelease.storages }}</textarea>
+            
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Comments:</label>
+            <div class="col-xs-6">
+            <textarea class="form-control" rows="10"  id="comments" name="comments">{{ erelease.comments }}</textarea>
+            </div>
+        </div>
+        <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-primary" {% if not erelease %} disabled {% endif %} >Update</button>
+            </div>
+        </div>
+      </form>
+        <br><br><br><br>
+
+  </div>
+      
+
+
+{% endblock %}

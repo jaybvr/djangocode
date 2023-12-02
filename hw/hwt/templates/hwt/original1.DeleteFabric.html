@@ -1,0 +1,182 @@
+{% include './base_layout.html' with menu="lf" %}
+
+{% block content %}
+
+  
+<div class="col-sm-9"> 
+      <h3>Delete Fabric</h3>
+      <h3> </h3>
+      {% if error %}
+        <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ error }}
+                    </div>
+     {% endif %}
+     <form class="form-horizontal" action="{% url 'delete_fabric' %}" method="POST">
+          {% csrf_token %}
+        <div class="form-group">
+        <label class="control-label col-sm-2" >Enter Fabric IP*:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" id="edit_fabric_id" name="dfabric_ip" placeholder="Enter Fabric IP" {% if not efabric %} required="required" {% endif %} >
+        </div>        
+      </div>
+      
+       <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+       
+            <button type="submit" class="btn btn-primary" {% if efabric %} disabled  {% endif %}>Submit</button>
+             
+          </div>
+  </div>
+  
+  </form>
+  
+      <h3>Fabric Details</h3>
+      <h3> </h3>
+     
+     <form class="form-horizontal" action="{% url 'delete_fabric' %}" method="POST">
+        {% csrf_token %}
+        
+<div class="form-group">
+            <div class="col-xs-6">
+                <input type="hidden" class="form-control input-default" value="{{ efabric.fabric_ip }}" id="fabric_ip" name="fabric_ip" placeholder="Enter Fabric IP">
+            </div>
+      </div>
+      
+      <div class="form-group">
+            <label class="control-label col-sm-2" >Fabric IP:</label>
+            <div class="col-xs-6">
+                <label class="control-label" >{{ efabric.fabric_ip }}</label>
+            </div>
+      </div>
+     
+     
+     
+      <div class="form-group">
+          <label class="control-label col-sm-2" >Serial:</label>
+          <div class="col-xs-6">
+                            <label class="control-label" >{{ efabric.fabric_serial }}</label>
+            
+          </div>
+      </div>
+     
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Location:</label>
+        <div class="col-xs-6">
+          
+                          <label class="control-label" >{{ efabric.fabric_location }}</label>
+          
+        </div>
+    </div>
+    
+    
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Fabric Credentials:</label>
+    <div class="col-xs-6">
+                      <label class="control-label" >{{ efabric.fabric_credentials }}</label>
+      
+      
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Brocade / Cisco:</label>
+    <div class="col-xs-6">
+                      <label class="control-label" >{{ efabric.fabric_type }}</label>
+      
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Primary / Secondary:</label>
+    <div class="col-xs-6">
+                      <label class="control-label" >{{ efabric.fabric_primary }}</label>
+      
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Fabric Port:</label>
+    <div class="col-xs-6">
+                      <label class="control-label" >{{ efabric.fabric_primary_port }}</label>
+      
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >VSAN ID:</label>
+    <div class="col-xs-6">
+                      <label class="control-label" >{{ efabric.fabric_vsan_id }}</label>
+      
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" >LAB:</label>
+    <div class="col-xs-6">
+                      <label class="control-label" >{{ efabric.fabric_lab }}</label>
+      
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Connected Storwises:</label>
+    <div class="col-xs-6">
+                      <label class="control-label" >{{ efabric.fabric_storwise }}</label>
+      
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Connected DS8K:</label>
+    <div class="col-xs-6">
+                      <label class="control-label" >{{ efabric.fabric_ds8k }}</label>
+      
+    </div>
+  </div>
+
+ <div class="form-group">
+    <label class="control-label col-sm-2" >Connected EMC VMAX:</label>
+    <div class="col-xs-6">
+                      <label class="control-label" >{{ efabric.fabric_emc_vmax }}</label>
+      
+    </div>
+  </div>
+   <div class="form-group">
+    <label class="control-label col-sm-2" >Connected EMC VNX:</label>
+    <div class="col-xs-6">
+                      <label class="control-label" >{{ efabric.fabric_emc_vnx }}</label>
+      
+    </div>
+  </div>
+   <div class="form-group">
+    <label class="control-label col-sm-2" >Connected Hitachi:</label>
+    <div class="col-xs-6">
+      
+                      <label class="control-label" >{{ efabric.fabric_hitachi }}</label>
+      
+    </div>
+  </div>
+   <div class="form-group">
+    <label class="control-label col-sm-2" >Connected XIV:</label>
+    <div class="col-xs-6">
+                      <label class="control-label" >{{ efabric.fabric_xiv }}</label>
+      
+    </div>
+  </div>
+  
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+       
+ 
+       <button type="submit" class="btn btn-primary" {% if not efabric %} disabled         {% endif %}>Delete</button>
+        
+        </div>
+  </div>
+    
+  </form>
+  <br><br><br><br>
+  </div>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,160 @@
+{% include './base_layout.html' with menu="lh" %}
+
+{% block content %}
+
+      
+<div class="col-sm-9"> 
+<h3>Delete HMC</h3>
+{% if error %}
+        <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ error }}
+                    </div>
+     {% endif %}
+     
+      <form class="form-horizontal" action="{% url 'delete_hmc' %}" method="POST">
+          {% csrf_token %}
+        <div class="form-group">
+        <label class="control-label col-sm-2" >Enter HMC IP*:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" id="edit_hmc_id" name="dhmc_id" placeholder="Enter HMC IP" {% if not ehmc %}  required="required" {% endif %} >
+        </div>        
+      </div>
+      
+       <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary"        {% if ehmc %}  disabled {% endif %} >Submit</button>
+        
+          </div>
+  </div>
+  
+  </form>
+  
+  
+  
+  <h3>HMC Details</h3>
+      <h3> </h3>
+    
+ 
+     <form class="form-horizontal" action="{% url 'delete_hmc' %}" method="POST">
+       {% csrf_token %}
+     <div class="form-group">
+            <div class="col-xs-6">
+                <input type="hidden" class="form-control input-default" value="{{ ehmc.hmc_public_ip }}" id="hmc_public_ip" name="hmc_public_ip" placeholder="Enter HMC IP">
+            </div>
+      </div>
+      
+      <div class="form-group">
+            <label class="control-label col-sm-2" >HMC IP:</label>
+            <div class="col-xs-6">
+                <label class="control-label" >{{ ehmc.hmc_public_ip }}</label>
+            </div>
+      </div>      
+
+    <div class="form-group">
+          <label class="control-label col-sm-2" >Serial:</label>
+          <div class="col-xs-6">
+                            <label class="control-label" >{{ ehmc.hmc_serial }}</label>
+            
+          </div>
+    </div>
+     
+    <div class="form-group">
+        <label class="control-label col-sm-2" >Location:</label>
+        <div class="col-xs-6">
+                          <label class="control-label" >{{ ehmc.hmc_location }}</label>
+          
+         </div>
+    </div>
+    
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Enter HMC Credentials</label>
+    <div class="col-xs-6">
+                      <label class="control-label" >{{ ehmc.hmc_credentials }}</label>
+      
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >HMC Private IP:</label>
+    <div class="col-xs-6">
+                      <label class="control-label" >{{ ehmc.hmc_private_ip }}</label>
+      
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Public / Private:</label>
+    <div class="col-xs-6">
+                      <label class="control-label" >{{ ehmc.hmc_public_private }}</label>
+      
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >IMM IP:</label>
+    <div class="col-xs-6">
+                    <label class="control-label" >{{ ehmc.hmc_imm_ip }}</label>
+    
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >IMM Credentials:</label>
+    <div class="col-xs-6">
+                     <label class="control-label" >{{ ehmc.hmc_imm_credentials }}</label>
+     
+    </div>
+  </div>
+
+
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >MTMS:</label>
+    <div class="col-xs-6">
+                      <label class="control-label" >{{ ehmc.hmc_mtms }}</label>
+      
+    </div>
+  </div>
+
+  <div class="form-group">
+      <label class="control-label col-sm-2" >Owner:</label>
+      <div class="col-xs-6">
+                        <label class="control-label" >{{ ehmc.hmc_owner }}</label>
+        
+      </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Squad:</label>
+    <div class="col-xs-6">
+                      <label class="control-label" >{{ ehmc.hmc_squad }}</label>
+      
+    </div>
+</div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >LAB:</label>
+    <div class="col-xs-6">
+                      <label class="control-label" >{{ ehmc.hmclab }}</label>
+      
+    </div>
+</div>
+
+
+
+  <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+
+             <button type="submit" class="btn btn-primary"     {% if not ehmc %} disabled {% endif %}>Delete</button>
+       
+          </div>
+  </div>
+    
+  </form>
+  <br><br><br><br>
+  </div>
+
+{% endblock %}
+
+
