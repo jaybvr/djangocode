@@ -8,6 +8,7 @@ from	django.shortcuts	import	render,	get_object_or_404
 from django.db.models import Q
 from django.db.models import Sum
 from datetime import datetime, timedelta
+from django.core.management import call_command
 import io
 from django.http import FileResponse
 import json
@@ -42,12 +43,12 @@ import string
 # Create your views here.
 
 def index(request):
-    #return HttpResponse("Hello Worls ")
-    return render(request,'products/MenuList.html')
+	#return HttpResponse("Hello Worls ")
+	return render(request,'products/MenuList.html')
 
 @login_required
 def list_main(request):
-    return render(request,'products/MenuList.html')
+	return render(request,'products/MenuList.html')
 
 def	login_user(request):
 							error=""
@@ -70,13 +71,13 @@ def	logout_user(request):
 
 @login_required
 def list_alerts(request):
-    
-        return render(request,'products/ListAlerts.html',{})
+	
+		return render(request,'products/ListAlerts.html',{})
 
 @login_required
 def list_groups(request):
 
-        return render(request,'products/ListGroups.html',{'inventorygroup':InventoryGroups.objects.all()})
+		return render(request,'products/ListGroups.html',{'inventorygroup':InventoryGroups.objects.all()})
 
 
 @login_required
@@ -93,7 +94,7 @@ def	export_host_list(request):
 
 @login_required
 def list_bu(request):
-        return render(request,'products/ListBU.html',{'bus':BusinessUnit.objects.all()})
+		return render(request,'products/ListBU.html',{'bus':BusinessUnit.objects.all()})
 
 
 
@@ -391,61 +392,95 @@ def update_cart(request):
 			psuccess=""
 			qs=""
 			gst=0
-			import pdb; pdb.set_trace();
+			bus=""
+			bu_sel=""
+   
+			item_g=""
+			item_n=""
+			item_c=""
+			
 			#print("I'm in Update cart, got the item id "+ value1)
-
+			#import pdb; pdb.set_trace();
 			bus=BusinessUnit.objects.all()
 			qs=InventoryItems.objects.all()
-			
-			bu_sel=request.GET.get('bu')
-			item_g=request.GET.get('item_group')
-			item_n=request.GET.get('item_name')
-			item_c=request.GET.get('item_code')
+			if request.GET:
+					bu_sel=request.GET.get('bu')
+					item_g=request.GET.get('item_group')
+					item_n=request.GET.get('item_name')
+					item_c=request.GET.get('item_code')
 
-			if bu_sel !="-----" and bu_sel is not None:
-			 		qs=qs.filter(bu=get_object_or_404(BusinessUnit,	pk=str(bu_sel).strip()))
-			if item_g !="-----" and item_g is not None:
-			 		qs=qs.filter(group=get_object_or_404(InventoryGroups,	pk=str(item_g).strip()))
-			if item_n !="" and item_n is not None:
-			 		qs=qs.filter(name__icontains=item_n)
-			if item_c !="" and item_c is not None:
-			 		qs=qs.filter(item_code__icontains=item_c)
-			#import pdb; pdb.set_trace();
-			#print("GOVINDA HARI >>>> "+str(request.POST.get('i_code')))
-			cart_list=[]
-			order_list=[]			
-			if request.POST:
+					if bu_sel !="-----" and bu_sel is not None:
+							qs=qs.filter(bu=get_object_or_404(BusinessUnit,	pk=str(bu_sel).strip()))
+					if item_g !="-----" and item_g is not None:
+							qs=qs.filter(group=get_object_or_404(InventoryGroups,	pk=str(item_g).strip()))
+					if item_n !="" and item_n is not None:
+							qs=qs.filter(name__icontains=item_n)
+					if item_c !="" and item_c is not None:
+							qs=qs.filter(item_code__icontains=item_c)
+					#import pdb; pdb.set_trace();
+					#print("GOVINDA HARI >>>> "+str(request.POST.get('i_code')))
+					
+					#print(str(request.POST.get('iu_code')))
+
+					# import pdb; pdb.set_trace();
+			elif request.POST:
+					#import pdb; pdb.set_trace();
+					cart_list=[]
+					order_list=[]
 					a=0
-					import pdb; pdb.set_trace();
-					if ('i_code' in request.POST and request.POST.get('i_code') != ""):
-							
-							cart_list=request.POST.getlist('i_code')
-							if 'order' not in request.POST:
-								order_list=['1']
-							elif 'order' in request.POST:
-								order_list=request.POST.getlist('order')
+					#import pdb; pdb.set_trace();
+					inv_list=""
+					inv_list=InventoryItems.objects.values_list('item_code',flat=True)
+					if  ('barcode-input' in request.POST and request.POST.get('barcode-input') != ""):
 							#import pdb; pdb.set_trace();
-							flag=0
-							inv_list=""
-							inv_list=InventoryItems.objects.values_list('item_code',flat=True)
-							if (len(inv_list)>0) :
-								if ((len(cart_list)==1) and (cart_list[0] in inv_list)) or len(cart_list)>1:
-									flag=1
-         
-							if flag==1:
-								i=0
-								while i < len(order_list):
-									o_item=""
-									c_item=""
-									if(int(order_list[i])>0):
-										o_item=InventoryItems.objects.get(pk=str(cart_list[i]).strip())
-										o_item.available_quantity-=int(order_list[i])
-										o_item.save()
+							bcode=""
+							bcode=request.POST.get('barcode-input')
+							if (bcode in inv_list):					
+								c_item=""
+								o_item=InventoryItems.objects.get(pk=str(bcode).strip())
+								c_list=[]
+								c_list=Cart.objects.values_list('item_code',flat=True)
+								if (o_item.available_quantity >0):
+									if  (bcode in c_list):
+										c_item=Cart.objects.get(pk=str(bcode).strip())
+									#except	Cart.DoesNotExist:
+									else:
+										c_item=Cart(item_code=o_item.item_code,name=o_item.name,unit=o_item.unit,order_quantity=0,item_price=o_item.price,igst=o_item.igst,cgst=o_item.cgst,sgst=o_item.sgst,tax=0,exp_date=o_item.exp_date,damage=o_item.damage,item_net_price=0,order_price=0,bu=str(o_item.bu.name),item_group=str(o_item.group.name))
+									#import pdb; pdb.set_trace();
+									c_item.order_quantity=c_item.order_quantity+1
+									if c_item.igst > 0 or c_item.cgst > 0 or c_item.sgst > 0:
+										c_item.tax=round(((c_item.igst+c_item.cgst+c_item.sgst)*c_item.item_price)/100,2)
+									else:
+										c_item.tax=0
+									c_item.item_net_price=round(c_item.item_price+c_item.tax,2)
+									c_item.order_price=round(c_item.order_quantity * c_item.item_net_price,2)
+									c_item.save()
+			
+									
+									o_item.available_quantity=o_item.available_quantity-1
+									o_item.save()
+
+					elif ('iu_code' in request.POST and request.POST.get('iu_code') != ""):
+							
+							cart_list=request.POST.getlist('iu_code')
+							if 'order' in request.POST:
+								order_list=request.POST.getlist('order')
+							if len(cart_list) == len(order_list):
+								c_items={}
+								j=0
+								for item in cart_list:
+									if int(order_list[j])>0:
+										c_items[item]=order_list[j]
+									j=j+1
+								x=""
+								y=""
+								for x,y in c_items.items():
+										o_item=InventoryItems.objects.get(pk=str(x).strip())
 										try:
-											c_item=Cart.objects.get(pk=str(cart_list[i]).strip())
+											c_item=Cart.objects.get(pk=str(x).strip())
 										except	Cart.DoesNotExist:
 												c_item=Cart(item_code=o_item.item_code,name=o_item.name,unit=o_item.unit,order_quantity=0,item_price=o_item.price,igst=o_item.igst,cgst=o_item.cgst,sgst=o_item.sgst,tax=0,exp_date=o_item.exp_date,damage=o_item.damage,item_net_price=0,order_price=0,bu=str(o_item.bu.name),item_group=str(o_item.group.name))
-										c_item.order_quantity+=int(order_list[i])
+										c_item.order_quantity+=int(y)
 										if c_item.igst > 0 or c_item.cgst > 0 or c_item.sgst > 0:
 											c_item.tax=round(((c_item.igst+c_item.cgst+c_item.sgst)*c_item.item_price)/100,2)
 										else:
@@ -453,17 +488,52 @@ def update_cart(request):
 										c_item.item_net_price=round(c_item.item_price+c_item.tax,2)
 										c_item.order_price=round(c_item.order_quantity * c_item.item_net_price,2)
 										c_item.save()
+										o_item.available_quantity-=int(y)
+										o_item.save()
+							#import pdb; pdb.set_trace();
+					# flag=0
+					# inv_list=""
+					# inv_list=InventoryItems.objects.values_list('item_code',flat=True)
+					# if (len(inv_list)>0) :
+					# 	if ((len(cart_list)==1) and (cart_list[0] in inv_list)) or len(cart_list)>1:
+					# 		flag=1
 
-									i+=1
+					# if flag==1:
+					# 	i=0
+					# 	while i < len(order_list):
+					# 		o_item=""
+					# 		c_item=""
+					# 		if(int(order_list[i])>0):
+					# 			o_item=InventoryItems.objects.get(pk=str(cart_list[i]).strip())
+					# 			o_item.available_quantity-=int(order_list[i])
+					# 			o_item.save()
+					# 			try:
+					# 				c_item=Cart.objects.get(pk=str(cart_list[i]).strip())
+					# 			except	Cart.DoesNotExist:
+					# 					import pdb; pdb.set_trace();
+					# 					c_item=Cart(item_code=o_item.item_code,name=o_item.name,unit=o_item.unit,order_quantity=0,item_price=o_item.price,igst=o_item.igst,cgst=o_item.cgst,sgst=o_item.sgst,tax=0,exp_date=o_item.exp_date,damage=o_item.damage,item_net_price=0,order_price=0,bu=str(o_item.bu.name),item_group=str(o_item.group.name))
+					# 			import pdb; pdb.set_trace();
+					# 			c_item.order_quantity+=int(order_list[i])
+					# 			if c_item.igst > 0 or c_item.cgst > 0 or c_item.sgst > 0:
+					# 				c_item.tax=round(((c_item.igst+c_item.cgst+c_item.sgst)*c_item.item_price)/100,2)
+					# 			else:
+					# 				c_item.tax=0
+					# 			c_item.item_net_price=round(c_item.item_price+c_item.tax,2)
+					# 			c_item.order_price=round(c_item.order_quantity * c_item.item_net_price,2)
+					# 			c_item.save()
+
+					# 		i=i+1
 			gst=0
 			iprice=0
 			total=0
+			cart_list=""
 			if Cart.objects.exists():
-			 	for j in Cart.objects.all():
-			 		gst=gst+(j.tax*j.order_quantity)
-			 		iprice=iprice+(j.item_price*j.order_quantity)
-			 	total=round(Cart.objects.aggregate(Sum('order_price'))['order_price__sum'],2)
-			return render(request,'products/AddSalesItem.html',{'qs':qs,'bus':bus,'total':total,'iprice':str(round(iprice,2)),'tax':str(round(gst,2)),'cart':Cart.objects.all().order_by('bu'),'perror':perror,'psuccess':psuccess})
+				for j in Cart.objects.all():
+					gst=gst+(j.tax*j.order_quantity)
+					iprice=iprice+(j.item_price*j.order_quantity)
+				total=round(Cart.objects.aggregate(Sum('order_price'))['order_price__sum'],2)
+				cart_list=Cart.objects.all().order_by('bu')
+			return render(request,'products/AddSalesItem.html',{'qs':qs,'bus':bus,'total':total,'iprice':str(round(iprice,2)),'tax':str(round(gst,2)),'cart':cart_list,'perror':perror,'psuccess':psuccess})
 			
 @login_required
 def clear_cart(request):
@@ -479,7 +549,8 @@ def clear_cart(request):
 						cart_item.delete()
 					except:
 						perror+="Cart Item not found in the inventory "+cart_item.item_code
-			
+      
+			Cart.objects.all().delete()
 			return render(request,'products/AddSalesItem.html',{'cart':Cart.objects.all().order_by('bu'),'qs':InventoryItems.objects.all(),'ig':InventoryGroups.objects.all(),'perror':perror,'psuccess':psuccess})
 
 @login_required
@@ -694,17 +765,17 @@ def delete_customer(request):
 
 @login_required
 def add_sales(request):
-        return render(request,'products/AddSalesItem.html',{})
+		return render(request,'products/AddSalesItem.html',{})
 
 
 @login_required
 def edit_sales(request):
-        return render(request,'products/EditSalesItem.html',{})
+		return render(request,'products/EditSalesItem.html',{})
 
 
 @login_required
 def delete_sales(request):
-        return render(request,'products/DeleteSalesItem.html',{})
+		return render(request,'products/DeleteSalesItem.html',{})
 
 @login_required
 def cart_checkout(request):
@@ -794,7 +865,7 @@ def cart_checkout(request):
 	#c.showOutline()
 
 	#fname = os.path.join(BASE_DIR, 'pdf_test_%s.pdf' %
-    #                    ( datetime.now().strftime('%d-%b-%Y %H-%M')))
+	#                    ( datetime.now().strftime('%d-%b-%Y %H-%M')))
 	#fname = 'pdf_test_%s.pdf'%( datetime.datetime.now().strftime('%d-%b-%Y %H-%M'))
 	#data=[['x','y','z'],['1','2','3'],['4','5','6'],['7','8','9']]
 
@@ -845,7 +916,7 @@ def cart_checkout(request):
 	#data=[['x','y','z'],['1','2','3'],['4','5','6'],['7','8','9']]
 	
 	#filename = os.path.join(BASE_DIR, 'pdf_test_%s.pdf' %
-    #                    ( datetime.now().strftime('%d-%b-%Y %H-%M')))
+	#                    ( datetime.now().strftime('%d-%b-%Y %H-%M')))
 
 	#pdf= SimpleDocTemplate(filename,pagesize=letter)
 	#table=Table(data)
@@ -998,36 +1069,36 @@ def generatePDF(request):
 
 
 def link_callback(uri, rel):
-            """
-            Convert HTML URIs to absolute system paths so xhtml2pdf can access those
-            resources
-            """
+			"""
+			Convert HTML URIs to absolute system paths so xhtml2pdf can access those
+			resources
+			"""
 
-            result = finders.find(uri)
-            if result:
-                    if not isinstance(result, (list, tuple)):
-                            result = [result]
-                    result = list(os.path.realpath(path) for path in result)
-                    path=result[0]
-            else:
-                    sUrl = settings.STATIC_URL        # Typically /static/
-                    sRoot = settings.STATIC_ROOT      # Typically /home/userX/project_static/
-                    mUrl = settings.MEDIA_URL         # Typically /media/
-                    mRoot = settings.MEDIA_ROOT       # Typically /home/userX/project_static/media/
+			result = finders.find(uri)
+			if result:
+					if not isinstance(result, (list, tuple)):
+							result = [result]
+					result = list(os.path.realpath(path) for path in result)
+					path=result[0]
+			else:
+					sUrl = settings.STATIC_URL        # Typically /static/
+					sRoot = settings.STATIC_ROOT      # Typically /home/userX/project_static/
+					mUrl = settings.MEDIA_URL         # Typically /media/
+					mRoot = settings.MEDIA_ROOT       # Typically /home/userX/project_static/media/
 
-                    if uri.startswith(mUrl):
-                            path = os.path.join(mRoot, uri.replace(mUrl, ""))
-                    elif uri.startswith(sUrl):
-                            path = os.path.join(sRoot, uri.replace(sUrl, ""))
-                    else:
-                            return uri
+					if uri.startswith(mUrl):
+							path = os.path.join(mRoot, uri.replace(mUrl, ""))
+					elif uri.startswith(sUrl):
+							path = os.path.join(sRoot, uri.replace(sUrl, ""))
+					else:
+							return uri
 
-            # make sure that file exists
-            if not os.path.isfile(path):
-                    raise Exception(
-                            'media URI must start with %s or %s' % (sUrl, mUrl)
-                    )
-            return path
+			# make sure that file exists
+			if not os.path.isfile(path):
+					raise Exception(
+							'media URI must start with %s or %s' % (sUrl, mUrl)
+					)
+			return path
 
 @login_required
 def generatePDF1(request):
@@ -1457,7 +1528,7 @@ def gen_inventory_repo(request):
 
 @login_required
 def list_orders(request):
-		qs=[]
+		qs=""
 		order_id=request.GET.get('order_id')
 		order_status=request.GET.get('order_status')
 		order_date=request.GET.get('order_date')
@@ -1480,9 +1551,19 @@ def list_orders(request):
 							qs=qs.filter(customer_mobile=Customers.objects.get(pk=str(order_customer).strip())	)
 						except Customers.DoesNotExist:
 							qs=qs
+				if len(qs)==1:
+					#import pdb; pdb.set_trace()
+					cust= qs[0].customer_mobile
+					qs1=ItemSales.objects.filter(order_id=qs[0].order_id).order_by('bu')
+					return render(request,'products/ConfirmOrder.html',{'cust':cust,'order':qs[0],'qs':qs1,'total':round(qs1.aggregate(Sum('order_price'))['order_price__sum'],2)})
 
+					
 
 		return render(request,'products/ListOrders.html',{'orders':qs})
+
+def trial(request):
+    call_command('dbbackup')
+    return HttpResponse('db created')
 
 @login_required
 def return_items(request):
@@ -1543,7 +1624,7 @@ def return_items(request):
 
 
 	return render(request,'products/ReturnOfItems.html',{'orders':qs,'order_items':qs1, 'perror':perror})
- 
+
 
 @login_required
 def list_order_items(request):
@@ -1694,5 +1775,5 @@ def import_items(request):
 				
 				return render(request,'products/ImportItems.html',{'success':success,'error':error,'inclusions':inclusions,'buexclusions':buexclusions,'igexclusions':igexclusions,'updated':updated})
 
-        
+		
 

@@ -1,0 +1,96 @@
+{% include './MenuList.html' with menu="lc" %}
+
+{% block content %}
+
+<div class="col-sm-9"> 
+  <h3>Delete Customer details</h3>
+{% if perror %}
+    <div class="alert alert-danger">
+                    <strong>Error!</strong> {{ perror }}
+                </div>
+ {% endif %}     
+ 
+{% if psuccess %}
+  <div class="alert alert-success">
+              <strong>Success!</strong> {{ psuccess }}
+  </div>
+{% endif %}
+
+ 
+ <form class="form-horizontal" action="{% url 'delete_customer' %}" method="POST">
+      {% csrf_token %}
+    <div class="form-group">
+    <label class="control-label col-sm-2" >Enter Customer mobile no *:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" id="gr_id" name="del_cust" placeholder="Enter Customer mobile no " {% if not dcust %} required="required" {% endif %}>
+    </div>        
+  </div>
+  
+   <div class="form-group">        
+  <div class="col-sm-offset-2 col-sm-10">
+  
+        <button type="submit" class="btn btn-primary"  {% if dcust %} disabled {% endif %}>Submit</button>
+    
+      </div>
+</div>
+
+</form>
+
+<h3>Business Unit Details</h3>
+  <h3> </h3>
+
+  <form class="form-horizontal" action="{% url 'delete_customer' %}" method="POST">
+    {% csrf_token %}
+
+    <div class="form-group">
+      <div class="col-xs-6">
+          <input type="hidden" class="form-control input-default" value="{{ dcust.customer_mobile }}" id="dcust" name="dcust" >
+      </div>
+
+      </div>
+
+<div class="form-group">
+  <label class="control-label col-sm-2" >Customer Mobile *:</label>
+  <div class="col-xs-6">
+      <label class="control-label" >{{ dcust.customer_mobile }}</label>
+  </div>
+</div>      
+
+
+<div class="form-group">
+    <label class="control-label col-sm-2" >Customer Name :</label>
+    <div class="col-xs-6">
+      <label class="control-label" >{{ dcust.customer_name }}</label>
+    </div>
+  </div>
+  
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Customer Mail ID :</label>
+    <div class="col-xs-6">
+      <label class="control-label" >{{ dcust.customer_mailid }}</label>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Customer Address :</label>
+    <div class="col-xs-6">
+      <label class="control-label" >{{ dcust.customer_address }}</label>
+    </div>
+  </div>
+  
+
+  
+  <div class="form-group">        
+    <div class="col-sm-offset-2 col-sm-10">
+    <button type="submit" class="btn btn-primary" {% if not dcust %}  disabled  {% endif %}>Delete</button>
+  
+    </div>
+  </div>
+  
+</form>
+  </div>
+
+{% endblock %}
+
+

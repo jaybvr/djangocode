@@ -1,0 +1,165 @@
+{% include './MenuList.html' with menu="li" %}
+
+
+
+
+{% block content %}
+      
+<div class="col-sm-9"> 
+      <h3>Add Inventory Item</h3>
+      
+     {% if perror %}
+        <div class="alert alert-danger">
+                        <strong>Error!</strong> {{ perror }}
+                    </div>
+     {% endif %}
+
+     {% if psuccess %}
+        <div class="alert alert-success">
+                        <strong>Success!</strong> {{ psuccess }}
+                    </div>
+     {% endif %}
+
+     <form class="form-horizontal" id="inventory" data-groups-url="{% url 'load_groups' %}" action="{% url 'add_inventory' %}"  method="POST" novalidate>
+          {% csrf_token %}
+          
+  <div class="form-group">
+      <label class="control-label col-sm-2" >Inventory Item code * :</label>
+      <div class="col-xs-6">
+        <input type="text" class="form-control input-default" id="item_code" name="item_code" required="required" placeholder="Enter Inventory Item Code ">
+      </div>
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Business Unit * :</label>
+    <div class="col-xs-6">
+      <select class="form-control" id="bu" name="bu" required="required">
+        <option>-----</option>
+  
+        {% for h in bus %}
+        <option>{{ h.name }}</option>
+        {% endfor %}
+    </select>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Item Group * :</label>
+    <div class="col-xs-6">
+      <select class="form-control" name="item_group" id="item_group" required="required">
+        
+    </select>
+  
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Item Name :</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" id="item_name" name="item_name" required="required" placeholder="Enter Inventory Item Name ">
+    </div>
+</div>
+<div class="form-group">
+  <label class="control-label col-sm-2" >Unit :</label>
+  <div class="col-xs-6">
+    <input type="text" class="form-control input-default" id="unit" name="unit"  placeholder="Enter Units  ">
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="control-label col-sm-2" >Quantity:</label>
+  <div class="col-xs-6">
+    <input type="number" class="form-control input-default" id="quantity" name="quantity" required="required" placeholder="Enter Inventory Item Quantity " pattern="[0-9]+">
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="control-label col-sm-2" >Price:</label>
+  <div class="col-xs-6">
+    <input type="number" class="form-control input-default" id="price" step="0.01" name="price" required="required" placeholder="Enter Inventory Item Price " pattern="[0-9]+">
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="control-label col-sm-2" >iGST %:</label>
+  <div class="col-xs-6">
+    <input type="number" class="form-control input-default" id="igst" name="igst" step="0.01" required="required" placeholder="Enter iGST " pattern="[0-9]+">
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="control-label col-sm-2" >cGST %:</label>
+  <div class="col-xs-6">
+    <input type="number" class="form-control input-default" id="cgst" name="cgst" step="0.01" required="required" placeholder="Enter CGST " pattern="[0-9]+">
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="control-label col-sm-2" >sGST %:</label>
+  <div class="col-xs-6">
+    <input type="number" class="form-control input-default" id="sgst" name="sgst" step="0.01" required="required" placeholder="Enter SGST " pattern="[0-9]+">
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="control-label col-sm-2" >Expiry Date:</label>
+  <div class="col-xs-6">
+    <input type="date" class="form-control input-default" id="exp_date" name="exp_date" placeholder="Enter Expiry Date  " >
+  </div>        
+  </div>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Damage :</label>
+    <div class="col-sm-2">
+      <select class="form-control combo" id="damage" name="damage">
+        <option>Y</option>
+        <option selected>N</option>
+      </select>
+    </div>
+    </div>
+      
+<div class="form-group">
+  <label class="control-label col-sm-2" >Date Added:</label>
+  <div class="col-xs-6">
+    <label class="control-label" >{{ now }}</label>
+  </div>
+</div>
+
+
+
+  <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary">ADD</button>
+          </div>
+  </div>
+    
+  </form>
+  <br><br><br><br>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $("#bu").change(function () {
+      var url = $("#inventory").attr("data-groups-url");  // get the url of the `load_cities` view
+      var bu = $(this).val();  // get the selected country ID from the HTML input
+
+      $.ajax({                       // initialize an AJAX request
+        url: url,                    // set the url of the request (= localhost:8000/hr/ajax/load-cities/)
+        data: {
+          'bu': bu       // add the country id to the GET parameters
+        },
+        success: function (data) {   // `data` is the return of the `load_cities` view function
+          $("#item_group").html(data);  // replace the contents of the city input with the data that came from the server
+
+         
+        }
+      });
+
+    });
+  </script>
+{% endblock %}
+
+

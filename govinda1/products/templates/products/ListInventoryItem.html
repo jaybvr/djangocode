@@ -1,0 +1,194 @@
+{% include './MenuList.html' with menu="li" %}
+
+{% block content %}
+     
+ <div class="col-sm-offset-7">
+
+{% if user.get_username == "admin" %} 
+ <a type="button" class="btn btn-primary" href="{% url 'add_inventory' %}">Add Inventory item</a>
+ <a type="button" class="btn btn-primary" href="{% url 'edit_inventory' %}">Edit Inventory item</a>
+ <a type="button" class="btn btn-primary" href="{% url 'delete_inventory' %}">Delete Inventory item</a>
+{% endif %}
+
+</div>
+
+
+<div class="col-xs-5">
+  <br>
+  <br>
+  
+         
+<div class="container horizontal-scrollable"> 
+  <h3>List Inventory by Filters</h3>
+  <br>
+        <div class="row text-center"> 
+  
+  
+ <form class="form-horizontal" id="inventory" data-groups-url="{% url 'load_groups' %}" action="{% url 'list_inventory' %}" method="GET">
+  {% csrf_token %}
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Business Unit * :</label>
+    <div class="col-xs-6">
+      <select class="form-control" id="bu" name="bu" required="required">
+        <option>-----</option>
+  
+        {% for h in bus %}
+        <option>{{ h.name }}</option>
+        {% endfor %}
+    </select>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Item Group * :</label>
+    <div class="col-xs-6">
+      <select class="form-control" name="item_group" id="item_group" required="required">
+        <option>-----</option>
+
+    </select>
+  
+    </div>
+  </div>
+
+<!--
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Inventory Item Group:</label>
+    <div class="col-xs-6">
+      <select class="form-control" name="item_group">
+        {% for h in ig %}
+        <option>{{ h.name }}</option>
+        {% endfor %}
+        <option selected > </option>
+
+    </select>
+    </div>
+    </div>-->
+
+<div class="form-group">
+<label class="control-label col-sm-2" >Inventory Item name contains :</label>
+<div class="col-xs-6">
+  <input type="text" class="form-control input-default " id="item_name" name="item_name" placeholder="Enter Inventory Item name" >
+</div>        
+</div>
+
+<div class="form-group">
+  <label class="control-label col-sm-2" >Inventory Item Code contains:</label>
+  <div class="col-xs-6">
+    <input type="text" class="form-control input-default" id="item_code" name="item_code" placeholder="Enter Inventory Item code" >
+  </div>        
+  </div>
+
+
+<div class="form-group">        
+<div class="col-sm-offset-2 col-sm-10">
+
+    <button type="submit" class="btn btn-primary" >Search</button>
+
+  </div>
+</div>
+
+</form>
+
+<hr> 
+<br><br><br>
+
+
+
+
+  <table class="table table-bordered table-responsive table-striped">
+  <thead>
+    <tr>
+      <th>Item code</th>
+      <th>Item name</th>     
+      <th>Unit</th> 
+      <th>Business Unit </th>
+      <th>Inventory Group</th>        
+      <th>Available Quantity</th>
+      <th>Price per Item</th>
+      <th>iGST %</th>
+      <th>cGST %</th>
+      <th>sGST %</th>
+      <th>Date Added</th>
+      <th>Exp Date</th>
+      <th>Damaged</th>
+
+
+
+  
+    </tr>
+  </thead>
+  {% if qs %}
+  <tbody>
+        {% for item in qs %}
+   <tr class="items">
+   <td>{{ item.item_code}} </td>
+    <td>{{ item.name}} </td>
+    <td>{{ item.unit }}</td>     
+    <td>{{ item.bu.name}} </td>
+    <td>{{ item.group.name}} </td>       
+    <td>{{ item.available_quantity}} </td>
+    <td>{{ item.price}} </td>
+    <td>{{ item.igst}} </td>
+    <td>{{ item.cgst}} </td>
+    <td>{{ item.sgst}} </td>
+    <td>{{ item.date}} </td>
+    <td>{{ item.exp_date}} </td>
+    {% if item.damage == True %}
+    <td> Yes </td>
+    {% else %}
+    <td> No </td>
+    {% endif %}
+    
+  </tr>
+        {% endfor %}    
+  </tbody>
+  
+  {% endif %}
+  
+  </table>
+  
+  </div> 
+  
+  <br><br><br><br>
+  
+  </div>
+        
+
+    </div>
+
+
+<br><br><br><br>
+
+
+
+    </div>
+   
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $("#bu").change(function () {
+      var url = $("#inventory").attr("data-groups-url");  // get the url of the `load_cities` view
+      var bu = $(this).val();  // get the selected country ID from the HTML input
+
+      $.ajax({                       // initialize an AJAX request
+        url: url,                    // set the url of the request (= localhost:8000/hr/ajax/load-cities/)
+        data: {
+          'bu': bu       // add the country id to the GET parameters
+        },
+        success: function (data) {   // `data` is the return of the `load_cities` view function
+          $("#item_group").html(data);  // replace the contents of the city input with the data that came from the server
+          $("#item_group").append('<option>'+'-----'+'</option>');
+
+         
+        }
+      });
+
+    });
+  </script>
+
+{% endblock %}
+
+

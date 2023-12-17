@@ -1,0 +1,122 @@
+
+{% include './MenuList.html' with menu="lc" %}
+
+{% block content %}
+     
+ <div class="col-sm-offset-7">
+    {% if user.get_username == "admin" %} 
+
+
+ <a type="button" class="btn btn-primary" href="{% url 'edit_customer' %}">Edit Customers</a>
+ <a type="button" class="btn btn-primary" href="{% url 'delete_customer' %}">Delete Customers</a>
+ {% endif %}
+
+</div>
+
+
+<div class="col-xs-5">
+    <br>
+    <br>
+    
+           
+  <div class="container horizontal-scrollable"> 
+    <h3>List Customers</h3>
+    <br>
+          <div class="row text-center"> 
+    
+    
+   <form class="form-horizontal" action="{% url 'list_customers' %}" method="GET">
+    {% csrf_token %}
+  
+  
+  <div class="form-group">
+  <label class="control-label col-sm-2" >Customer mobile number contains :</label>
+  <div class="col-xs-6">
+    <input type="text" class="form-control input-default " id="item_name" name="mobile" placeholder="Enter mobile number  " >
+  </div>        
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Customer name contains:</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default" id="item_code" name="name" placeholder="Enter Customer  name " >
+    </div>        
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2" >Customer mail id contains:</label>
+        <div class="col-xs-6">
+          <input type="text" class="form-control input-default" id="item_code" name="mail" placeholder="Enter Customer mail id  " >
+        </div>        
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" >Customer address contains:</label>
+            <div class="col-xs-6">
+              <input type="text" class="form-control input-default" id="item_code" name="address" placeholder="Enter Customer address " >
+            </div>        
+            </div>
+
+  <div class="form-group">        
+  <div class="col-sm-offset-2 col-sm-10">
+  
+      <button type="submit" class="btn btn-primary" >Search</button>
+  
+    </div>
+  </div>
+  
+  </form>
+  
+  <hr> 
+  <br><br><br>
+  
+  
+  
+  
+    <table class="table table-bordered table-responsive table-striped">
+    <thead>
+      <tr>
+        <th>Customer mobile </th>
+        <th>Name</th>              
+        <th>Mail </th>
+        <th>Address</th>
+        
+  
+    
+      </tr>
+    </thead>
+    {% if customers %}
+    <tbody>
+          {% for item in customers %}
+     <tr class="items">
+     <td>{{ item.customer_mobile}} </td>
+      <td>{{ item.customer_name}} </td>            
+      <td>{{ item.customer_mailid}} </td>
+      <td>{{ item.customer_address}} </td>
+      
+  
+    </tr>
+          {% endfor %}    
+    </tbody>
+    
+    {% endif %}
+    
+    </table>
+    
+    </div> 
+    
+    <br><br><br><br>
+    
+    </div>
+          
+  
+      </div>
+  
+  
+  <br><br><br><br>
+  
+  
+  
+      </div>
+     
+    </div>
+    {% endblock %}

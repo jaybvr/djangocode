@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+
+
+<div > 
+
+
+<form  >
+
+
+
+      <div > 
+  
+        <table  style="width:100%; border: 1px solid black; border-collapse: collapse; text-align: center;" cellspacing="0" cellpadding="0">
+            <thead>
+              <tr  ><th colspan="11" style="padding-top: 5px;"><h3>SRI SRI RADHA KRISHNA CHANDRA TEMPLE - ISKCON <br> Reddy College Rd, Malla Reddy Nagar, NGO Colony, Guntur, Andhra Pradesh 522004 Cell: 8331961288 </h3></th> </tr>
+              
+            </thead></table>
+
+            <br><br>
+      <h3>Inventory Current Status</h3>  
+
+      {% if za_dict %}
+{% for i, j in za_dict.items %}
+<br>
+  <table style="width:100%; border: 1px solid black; border-collapse: collapse; text-align: center;" cellspacing="0" cellpadding="0">
+    <thead>
+      <tr>
+        <th colspan="12" style="text-align: left; padding-top: 3px;"> Business Unit : {{ i }}</th> 
+
+    </tr>
+    <tr>
+        <th style="   padding-top: 3px;">Item code</th>
+        <th style="   padding-top: 3px;">Item name</th>     
+        <th style="   padding-top: 3px;">Unit</th> 
+        <th style="   padding-top: 3px;">Inventory Group</th>        
+        <th style="   padding-top: 3px;">Available Qty</th>
+        <th style="   padding-top: 3px;">Price</th>
+        <th style="   padding-top: 3px;">iGST %</th>
+        <th style="   padding-top: 3px;">cGST %</th>
+        <th style="   padding-top: 3px;">sGST %</th>
+        <th style="   padding-top: 3px;">Date Added</th>
+        <th style="   padding-top: 3px;">Exp Date</th>
+        <th style="   padding-top: 3px;">Damage</th>
+
+  
+  
+    
+      </tr>
+    </thead>
+    <tbody>
+          {% for item in j %}
+     <tr >
+     <td style="padding: 2px; ">{{ item.item_code}} </td>
+      <td style="padding: 2px; ">{{ item.name}} </td>
+      <td style="padding: 2px; ">{{ item.unit }}</td>     
+      <td style="padding: 2px; ">{{ item.group.name}} </td>       
+      <td style="padding: 2px; ">{{ item.available_quantity}} </td>
+      <td style="padding: 2px; ">{{ item.price}} </td>
+      <td style="padding: 2px; ">{{ item.igst}} </td>
+      <td style="padding: 2px; ">{{ item.cgst}} </td>
+      <td style="padding: 2px; ">{{ item.sgst}} </td>
+      <td style="padding: 2px; ">{{ item.date}} </td>
+      <td style="padding: 2px; ">{{ item.exp_date}} </td>
+      {% if item.damage == True %}
+      <td style="padding: 2px; "> Yes </td>
+      {% else %}
+      <td style="padding: 2px; "> No </td>
+      {% endif %}
+  
+      
+    
+    </tr>
+          {% endfor %}    
+          
+    </tbody>
+    
+    {% endfor %}    
+    {% endif %}
+</table>
+<br><br>
+
+
+
+
+
+
+
+
+</body>
+</html>

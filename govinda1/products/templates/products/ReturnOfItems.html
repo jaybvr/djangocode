@@ -1,0 +1,144 @@
+{% include './MenuList.html' with menu="ri" %}
+
+{% block content %}
+
+
+
+<div class="col-sm-9"> 
+
+
+<form class="form-horizontal" action="{% url 'return_items' %}" method="GET" >
+    {% csrf_token %}
+
+    <h3>Return or Exchange of Ordered Items : </h3>
+
+<br><br>
+
+  <div class="form-group">
+    <label class="control-label col-sm-2" >Order ID :</label>
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-default " id="item_name" name="order_id" placeholder="Enter Order ID  " >
+    </div>        
+    </div>
+    
+    <div class="form-group">        
+    <div class="col-sm-offset-2 col-sm-10">
+    
+        <button type="submit" class="btn btn-primary" >Search</button>
+    
+      </div>
+    </div>
+
+    </form>
+
+    <form class="form-horizontal" action="{% url 'return_items' %}" method="POST">
+      {% csrf_token %}
+
+    <h3>Order Details</h3>
+    {% if orders %}
+
+    <div class="form-group">
+      <div class="col-xs-6">
+          <input type="hidden" class="form-control input-default" value="{{ orders.order_id }}"  name="order_id" >
+      </div>
+
+      </div>
+
+    <table class="table table-bordered table-responsive table-striped">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Order Status</th>              
+            <th>Order Date</th>
+            <th>Order Total</th>
+            <th>Paid by Cash</th>
+            <th>Paid through Online</th>
+            <th>Transaction ID</th>
+            <th>Ordered by Customer</th>
+      
+
+          </tr>
+        </thead>
+        <tbody>
+
+              {% for item in orders %}
+              
+         <tr class="edit_order">
+          <td>{{ item.order_id}} </td>
+          <td>{{ item.order_status}} </td>            
+          <td>
+            {{ item.order_date}}
+          </td>
+          <td>{{ item.order_total}} </td>
+          <td>{{ item.cash}} </td>
+          <td>{{ item.online}} </td>
+          <td>{{ item.transaction_id}}</td>
+          <td>{{ item.customer_mobile.customer_mobile}} </td>
+         
+        </tr>
+              {% endfor %}    
+
+        </tbody>
+      </table>
+
+      <table class="table table-bordered table-responsive table-striped">
+          <thead>
+            <tr>
+              <th>Item Code</th>
+              <th>Item Name</th>              
+              <th>Group</th>
+              <th>Order Quantity</th>
+              <th>Item Price</th>
+              <th>Order Price</th>
+    
+        
+    
+            </tr>
+          </thead>
+          <tbody>
+            {% if order_items %}
+    
+                {% for item in order_items %}
+                
+           <tr class="edit_order">
+            <td>{{ item.item_code}} </td>
+            <td>{{ item.item_name}} </td>            
+            <td>{{ item.group}}</td>
+            <td> 
+            <input type="number" class="form-control input-default" value= "{{ item.order_quantity}}" name="quantity" placeholder="Enter Inventory Item Quantity ">
+             </td>
+            <td>{{item.item_price}} </td>
+            <td>{{item.order_price}} </td>
+          </tr>
+                {% endfor %}    
+          {% endif %}
+    
+          </tbody>
+        </table>
+        <div class="col-sm-offset-2 col-sm-10">
+    
+          <button type="submit" class="btn btn-primary" >Update Order</button>
+      
+        </div>
+        {% endif %}
+
+</form>
+  
+<form class="form-horizontal">
+ 
+
+</form>
+
+
+
+
+      <br><br><br>
+      </div>
+
+
+
+
+
+      <br><br><br><br>
+
+      {% endblock %}

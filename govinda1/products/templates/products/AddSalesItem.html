@@ -129,7 +129,22 @@
 
   <div style="border-style:outset">
 
-  <h3>Select Inventory by Filters</h3>
+    <div class="panel panel-default">
+      
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#sibf">
+            Select Inventory by Filters
+          </a>
+        </h4>
+      </div>
+      
+      <div id="sibf" class="panel-collapse collapse">
+        <div class="panel-body">
+
+
+
+
   <br>
 
         <div class="row text-center"> 
@@ -190,19 +205,22 @@
 </form>
 </div>
 </div>
+
+
+</div></div></div>
 <hr> 
-<br><br>
 
 
 <form class="form-horizontal" action="{% url 'update_cart' %}" id="add_to_cart" method="POST">
   {% csrf_token %}
 <br>
 <div class="form-group">        
-  <div class="col-sm-offset-10">
+  <h3> Item Code : </h3>
+  <input type="text" id="barcode-input" autofocus name="barcode-input">
+
   
         <button type="submit" class="btn btn-primary" id="add_to"  {% if edit %} disabled {% endif %}>Add to Cart</button>
     
-      </div>
 </div>
 
 
@@ -235,7 +253,7 @@
   <tbody>
         {% for item in qs %}
    <tr class="items">
-   <td width="160"><input class="form-control input-default" type="text" name="i_code" value="{{ item.item_code}}" readonly {% if item.available_quantity < 1 %} disabled {% endif %}> </td>
+   <td width="160"><input class="form-control input-default" type="text" name="iu_code" id="iu_code" value="{{ item.item_code}}" readonly {% if item.available_quantity < 1 %} disabled {% endif %}> </td>
    <td>{{ item.name}} </td>     
    <td>{{ item.unit}} </td>     
    <td>{{ item.bu.name}} </td>
@@ -278,37 +296,168 @@
 </div>
 
 <script>
-let code = "";
-let reading = false;
+// let code = "";
+// let reading = false;
 
-document.addEventListener('keypress', e => {
+
+// var str = '';
+//    document.addEventListener("keypress", function(e){
+//     debugger
+//     console.log("Inside BarCode  ");
+//       if(e.key == "Enter") {
+//          console.log("Inside BarCode event "+str);
+//          var temp = str;
+//          str = '';
+//          //window.location = ('/httpreq?parameter='+temp);
+         
+//          console.log("Inside BarCode event iu_code "+document.getElementById('iu_code'));
+//          console.log("Inside BarCode event iu_code vslue "+document.getElementById('iu_code').value);
+//          document.getElementById('iu_code').value = temp;
+//          console.log("Inside BarCode event button "+document.getElementById('add_to'));
+//          document.getElementById('add_to').submit();
+//       } else {
+//         console.log("Barcode else"+e.key);
+//          str += e.key;
+//       }
+//    });
+
+
+//document.addEventListener('keypress', e => {
   //usually scanners throw an 'Enter' key at the end of read
-   if (e.keyCode === 13) {
-          if(code.length > 6) {
-            console.log('code');
-            document.getElementById('i_code').value = 'code';
-            document.getElementById('add_to_cart').submit();
+//   if (e.keyCode === 13) {
+//          if(code.length > 10) {
+//            console.log(code);
+//            document.getElementById('iu_code').value = code;
+//            document.getElementById('add_to_cart').submit();
             /// code ready to use                
-            code = "";
-         }
-    } else {
-        code += e.key; //while this is not an 'enter' it stores the every key            
-    }
+//            code = "";
+//         }
+//    } 
 
     //run a timeout of 200ms at the first read and clear everything
-    if(!reading) {
-        reading = true;
-        setTimeout(() => {
-            code = "";
-            reading = false;
-        }, 200);  //200 works fine for me but you can adjust it
-    }
-});
+//    if(!reading) {
+//        reading = true;
+//        setTimeout(() => {
+//            code = "";
+//            reading = false;
+//        }, 1000);  //200 works fine for me but you can adjust it
+//    }
+//});
 
+///$$$$$$$$$$$$$$$
+
+   // document.addEventListener('DOMContentLoaded', function() {
+            // Event listener for keypress events
+//             var txt = "";
+// function selectBarcode() {
+//   //debugger
+//     if (txt != $("#focus").val()) {
+//         setTimeout('use_rfid()', 1000);
+//         txt = $("#focus").val();
+//         debugger
+//     }
+//     $("#focus").select();
+//     setTimeout('selectBarcode()', 1000);
+// }
+
+// $(document).ready(function () {
+//     setTimeout(selectBarcode(),1000);       
+// });
+
+//creates a listener for when you press a key
+window.onkeyup = keyup;
+//creates a global Javascript variable
+//var inputTextValue;
+function keyup(e) {
+  //setting your input text to the global Javascript Variable for every key press
+  //debugger
+  //inputTextValue = e.target.value;
+  //const barcodeInput = document.getElementById('barcode-input');
+  if (document.activeElement === barcodeInput) {
+  //listens for you to press the ENTER key, at which point your web address will change to the one you have input in the search box
+  if ((e.target.value.length>=10) && (e.keyCode == 13)) {
+    //if (e.keyCode == 13) {
+    // window.location = "http://www.myurl.com/search/" + inputTextValue;
+    //console.log(inputTextValue);
+    document.getElementById('add_to').unbind('click').click();
+    //barcodeInput.value="";
+  }}
+};
+
+            // document.addEventListener('keypress', function(event) {
+            //   debugger
+            //   // const textInput = event.key || String.fromCharCode(event.keyCode);
+            //   // console.log(textInput)
+            //   // console.log("Inside BarCode event ");
+            // const barcodeInput = document.getElementById('barcode-input');
+            // //console.log(event.value)
+            //     // Check if the input field is focused
+            //     if (document.activeElement === barcodeInput) {
+            //         // Append the pressed key to the input field
+            //         //barcodeInput.value += event.key;
+            //         console.log(event.key)
+            //         console.log(event.keycode)
+            //         console.log(barcodeInput.value)
+            //         //console.log(event.scannedBarcode)
+
+            //        // barcodeInput.value =  barcodeInput.value;
+            //         // Check for the Enter key (assuming barcode scanners usually end with an Enter key)
+            //         if (event.key === 'Enter') {
+            //            console.log(event.scannedBarcode)
+            //             // The barcode is complete, handle it as needed
+            //             debugger
+            //             const scannedBarcode = barcodeInput.value;
+            //             console.log('Scanned Barcode:', scannedBarcode);
+
+            //             // Clear the input field for the next scan
+            //             barcodeInput.value = '';
+            //         }
+            //     }
+            // });
+ 
+//        document.addEventListener('textInput', function (e){
+//         debugger
+//         console.log(e.data)
+//     if(e.data.length >= 6){
+//         console.log('IR scan textInput', e.data);
+//         e.preventDefault();
+//     }
+// });
+  
 </script>
   
 
 <script>
+
+
+// $(document).scannerDetection({
+  
+//   //https://github.com/kabachello/jQuery-Scanner-Detection
+     
+//      timeBeforeScanTest: 200, // wait for the next character for upto 200ms
+//      avgTimeByChar: 40, // it's not a barcode if a character takes longer than 100ms
+//      preventDefault: true,
+   
+//      endChar: [13],
+//        onComplete: function(barcode, qty){
+//       validScan = true;
+      
+//       console.log("In JQuery"+barcode);
+//          $('#').val (barcode);
+     
+//        } // main callback function	,
+//      ,
+//      onError: function(string, qty) {
+   
+//      $('#userInput').val ($('#userInput').val()  + string);
+   
+     
+//      }
+     
+     
+//    });
+
+
   $(document).ready(function(){
   
   $(".items").each(function(){
@@ -322,7 +471,7 @@ document.addEventListener('keypress', e => {
   
   $(".edit_order").each(function(){
         var self = $(this);
-        var j=self.find("td:eq(11)").text().trim();
+        var j=self.find("td:eq(12)").text().trim();
           for(i=0;i<=j;i++){
             self.find("select").append('<option>' + i + '</option>');
             if (i==j){ 
